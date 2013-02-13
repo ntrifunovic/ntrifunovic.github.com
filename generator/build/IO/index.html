@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+  <head>
+   <title>Uvod u C++ by ntrifunovic</title>
+   <link rel="stylesheet" href="/pygments.css">
+   <link rel="stylesheet" href="/static/stylesheets/styles.css">
+   <script src="/static/javascripts/jquery-1.9.0.js"></script>
+   <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="/">Home</a></li>
+        </nav> 
+      </div><!-- end header -->
+    <div class="wrapper">
+      <section>
+        <div id="title">
+          <h1>Uvod u C++ by ntrifunovic</h1>
+          <p>
+	    -Dodatna nastava iz informatike-
+	  </p>
+          <hr>
+          <span class="credits left">
+	    <g:plusone annotation = "none" size = "small" expandTo = "left"></g:plusone>
+	    Project maintained by <a href="https://github.com/ntrifunovic">ntrifunovic</a>
+	  </span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a> modified by <a href="https://github.com/ntrifunovic">ntrifunovic</a></span>	  
+        </div>
+	
+	  <h1>Input\Output</h1>
+<hr />
+<h2>C vs C++ I\O</h2>
+<p>U ovom kursu koristicemo C I\O (biblioteku stdio.h) za input i output</p>
+<ul>
+<li>zato sto je znatno brza u odnosu na C++ I\O (biblioteka iostream - cin i cout)</li>
+<li>metode koje cemo najvise koristiti su<ul>
+<li>scanf, fscanf, sscanf</li>
+<li>printf, fprintf</li>
+<li>getchar, fgetc</li>
+<li>gets, fgets</li>
+<li>puts, fputs</li>
+<li>putchar, fputc</li>
+<li>fopen</li>
+</ul>
+</li>
+</ul>
+<h2>Struktura C++ programa</h2>
+<p>Program koji ispisuje <code>Zdravo svete !!!</code></p>
+<div class="codehilite"><pre><span class="c1">// Ovo je komentar</span>
+<span class="cm">/* I ovo je komentar */</span>
+
+<span class="p">#</span><span class="k">include</span> <span class="o">&lt;</span><span class="n">stdio</span><span class="p">.</span><span class="n">h</span><span class="o">&gt;</span> <span class="c1">// Koristimo standardnu biblioteku stdio</span>
+
+<span class="k">int</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span> <span class="c1">// Ulazna tacka u program</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Zdravo svete !!!&quot;</span><span class="p">);</span> <span class="c1">// poziv metode za ispis na ekran iz biblioteke stdio</span>
+
+    <span class="k">return</span> <span class="mh">0</span><span class="p">;</span> <span class="c1">// Vracamo vrednost 0, sto znaci da se nas program uspesno zavrsio</span>
+<span class="p">}</span> <span class="c1">// Kraj metode main</span>
+</pre></div>
+
+
+<p>Program koji sabira dva broja uneta sa tastature  </p>
+<div class="codehilite"><pre><span class="c1">// Program koji sabira dva broja uneta sa tastature</span>
+
+<span class="p">#</span><span class="k">include</span> <span class="o">&lt;</span><span class="n">stdio</span><span class="p">.</span><span class="n">h</span><span class="o">&gt;</span> <span class="c1">// Koristimo standardnu biblioteku stdio</span>
+
+<span class="k">int</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span> <span class="c1">// Ulazna tacka u program</span>
+    <span class="k">int</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">;</span> <span class="c1">// Deklaracija promenjivih a i b tipa int</span>
+
+    <span class="c1">// poziv metode scanf za citanje sa tastature iz biblioteke stdio</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">);</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">);</span> <span class="c1">// poziv metode za ispis na ekran iz biblioteke stdio</span>
+
+    <span class="k">return</span> <span class="mh">0</span><span class="p">;</span> <span class="c1">// Vracamo vrednost 0, sto znaci da se nas program uspesno zavrsio</span>
+<span class="p">}</span> <span class="c1">// Kraj metode main</span>
+</pre></div>
+
+
+<h2>stdio.h</h2>
+<div class="codehilite"><pre><span class="kt">FILE</span><span class="o">*</span> <span class="nf">fopen</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">fileName</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">mode</span><span class="p">);</span>
+</pre></div>
+
+
+<p><code>mode</code> moze biti</p>
+<ul>
+<li><code>"r"</code> ako zelimo da citamo iz fajla</li>
+<li><code>"w"</code> ako zelimo da pisemo u fajl</li>
+</ul>
+<p>Povratna vrednost je pokazivac na objekat tipa <code>FILE</code> koji koristimo za pristup otvorenom fajlu.</p>
+<p>Ako je doslo do greske prilikom otvaranja fajla povratna vrednost je <code>null</code> (pokazivac na nista).</p>
+<hr />
+<div class="codehilite"><pre><span class="kt">int</span> <span class="nf">getchar</span><span class="p">();</span> <span class="c1">// cita sa standardnog ulaza</span>
+<span class="kt">int</span> <span class="nf">fgetc</span><span class="p">(</span><span class="kt">FILE</span><span class="o">*</span> <span class="n">f</span><span class="p">);</span> <span class="c1">// cita iz fajla</span>
+</pre></div>
+
+
+<ul>
+<li>Cita jedan karakter sa standardnog ulaza\fajla</li>
+<li>Povratna vrednost je procitani znak (njegov ASCII kod ili <code>EOF</code> ako se stiglo do kraja fajla)<ul>
+<li><code>EOF</code> je konstanta koja se nalazi u stdio.h</li>
+</ul>
+</li>
+</ul>
+<hr />
+<div class="codehilite"><pre><span class="kt">int</span> <span class="nf">putchar</span><span class="p">(</span><span class="kt">int</span> <span class="n">ch</span><span class="p">);</span> 
+<span class="kt">int</span> <span class="nf">fputc</span><span class="p">(</span><span class="kt">int</span> <span class="n">ch</span><span class="p">,</span> <span class="kt">FILE</span><span class="o">*</span> <span class="n">f</span><span class="p">);</span>
+</pre></div>
+
+
+<ul>
+<li>Pise jedan karakter na standardni ulaz\fajl</li>
+<li>Vraca <code>ch</code> ako je upis uspeo, <code>EOF</code> ako je doslo do greske</li>
+</ul>
+<hr />
+<div class="codehilite"><pre><span class="kt">int</span> <span class="nf">scanf</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">format</span><span class="p">,</span> <span class="p">...);</span>
+<span class="kt">int</span> <span class="nf">fscanf</span><span class="p">(</span><span class="kt">FILE</span><span class="o">*</span> <span class="n">f</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">format</span><span class="p">,</span> <span class="p">...);</span>
+</pre></div>
+
+
+<ul>
+<li>Povratna vrednost je broj procitanih elemenata, <code>EOF</code> ako je doslo do greske</li>
+<li><code>format</code> - Format ulaza koji se cita</li>
+<li>Posle formata sledi lista adresa promenjivih u koje se pamte ucitane vrednosti</li>
+</ul>
+<hr />
+<div class="codehilite"><pre><span class="kt">int</span> <span class="nf">printf</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">format</span><span class="p">,</span> <span class="p">...);</span>
+<span class="kt">int</span> <span class="nf">fprintf</span><span class="p">(</span><span class="kt">FILE</span><span class="o">*</span> <span class="n">f</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">format</span><span class="p">,</span> <span class="p">...);</span>
+</pre></div>
+
+
+<ul>
+<li>Povratna vrednost je broj ispisanih karaktera, negativna vrednost ako je doslo do greske</li>
+<li><code>format</code> - Format izlaza koji se ispisuje</li>
+<li>Posle formata sledi lista promenjivih koje se ispisuju</li>
+</ul>
+<hr />
+<h3><code>scanf</code>, <code>printf</code>, <code>sscanf</code>, ...  parametar <code>format</code></h3>
+<ul>
+<li><code>%c</code>      <code>char</code></li>
+<li><code>%d</code>      <code>long</code>, <code>int</code></li>
+<li><code>%u</code>      <code>unsigned int</code></li>
+<li><code>%lld</code>    <code>long long</code></li>
+<li><code>%f</code>      <code>float</code></li>
+<li><code>%lf</code>     <code>double</code></li>
+<li>
+<p><code>%s</code>      <code>char*</code></p>
+</li>
+<li>
+<p>Opciono posle <code>%</code> moze ici <code>*</code> sto ce za posledicu imati da se procitani podatak ne pamti u neku promenjivu</p>
+</li>
+<li>Postoje i drugi opcioni parametri vezani za formatiranje ulaza</li>
+</ul>
+	
+    </div>
+  </body>
+</html>
