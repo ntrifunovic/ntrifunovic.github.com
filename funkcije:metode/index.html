@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+  <head>
+   <title>Uvod u C++ by ntrifunovic</title>
+   <link rel="stylesheet" href="/pygments.css">
+   <link rel="stylesheet" href="/static/stylesheets/styles.css">
+   <script src="/static/javascripts/jquery-1.9.0.js"></script>
+   <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="/">Home</a></li>
+        </nav> 
+      </div><!-- end header -->
+    <div class="wrapper">
+      <section>
+        <div id="title">
+          <h1>Uvod u C++ by ntrifunovic</h1>
+          <p>
+	    -Dodatna nastava iz informatike-
+	  </p>
+          <hr>
+          <span class="credits left">
+	    <g:plusone annotation = "none" size = "small" expandTo = "left"></g:plusone>
+	    Project maintained by <a href="https://github.com/ntrifunovic">ntrifunovic</a>
+	  </span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a> modified by <a href="https://github.com/ntrifunovic">ntrifunovic</a></span>	  
+        </div>
+	
+	  <h1>Funkcije/Metode</h1>
+<hr />
+<div class="codehilite"><pre><span class="nt">&lt;tip&gt;</span> <span class="nt">&lt;ime&gt;</span>(<span class="nt">&lt;lista</span><span class="na">_argumenata</span><span class="nt">&gt;</span>) <span class="nt">&lt;telo&gt;</span>
+</pre></div>
+
+
+<ul>
+<li>Podela resenja na manje delove</li>
+<li>Koriscenje takvih delova na vise mesta</li>
+<li>Funkciju mozemo smatrati za n-arni operator najviseg prioriteta</li>
+<li><code>&lt;tip&gt;</code> - svi tipovi koje smo spominjali + <code>void</code> (kada funkcija ne vraca vrednost)</li>
+<li><code>&lt;lista_argumenata&gt;</code> - proizvoljni br. elemenata razdvojenih <code>,</code> (moze biti i nula).</li>
+<li>F-ja vraca vrednost koristeci komandu <code>return izraz;</code>, tada se ujedno izlazi iz f-je.</li>
+</ul>
+<h2>Argumenti</h2>
+<ul>
+<li>Argumenti se mogu u funkciju preneti po vrednosti ili po referenci.</li>
+<li>Podrazumevano je da se prenose po vrednosti<ul>
+<li>To znaci da f-ja ima svoju kopiju argumenata</li>
+</ul>
+</li>
+<li>Ako zelimo da se argument prenosi po referenci tada treba da dodamo '&amp;' ispred imena argumenta u listi argumenta.<ul>
+<li>To znaci da kada f-ja menja argument ona menja i vrednost za koju je f-ja pozvana</li>
+</ul>
+</li>
+</ul>
+<p><strong>Primer:</strong></p>
+<div class="codehilite"><pre><span class="cp">#include&lt;stdio.h&gt;</span>
+
+<span class="kt">int</span> <span class="nf">zbir</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d %d %d&quot;</span><span class="p">,</span> <span class="n">zbir</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="n">zbir</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">zbir</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">));</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p><em>Sta ispisuje program?</em></p>
+<blockquote>
+<p>Resenje: 4 6 8</p>
+</blockquote>
+	
+    </div>
+  </body>
+</html>

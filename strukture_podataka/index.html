@@ -1,0 +1,223 @@
+<!doctype html>
+<html>
+  <head>
+   <title>Uvod u C++ by ntrifunovic</title>
+   <link rel="stylesheet" href="/pygments.css">
+   <link rel="stylesheet" href="/static/stylesheets/styles.css">
+   <script src="/static/javascripts/jquery-1.9.0.js"></script>
+   <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="/">Home</a></li>
+        </nav> 
+      </div><!-- end header -->
+    <div class="wrapper">
+      <section>
+        <div id="title">
+          <h1>Uvod u C++ by ntrifunovic</h1>
+          <p>
+	    -Dodatna nastava iz informatike-
+	  </p>
+          <hr>
+          <span class="credits left">
+	    <g:plusone annotation = "none" size = "small" expandTo = "left"></g:plusone>
+	    Project maintained by <a href="https://github.com/ntrifunovic">ntrifunovic</a>
+	  </span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a> modified by <a href="https://github.com/ntrifunovic">ntrifunovic</a></span>	  
+        </div>
+	
+	  <h1>Strukture podataka</h1>
+<hr />
+<h2>Strukture u jeziku C++</h2>
+<p>Sintaksa:</p>
+<div class="codehilite"><pre><span class="k">struct</span> <span class="n">imeTipaStrukture</span> <span class="p">{</span>
+    <span class="n">tip1</span> <span class="n">ime1</span><span class="p">;</span>
+    <span class="n">tip2</span> <span class="n">ime2</span><span class="p">;</span>
+    <span class="p">...</span>
+    <span class="n">tipk</span> <span class="n">imek</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">promenjiva1</span><span class="p">;</span>
+
+<span class="n">imeTipaStrukture</span> <span class="n">promenjiva2</span><span class="p">;</span>
+</pre></div>
+
+
+<p><code>Promenjiva1</code> i <code>Promenjiva2</code> su tipa <code>imeTipaStrukture</code>.</p>
+<p>Definicijom strukture sa proslog slajda definisali smo tip koji sadrzi k promenjivih tipova <code>tip1</code>, <code>tip2</code>, ..., <code>tipk</code>. Vrednosti ovih promenjivih mozemo pristupiti navodjenjem imena promenjive iza tacke(<code>.</code>).</p>
+<p><strong>Primer:</strong></p>
+<div class="codehilite"><pre><span class="n">promenjiva1</span><span class="p">.</span><span class="n">ime2</span> <span class="o">=</span> <span class="n">vrednost</span><span class="p">;</span>
+<span class="n">tipk</span> <span class="n">x</span> <span class="o">=</span> <span class="n">promenjiva2</span><span class="p">.</span><span class="n">imek</span><span class="p">;</span>
+</pre></div>
+
+
+<ul>
+<li>Struktura ne moze sadrzati podatke tipa te strukture</li>
+<li>Struktura moze sadrzati podatke tipa pokazivaca na tu strukturu</li>
+<li>Strukture u sebi mogu sadrzati metode i operatore<ul>
+<li>Metode mogu biti staticke<ul>
+<li>Necemo ih koristiti u ovom kursu</li>
+</ul>
+</li>
+<li>Ne statickim metodam se pristupa slicno kao i podacima<ul>
+<li><code>promenjiva1.metoda1(); // gde je promenjiva1 istanca strukture koja sadrzi metodu metoda1</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Primer:</strong></p>
+<div class="codehilite"><pre><span class="k">struct</span> <span class="n">Tacka</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="n">Tacka</span> <span class="n">tacke</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">tacke</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">x</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">tacke</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">y</span><span class="p">);</span>
+    <span class="p">....</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h2>Pokazivaci</h2>
+<h3>(eng. Pointers)</h3>
+<ul>
+<li>
+<p>Promenjiva tipa pokazivac na neki tip se deklarise na sledeci nacin</p>
+<div class="codehilite"><pre><span class="n">tip</span> <span class="o">*</span><span class="n">imePokazivaca</span><span class="p">;</span>
+</pre></div>
+
+
+</li>
+<li>
+<p>Vrednost pokazivaca predstavlja adresu u memoriji na kojoj se nalazi promenjiva onog tipa koji je koriscen pri deklaraciji pokazivaca</p>
+</li>
+<li>
+<p>Memoriskoj lokaciji na koju ukazuje pokazivac pristupamo unarnim prefiksnim operatorom <code>*</code></p>
+</li>
+<li>
+<p>Unarni prefiksni operator <code>&amp;</code> vraca adresu podatka u memoriji</p>
+</li>
+<li>Za pristup elementima strukture preko pokazivaca koristi se operator <code>-&gt;</code></li>
+<li>Pokazivaci se ponasaju kao i drugi podaci<ul>
+<li>Mogu se praviti nizovi pokazivaca</li>
+<li>Strukture u sebi mogu sadrzati pokazivace</li>
+</ul>
+</li>
+</ul>
+<p><strong>Primer:</strong></p>
+<div class="codehilite"><pre><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="kt">int</span> <span class="o">*</span><span class="n">px</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">;</span> <span class="c1">// y nije pokazivac</span>
+<span class="o">*</span><span class="n">px</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
+</pre></div>
+
+
+<p><em>Koja je vrednost u promenjivoj y ?</em></p>
+<blockquote>
+<p>Resenje: 3</p>
+</blockquote>
+<div class="codehilite"><pre><span class="c1">// Pristupanje elementima strukture preko pointera</span>
+<span class="n">Tacka</span> <span class="o">*</span><span class="n">pt</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">t</span><span class="p">;</span>
+<span class="p">(</span><span class="o">*</span><span class="n">pt</span><span class="p">).</span><span class="n">x</span> <span class="o">=</span> <span class="mh">0</span><span class="p">;</span>
+<span class="n">pt</span><span class="o">-&gt;</span><span class="n">y</span> <span class="o">=</span> <span class="mh">0</span><span class="p">;</span>
+</pre></div>
+
+
+<h2>Povezane (Ulancane) Liste</h2>
+<h3>(eng. Linked List)</h3>
+<p>Povezana lista je linearna struktura podataka, tj. podaci su u nekom linearnom poretku.</p>
+<p>Vrste povezanih lista:</p>
+<ul>
+<li>jednostruka ulancana lista</li>
+<li>dvostruko ulancana lista</li>
+<li>ciklicna lista</li>
+<li>ne ciklicna lista</li>
+</ul>
+<p><strong>Primer implementacije:</strong></p>
+<div class="codehilite"><pre><span class="k">struct</span> <span class="n">Elem</span> <span class="p">{</span>
+    <span class="n">Podaci</span> <span class="n">p</span><span class="p">;</span>
+    <span class="n">Elem</span><span class="o">*</span> <span class="n">next</span><span class="p">;</span>
+    <span class="n">Elem</span><span class="o">*</span> <span class="n">prev</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="n">Elem</span><span class="o">*</span> <span class="n">head</span><span class="p">;</span> <span class="c1">// Pokazivac na pocetak liste</span>
+</pre></div>
+
+
+<p>Jednostruko povezane liste sadrze samo pokazivac next, a dvostruko povezane liste sadrze i next i prev pokazivac. </p>
+<p><strong>Primer implementacije jednostuko povezanih listi:</strong></p>
+<div class="codehilite"><pre><span class="k">struct</span> <span class="n">Elem</span> <span class="p">{</span>
+    <span class="n">Podaci</span> <span class="n">p</span><span class="p">;</span>
+    <span class="n">Elem</span><span class="o">*</span> <span class="n">next</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+
+
+<p>Ubacicanje elementa</p>
+<div class="codehilite"><pre><span class="c1">// Ubacujemo element n iza elementa e</span>
+<span class="k">void</span> <span class="n">ubaci</span><span class="p">(</span><span class="n">Elem</span> <span class="o">*</span><span class="n">e</span><span class="p">,</span> <span class="n">Elem</span> <span class="o">*</span><span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">n</span><span class="o">-&gt;</span><span class="n">sled</span> <span class="o">=</span> <span class="n">e</span><span class="o">-&gt;</span><span class="n">sled</span><span class="p">;</span>
+    <span class="n">n</span><span class="o">-&gt;</span><span class="n">prev</span> <span class="o">=</span> <span class="n">e</span><span class="p">;</span>
+    <span class="n">e</span><span class="o">-&gt;</span><span class="n">sled</span><span class="o">-&gt;</span><span class="n">prev</span> <span class="o">=</span> <span class="n">n</span><span class="p">;</span>
+    <span class="n">e</span><span class="o">-&gt;</span><span class="n">sled</span> <span class="o">=</span> <span class="n">n</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>Izbacivanje elementa</p>
+<div class="codehilite"><pre><span class="c1">// Izbacuje element e iz povezane liste</span>
+<span class="k">void</span> <span class="n">izbaci</span><span class="p">(</span><span class="n">Elem</span><span class="o">*</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">Elem</span><span class="o">*</span> <span class="n">prev</span> <span class="o">=</span> <span class="n">e</span><span class="o">-&gt;</span><span class="n">prev</span><span class="p">;</span>
+    <span class="n">Elem</span><span class="o">*</span> <span class="n">next</span> <span class="o">=</span> <span class="n">e</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+
+    <span class="n">prev</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">next</span><span class="p">;</span>
+    <span class="n">next</span><span class="o">-&gt;</span><span class="n">prev</span> <span class="o">=</span> <span class="n">prev</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p><strong>Napomena</strong>: Pretpostavlja se da postoji poslednji dummy element. 
+<em>Da li bi ova implementacija radila da on ne postoji ?</em></p>
+<h2>Hash tabele/funkcije</h2>
+<h3>Hash funkcije</h3>
+<ul>
+<li>Hash funkcija je funkcija koja preslikava podatak promenjive velicine iz velikog skupa mogucih vrednosti u podatak fiksne velicine sa manjim skupom mogucih vrednosti.</li>
+<li>Podatak koji se preslikava se naziva kljuc</li>
+</ul>
+<p><strong>Primer:</strong> kljuc moze biti ime osobe, koje se preslikava u ceo broj</p>
+<p><strong>Primer:</strong> Hash funkcija koja preslika rec od tri znaka</p>
+<div class="codehilite"><pre><span class="n">h</span><span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">3</span><span class="o">*</span><span class="n">r</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">7</span><span class="o">*</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="n">mod</span> <span class="mi">11</span>
+</pre></div>
+
+
+<h3>Hash tabele</h3>
+<ul>
+<li>Hash funkcije se koriste za implementaciju hash tabela</li>
+<li>Hash tabela je struktura podataka sa asocijativnim pristupom, sto znaci da mapira kljuceve u njihove vrednosti</li>
+<li>
+<p>Hash tabela koristi hash funkciju da preslika kljuc u br. ulaza tabele</p>
+</li>
+<li>
+<p>Svaki ulaz hash tabele je struktura podataka sa asocijativnim pristupom</p>
+</li>
+<li>Najcesce se ulaz hash tabele realizuje kao povezana lista key-value parova</li>
+<li>Da bi se pretraga hash tabele brzo izvrsavala potrebno je da je br. elemenata u svim ulazima priblizno jednak. To se postize koriscenjem dobre hash funkcije</li>
+</ul>
+<p>*Pitanje: Sta bi se desilo ako bi se svi kjucevi uvek preslikavali u jedan ulaz hash tabele? *</p>
+<blockquote>
+<p>Odgovor: Hash tabela bi se svela na pretrazivanje u povezanoj listi</p>
+</blockquote>
+<h3>Dobre hash funkcije</h3>
+<ul>
+<li>Hash funkcije koje imaju uniformnu distribuciju vrednosti su dobre hash funkcije</li>
+<li>Hash funkcija treba da bude sto prostija zbog lakseg i brzeg izracunavanja</li>
+</ul>
+<p>Pokazuje se da je funkcija <code>h(K) = K mod p</code> gde je <code>p</code> prost broj dobra hash funkcija</p>
+	
+    </div>
+  </body>
+</html>

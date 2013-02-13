@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+  <head>
+   <title>Uvod u C++ by ntrifunovic</title>
+   <link rel="stylesheet" href="/pygments.css">
+   <link rel="stylesheet" href="/static/stylesheets/styles.css">
+   <script src="/static/javascripts/jquery-1.9.0.js"></script>
+   <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="/">Home</a></li>
+        </nav> 
+      </div><!-- end header -->
+    <div class="wrapper">
+      <section>
+        <div id="title">
+          <h1>Uvod u C++ by ntrifunovic</h1>
+          <p>
+	    -Dodatna nastava iz informatike-
+	  </p>
+          <hr>
+          <span class="credits left">
+	    <g:plusone annotation = "none" size = "small" expandTo = "left"></g:plusone>
+	    Project maintained by <a href="https://github.com/ntrifunovic">ntrifunovic</a>
+	  </span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a> modified by <a href="https://github.com/ntrifunovic">ntrifunovic</a></span>	  
+        </div>
+	
+	  <h1>Nizovi i Matrice</h1>
+<hr />
+<h2>Nizovi</h2>
+<div class="codehilite"><pre><span class="nt">&lt;tip&gt;</span> <span class="nt">&lt;ime&gt;</span><span class="cp">[</span><span class="o">&lt;</span><span class="nx">BROJ_ELEMENATA</span><span class="o">&gt;</span><span class="cp">]</span>
+</pre></div>
+
+
+<ul>
+<li>Slozeni tip podataka</li>
+<li>Osnovni struktuirani tip podataka<ul>
+<li>Elementi su istog tipa</li>
+<li>Identifikuju se rednim brojem<ul>
+<li>Redni brojevi pocinju od <code>0</code> i idu do <code>&lt;BROJ_ELEMENATA&gt; - 1</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>&lt;BROJ_ELEMENATA&gt;</code> je konkretan pozitivan ceo broj ili neka konstanta</li>
+<li>Nizovi se mogu inicijalizovati, tada se moze izostavitit duzina niza.</li>
+</ul>
+<p><strong>Primer:</strong></p>
+<div class="codehilite"><pre><span class="kt">int</span> <span class="n">a</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
+
+<span class="kt">int</span> <span class="n">x</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">};</span>
+<span class="kt">int</span> <span class="n">y</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">};</span>
+
+<span class="kt">char</span> <span class="n">s1</span><span class="p">[]</span> <span class="o">=</span> <span class="s">&quot;End&quot;</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">char</span> <span class="n">s2</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span> <span class="sc">&#39;E&#39;</span><span class="p">,</span> <span class="sc">&#39;n&#39;</span><span class="p">,</span> <span class="sc">&#39;d&#39;</span><span class="p">,</span> <span class="sc">&#39;\0&#39;</span> <span class="p">};</span>
+</pre></div>
+
+
+<h2>Matrice, Visedimenzionalni nizovi</h2>
+<p>Elementi niza mogu da budu nizovi, tako dobijamo visedimenzionalne nizove.</p>
+<p><strong>Primer:</strong></p>
+<div class="codehilite"><pre><span class="c1">// Dvodimenzioni niz</span>
+<span class="k">int</span> <span class="n">x1</span><span class="p">[</span><span class="mh">2</span><span class="p">][</span><span class="mh">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">{{</span><span class="mh">5</span><span class="p">,</span> <span class="mh">10</span><span class="p">,</span> <span class="mh">15</span><span class="p">},</span> <span class="p">{</span><span class="mh">3</span><span class="p">,</span> <span class="mh">6</span><span class="p">,</span> <span class="mh">9</span><span class="p">}};</span>
+<span class="k">int</span> <span class="n">x2</span><span class="p">[</span><span class="mh">2</span><span class="p">][</span><span class="mh">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">{{</span><span class="mh">5</span><span class="p">},</span> <span class="p">{</span><span class="mh">3</span><span class="p">,</span> <span class="mh">6</span><span class="p">}};</span>
+
+<span class="c1">// Trodimenzioni niz</span>
+<span class="n">char</span> <span class="n">tro</span><span class="p">[</span><span class="mh">5</span><span class="p">][</span><span class="mh">5</span><span class="p">][</span><span class="mh">5</span><span class="p">];</span>
+</pre></div>
+
+
+<p>Pristup elementima <code>k</code> dimenzionog niza:</p>
+<div class="codehilite"><pre><span class="nt">&lt;tip&gt;</span> <span class="nt">&lt;ime&gt;</span>&#39;<span class="cp">[</span><span class="s1">&#39;&lt;N1&gt;&#39;</span><span class="cp">]</span>&#39;&#39;<span class="cp">[</span><span class="s1">&#39;&lt;N1&gt;&#39;</span><span class="cp">]</span>&#39;...&#39;<span class="cp">[</span><span class="s1">&#39;&lt;Nk&gt;&#39;</span><span class="cp">]</span>&#39;;
+</pre></div>
+
+
+<p>Ako zelimo da pristupimo elementu sa indekslima <code>x1</code>, <code>x2</code>, …, <code>xk</code> to radimo na sledeci nacin:</p>
+<div class="codehilite"><pre><span class="nt">&lt;ime&gt;</span>&#39;<span class="cp">[</span><span class="s1">&#39;x1&#39;</span><span class="cp">]</span>&#39;&#39;<span class="cp">[</span><span class="s1">&#39;x2&#39;</span><span class="cp">]</span>&#39;...&#39;<span class="cp">[</span><span class="s1">&#39;xk&#39;</span><span class="cp">]</span>&#39;
+</pre></div>
+
+
+<p><strong>Primer:</strong></p>
+<div class="codehilite"><pre><span class="kt">int</span> <span class="n">a</span><span class="p">[</span><span class="mi">100</span><span class="p">][</span><span class="mi">100</span><span class="p">];</span>
+<span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">];</span>
+</pre></div>
+
+
+<p><em>Kako ucitati niz u memoriju?</em></p>
+<blockquote>
+<div class="codehilite"><pre>  <span class="kt">int</span> <span class="n">a</span><span class="p">[</span><span class="mi">1000</span><span class="p">];</span>  <span class="c1">// niz u koji ucitavamo</span>
+  <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>  <span class="c1">// n &lt; 1000, inace ce doci do greske</span>
+
+  <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">n</span><span class="p">);</span>  <span class="c1">// Ucitavamo velicinu niza</span>
+
+  <span class="c1">// Ucitavamo elemente niza</span>
+  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+      <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+</pre></div>
+
+
+</blockquote>
+	
+    </div>
+  </body>
+</html>
