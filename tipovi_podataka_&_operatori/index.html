@@ -1,0 +1,277 @@
+<!doctype html>
+<html>
+  <head>
+   <title>Uvod u C++ by ntrifunovic</title>
+   <link rel="stylesheet" href="/pygments.css">
+   <link rel="stylesheet" href="/static/stylesheets/styles.css">
+   <script src="/static/javascripts/jquery-1.9.0.js"></script>
+   <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="/">Home</a></li>
+        </nav> 
+      </div><!-- end header -->
+    <div class="wrapper">
+      <section>
+        <div id="title">
+          <h1>Uvod u C++ by ntrifunovic</h1>
+          <p>
+	    -Dodatna nastava iz informatike-
+	  </p>
+          <hr>
+          <span class="credits left">
+	    <g:plusone annotation = "none" size = "small" expandTo = "left"></g:plusone>
+	    Project maintained by <a href="https://github.com/ntrifunovic">ntrifunovic</a>
+	  </span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a> modified by <a href="https://github.com/ntrifunovic">ntrifunovic</a></span>	  
+        </div>
+	
+	  <h1>Tipovi podataka &amp; Operatori</h1>
+<hr />
+<h2>Podaci i Tipovi</h2>
+<ul>
+<li>Podatak je svaki objekat koji se obradjuje.</li>
+<li>U programskom jeziku C++ svaki podatak ima svoj tip (C++ je  strogo tipiziran jezik).</li>
+<li>Tip podatka odredjuje sta moze biti njegova vrednost i operacije koje mozemo izvrsavati nad njim.</li>
+<li>Podatak moze biti promenjiva ili konstanta.</li>
+</ul>
+<h2>Prosti tipovi podataka</h2>
+<ul>
+<li><code>char</code> znak ili mali broj <strong>[1B]</strong></li>
+<li><code>short</code> celi broj <strong>[2B]</strong></li>
+<li><code>int</code> celi broj <strong>[4B]</strong></li>
+<li><code>long</code> celi broj <strong>[4B]</strong></li>
+<li><code>long long</code> celi broj <strong>[8B]</strong></li>
+<li><code>float</code> decimalni broj <strong>[4B]</strong></li>
+<li><code>double</code>  decimalni broj dvostruke preciznosti <strong>[8B]</strong></li>
+<li><code>bool</code> logicka vrednost, moze imati vrednosti true i false <strong>[1B]</strong></li>
+</ul>
+<h2>Celobrojni tipovi podataka</h2>
+<ul>
+<li>Svakom celobrojnom tipu moze biti dodat prefiks <code>unsigned</code>. To znaci da ce se podatak tog tipa tretirati kao neoznacen ceo broj.</li>
+<li>Oznaceni celi brojevi se pamte u drugom komplementu.</li>
+<li>Opseg u kome se moze nalaziti vrednost podatka nekog celobrojnog tipa zavisi od broja bajtova koje taj podatak zauzima u memoriji.</li>
+</ul>
+<h3>Kako odrediti opseg vrednosti nekog celobrojnog tipa?</h3>
+<p><strong>Neka je x broj bitova koje zauzima tip podatka koji analiziramo:</strong></p>
+<ul>
+<li>Za oznacene brojeve: od 0 do 2x-1</li>
+<li>Za neoznacene brojeve: od -2x-1 do 2x-1-1</li>
+</ul>
+<p><strong>Primeri:</strong></p>
+<p><em>Koji je opseg tipa unsigned char ?</em></p>
+<blockquote>
+<p>Resenje: od 0 do 255</p>
+</blockquote>
+<p><em>Koji je opseg tipa char ?</em></p>
+<blockquote>
+<p>Resenje od -128 do 127</p>
+</blockquote>
+<p><em>Koji je opseg tipa int ?</em></p>
+<blockquote>
+<p>Resenje od -231 do 231-1</p>
+</blockquote>
+<h2>Identifikatori</h2>
+<ul>
+<li>Imena konstanti, promenjivih, funkcija, ...</li>
+<li>Moraju da pocinju slovom ili znakom '_'</li>
+<li>Sastoje se od slova i cifara</li>
+<li>Ne smeju biti rezervisane reci</li>
+<li>Velika i mala slova se razlikuju</li>
+</ul>
+<p><strong>Primeri:</strong></p>
+<div class="codehilite"><pre><span class="n">a</span>
+<span class="n">A</span>
+<span class="n">_X</span>
+<span class="n">main</span>
+</pre></div>
+
+
+<h2>Deklaracija promenjive</h2>
+<div class="codehilite"><pre><span class="o">&lt;</span> <span class="n">tip</span> <span class="o">&gt;</span> <span class="p">(</span><span class="o">&lt;</span> <span class="n">ime_promenjive</span> <span class="o">&gt;</span><span class="p">(</span> <span class="o">=</span> <span class="o">&lt;</span> <span class="n">vrednost</span> <span class="o">&gt;</span><span class="p">)</span><span class="o">?</span><span class="sc">&#39;,&#39;</span> <span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="o">&lt;</span> <span class="n">ime_promenjive</span> <span class="o">&gt;</span><span class="p">(</span> <span class="o">=</span> <span class="o">&lt;</span> <span class="n">vrednost</span> <span class="o">&gt;</span><span class="p">)</span><span class="o">?</span><span class="p">)</span><span class="sc">&#39;;&#39;</span>
+</pre></div>
+
+
+<p><strong>Primeri:</strong></p>
+<div class="codehilite"><pre><span class="kt">char</span> <span class="n">separator</span> <span class="o">=</span> <span class="sc">&#39;,&#39;</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">suma</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kt">bool</span> <span class="n">test</span><span class="p">;</span>
+<span class="kt">long</span> <span class="kt">long</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">44</span><span class="p">;</span>
+</pre></div>
+
+
+<p>Pocetna vrednost nije obavezna. U tom slucaju promenjiva ima slucajnu pocetnu vrednost.</p>
+<h2>Operatori</h2>
+<ul>
+<li>
+<p>U jeziku C++ postoje 3 vrste operatora:</p>
+<ol>
+<li>
+<p>unarni <strong>[U]</strong>  </p>
+<div class="codehilite"><pre><span class="nt">&lt;oper&gt;&lt;promenjiva&gt;</span>
+</pre></div>
+
+
+<p>ili</p>
+<div class="codehilite"><pre><span class="nt">&lt;promenjiva&gt;&lt;oper&gt;</span>
+</pre></div>
+
+
+</li>
+<li>
+<p>binarni <strong>[B]</strong>  </p>
+<div class="codehilite"><pre><span class="nt">&lt;promenjiva1&gt;</span> <span class="nt">&lt;oper&gt;</span> <span class="nt">&lt;promenjiva2&gt;</span>
+</pre></div>
+
+
+</li>
+<li>
+<p>ternarni <strong>[T]</strong>  </p>
+<div class="codehilite"><pre><span class="nt">&lt;promenjiva1&gt;</span> <span class="nt">&lt;oper</span><span class="na">_deo1</span><span class="nt">&gt;</span> <span class="nt">&lt;promenjiva2&gt;</span> <span class="nt">&lt;oper</span><span class="na">_deo2</span><span class="nt">&gt;</span> <span class="nt">&lt;promenjiva3&gt;</span>
+</pre></div>
+
+
+</li>
+</ol>
+</li>
+<li>
+<p>Rezultat primene operatora je ili neka vrednost ili promena objekta nad kojim operator radi.</p>
+</li>
+</ul>
+<h3>Operator dodele <strong>[B]</strong></h3>
+<p>Operator dodele u jezik C++ je <strong><code>=</code></strong></p>
+<p><strong>Primer:</strong></p>
+<div class="codehilite"><pre><span class="kt">int</span> <span class="n">a</span><span class="p">;</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</pre></div>
+
+
+<p><em>Koju vrednost imaju promenjive <code>a</code> i <code>b</code> ?</em></p>
+<blockquote>
+<p><code>a = 2</code>, <code>b = 1</code></p>
+</blockquote>
+<h3>Aritmeticki operatori</h3>
+<ul>
+<li><code>+</code> sabiranje <strong>[B]</strong></li>
+<li><code>-</code> oduzimanje <strong>[B]</strong>, negacija <strong>[U]</strong></li>
+<li>
+<ul>
+<li><code>*</code> mnozenje <strong>[B]</strong></li>
+</ul>
+</li>
+<li><code>/</code> deljenje <strong>[B]</strong></li>
+<li><code>%</code> ostatak pri deljenju (mod) <strong>[B]</strong></li>
+</ul>
+<p><strong>Primer:</strong></p>
+<div class="codehilite"><pre><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
+</pre></div>
+
+
+<p><em>Koju vrednost imaju promenjive <code>a</code> i <code>b</code> ?</em></p>
+<blockquote>
+<p><code>a = 7</code>, <code>b = 4</code></p>
+</blockquote>
+<h3>Slozeni aritmeticki operatori dodele <strong>[B]</strong></h3>
+<ul>
+<li>
+<p><code>+=</code></p>
+<div class="codehilite"><pre><span class="n">a</span> <span class="o">+=</span> <span class="n">b</span><span class="p">;</span> <span class="c1">// &lt;=&gt; a = a + b;</span>
+</pre></div>
+
+
+</li>
+<li>
+<p><code>-=</code></p>
+<div class="codehilite"><pre><span class="n">a</span> <span class="o">-=</span> <span class="n">b</span><span class="p">;</span> <span class="c1">// &lt;=&gt;  a = a - b;</span>
+</pre></div>
+
+
+</li>
+<li>
+<p><code>*=</code></p>
+<div class="codehilite"><pre><span class="n">a</span> <span class="o">*=</span> <span class="n">b</span><span class="p">;</span> <span class="c1">// &lt;=&gt; a = a * b;</span>
+</pre></div>
+
+
+</li>
+<li>
+<p><code>/=</code></p>
+<div class="codehilite"><pre><span class="n">a</span> <span class="o">/=</span> <span class="n">b</span><span class="p">;</span> <span class="c1">// &lt;=&gt; a = a / b;</span>
+</pre></div>
+
+
+</li>
+<li>
+<p><code>%=</code></p>
+<div class="codehilite"><pre><span class="n">a</span> <span class="o">%=</span> <span class="n">b</span><span class="p">;</span> <span class="c1">// &lt;=&gt; a = a % b;</span>
+</pre></div>
+
+
+</li>
+</ul>
+<h3>Operatori <code>++</code> i <code>--</code> <strong>[U]</strong></h3>
+<p>za <code>++</code></p>
+<div class="codehilite"><pre><span class="o">++</span><span class="n">x</span><span class="p">;</span> <span class="c1">// &lt;=&gt; x = x + 1;</span>
+<span class="n">x</span><span class="o">++</span><span class="p">;</span> <span class="c1">// &lt;=&gt; x = x + 1;</span>
+</pre></div>
+
+
+<p>analogno i za <code>--</code></p>
+<div class="codehilite"><pre><span class="o">--</span><span class="n">x</span><span class="p">;</span> <span class="c1">// &lt;=&gt; x = x - 1;</span>
+<span class="n">x</span><span class="o">--</span><span class="p">;</span> <span class="c1">// &lt;=&gt; x = x - 1;</span>
+</pre></div>
+
+
+<h3>Relacioni operatori <strong>[B]</strong></h3>
+<ul>
+<li><code>==</code> jednakost</li>
+<li><code>!=</code> nejednakost</li>
+<li><code>&gt;</code> vece</li>
+<li><code>&lt;</code> manje</li>
+<li><code>&gt;=</code> vece jednako</li>
+<li><code>&lt;=</code> manje jednako</li>
+</ul>
+<h3>Logicki operatori</h3>
+<ul>
+<li><code>!</code> negacija [U]</li>
+<li><code>&amp;&amp;</code> logicko i [B]</li>
+<li><code>||</code> logicko ili [B]</li>
+</ul>
+<p><strong>Primer:</strong></p>
+<div class="codehilite"><pre><span class="kt">bool</span> <span class="n">test</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="p">(</span><span class="n">b</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">);</span>
+</pre></div>
+
+
+<p><em>Koja je vrednost promenjive test za  <code>a = 3</code> i <code>b = 4</code> ?</em></p>
+<blockquote>
+<p>Resenje: <code>true</code></p>
+</blockquote>
+<h3>Uslovni operator <strong>[T]</strong></h3>
+<div class="codehilite"><pre><span class="o">&lt;</span> <span class="n">uslov</span> <span class="o">&gt;</span> <span class="o">?</span> <span class="o">&lt;</span> <span class="n">vrednost1</span> <span class="o">&gt;</span> <span class="o">:</span> <span class="o">&lt;</span> <span class="n">vrednost2</span> <span class="o">&gt;</span>
+</pre></div>
+
+
+<p><strong>Primeri:</strong></p>
+<div class="codehilite"><pre><span class="kt">int</span> <span class="n">max</span> <span class="o">=</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span> <span class="o">?</span> <span class="n">a</span> <span class="o">:</span> <span class="n">b</span><span class="p">;</span> 
+<span class="kt">int</span> <span class="n">min</span>  <span class="o">=</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span> <span class="o">?</span> <span class="n">a</span> <span class="o">:</span> <span class="n">b</span><span class="p">;</span>
+</pre></div>
+
+
+<p><em>Kako odrediti max 3 broja koristeci ternarni operator ?</em></p>
+<blockquote>
+<div class="codehilite"><pre>  <span class="kt">int</span> <span class="n">max_a_b</span> <span class="o">=</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span> <span class="o">?</span> <span class="n">a</span> <span class="o">:</span> <span class="n">b</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">max</span> <span class="o">=</span> <span class="n">max_a_b</span>  <span class="o">&gt;</span> <span class="n">c</span> <span class="o">?</span> <span class="n">max_a_b</span> <span class="o">:</span> <span class="n">c</span><span class="p">;</span>
+</pre></div>
+
+
+</blockquote>
+	
+    </div>
+  </body>
+</html>
