@@ -9,13 +9,13 @@ U ovom kursu koristicemo C I\O (biblioteku stdio.h) za input i output
 
 * zato sto je znatno brza u odnosu na C++ I\O (biblioteka iostream - cin i cout)
 * metode koje cemo najvise koristiti su
-	* scanf, fscanf, sscanf
-	* printf, fprintf
-	* getchar, fgetc
-	* gets, fgets
-	* puts, fputs
-	* putchar, fputc
-	* fopen
+	* `scanf`, `fscanf`, `sscanf`
+	* `printf`, `fprintf`
+	* `getchar`, `fgetc`
+	* `gets`, `fgets`
+	* `puts`, `fputs`
+	* `putchar`, `fputc`
+	* `fopen`
 	
 ##Struktura C++ programa
 
