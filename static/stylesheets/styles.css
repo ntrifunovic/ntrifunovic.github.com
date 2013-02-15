@@ -862,6 +862,11 @@ section #title .credits.right {
     
 }
 
+.fb_edge_widget_with_comment span.fb_send_button_form_widget {
+  top:0px!important;  /*for example*/
+  left:0px!important;        /*for example*/
+}
+
 @media print, screen and (max-width: 720px) {
   #title .credits {
     display: block;
