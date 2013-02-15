@@ -9,7 +9,6 @@
    <link rel="stylesheet" href="/pygments.css">
    <link rel="stylesheet" href="/static/stylesheets/styles.css">
    <script src="/static/javascripts/jquery-1.9.0.js"></script>
-   <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
    <script type="text/javascript">
      var _gaq = _gaq || [];
      _gaq.push(['_setAccount', 'UA-38492106-1']);
@@ -38,7 +37,6 @@
 	  </p>
           <hr>
           <span class="credits left">
-	    <g:plusone annotation = "none" size = "small" expandTo = "left"></g:plusone>
 	    Project maintained by <a href="https://github.com/ntrifunovic">ntrifunovic</a>
 	  </span>
           <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a> modified by <a href="https://github.com/ntrifunovic">ntrifunovic</a></span>	  
@@ -119,6 +117,55 @@
 
 </blockquote>
 	
+    </div>
+    <div id="footer-bar">
+      <div id="footer-bar-content">
+	<!--span id = "social">
+	  <b> SOCIAL: </b>
+	</span!-->
+
+	
+	<span id="fb-like-b">
+	  <div class="fb-like" data-send="true" data-layout="button_count" data-width="50" data-show-faces="true"></div>
+	      <div id="fb-root"></div>
+	      <script>(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+		fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+	</span>
+
+	<hr class="spaceless">
+
+	
+	<span id="tweetb-b">
+	  <a href="https://twitter.com/share" class="twitter-share-button" data-size="medium">Tweet</a>
+	  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	</span>
+
+	<hr class="spaceless">
+
+	
+	<span id="google-pb">
+	  <!-- Place this tag where you want the +1 button to render. -->
+	  <div class="g-plusone" data-size="medium"></div>
+
+	  <!-- Place this tag after the last +1 button tag. -->
+	  <script type="text/javascript">
+	    (function() {
+	    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+	    po.src = 'https://apis.google.com/js/plusone.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+	    })();
+	  </script>
+	</span>
+
+	<hr class="spaceless">
+
+
+      </div>
     </div>
   </body>
 </html>

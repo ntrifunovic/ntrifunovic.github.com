@@ -698,7 +698,7 @@ dt {
   z-index: 100;
   left: 0;
   top: 0px;
-  height: 60px;
+  height: 50px;
   width: 100%;
   position: fixed;
   background: url(../images/nav-bg.gif) #353535;
@@ -713,7 +713,6 @@ dt {
   margin: 0 auto;
   padding: 0 10px;
   background: blue;
-  margin: 6px auto;
 }
 #header nav li {
   font-family: 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -818,6 +817,49 @@ section #title .credits.left {
 }
 section #title .credits.right {
   float: right;
+}
+
+#footer-bar {
+    z-index: 100;
+    position: fixed;
+    left:0;
+    bottom:0;
+    background: url(../images/nav-bg.gif) #353535;
+    border-top: 4px solid #434343;
+    border-right: 4px solid #434343;
+}
+
+.spaceless {
+    margin: 0;
+    padding: 0;
+}
+
+#footer-bar-content {
+
+}
+
+ #social {
+    font-size: 17px;
+    font-family: 'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    color: #696969;
+    
+}
+
+#fb-like-b,
+#google-pb,
+#tweet-b {
+}
+
+#fb-like-b {
+   
+}
+
+#google-pb {
+}
+
+#tweet-b {
+    
 }
 
 @media print, screen and (max-width: 720px) {
