@@ -1,0 +1,168 @@
+<script
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<!doctype html>
+<html>
+  <head>
+   <title>Uvod u C++ by ntrifunovic</title>
+   <link rel="stylesheet" href="/pygments.css">
+   <link rel="stylesheet" href="/static/stylesheets/styles.css">
+   <script src="/static/javascripts/jquery-1.9.0.js"></script>
+   <script type="text/javascript">
+     var _gaq = _gaq || [];
+     _gaq.push(['_setAccount', 'UA-38492106-1']);
+     _gaq.push(['_trackPageview']);
+
+     (function() {
+     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+
+   </script>
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="/">Home</a></li>
+        </nav> 
+      </div><!-- end header -->
+    <div class="wrapper">
+      <section>
+        <div id="title">
+          <h1>Uvod u C++ by ntrifunovic</h1>
+          <p>
+	    -Dodatna nastava iz informatike-
+	  </p>
+          <hr>
+          <span class="credits left">
+	    Project maintained by <a href="https://github.com/ntrifunovic">ntrifunovic</a>
+	  </span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a> modified by <a href="https://github.com/ntrifunovic">ntrifunovic</a></span>	  
+        </div>
+	
+	  <h1>Dinamičko programiranje</h1>
+<hr />
+<ol>
+<li>
+<p>Odrediti n-ti fibonačijev broj. (<code>f[0] = 1</code>, <code>f[1] = 1</code>, <code>f[i] = f[i-1] + f[i-2]</code>)</p>
+<div class="codehilite"><pre><span class="n">n</span> <span class="o">&lt;</span> <span class="mf">1.000.000</span>
+</pre></div>
+
+
+</li>
+<li>
+<p>Dat je niz celih brojeva. Naći podniz uzastopnih brojeva tako da je njihova suma maksimalna.</p>
+</li>
+<li>
+<p>Perica je na poklon dobio bele i crne kuglice. On želi da ih složi u niz tako da u nizu (gledajući s leva na desno) ako se nalazi bela kuglica onda iza nje mora obavezno ići crna, a iza crne može ići i bela i crna kuglica. Koliko postoji različitih nizova dužine <code>n</code>?</p>
+</li>
+<li>
+<p>Data je matrica a dimenzije <code>n * m</code> popunjena celim brojevima. Sa svakog polja u matrici dozvoljeno je preći samo na polje ispod ili na polje desno od tog polja (ukoliko postoje). Potrebno je izabrati put od gornjeg levog polja (polje sa koordinatama  <code>[1; 1]</code>), do donjeg desnog polja (polja sa koordinatama <code>[n;m]</code>), tako da zbir brojeva u poljima preko kojih se ide, bude maksimalan.</p>
+<div class="codehilite"><pre><span class="n">n</span><span class="p">,</span> <span class="n">m</span> <span class="o">&lt;</span> <span class="mi">5000</span>
+</pre></div>
+
+
+</li>
+<li>
+<p>Data je binarna matrica (elementi matrice su 0 ili 1) dimenzije <code>n * m</code>. Naći najveću kvadratnu podmatricu koja u sebi sadrži samo nule.</p>
+<div class="codehilite"><pre><span class="n">n</span><span class="p">,</span> <span class="n">m</span> <span class="o">&lt;</span> <span class="mf">5000.</span>
+</pre></div>
+
+
+</li>
+<li>
+<p>Koliko ima 2N-tocifrenih brojeva čiji je zbir prvih <code>N</code> cifara jednak zbiru poslednjih N cifara? Rešenje štampati po modulu 7919.</p>
+<div class="codehilite"><pre><span class="n">N</span> <span class="o">&lt;</span> <span class="mi">10000</span>
+</pre></div>
+
+
+</li>
+<li>
+<p>Najduži zajednički podniz (eng. <em>longest common subsequence</em>): Data su dva niza <code>a</code> i <code>b</code>. Naći niz najveće moguće dužine koji je podniz i za a i za b.</p>
+<div class="codehilite"><pre><span class="o">|</span><span class="n">a</span><span class="o">|</span><span class="p">,</span> <span class="o">|</span><span class="n">b</span><span class="o">|</span> <span class="o">&lt;</span> <span class="mi">5000</span>
+</pre></div>
+
+
+</li>
+<li>
+<p>Dat je niz prirodnih brojeva dužine <code>n</code>. Nači najduži rastuči podniz. (ne nužno uzastopnih elemenata)</p>
+<div class="codehilite"><pre><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">5000</span>
+</pre></div>
+
+
+</li>
+<li>
+<p><strong>Problem ranca:</strong><br />
+Provalnik sa rancem zapremine <code>N</code> upao je u prostoriju u kojoj se čuvaju vredni
+predmeti. U prostoriji ima ukupno M predmeta. Za svaki predmet poznata je njegova vrednost <code>v[k]</code> i njegova zapremina <code>z[k], k ϵ [1,M]</code>. Sve navedene vrednosti su celobrojne. Provalnik želi da napuni ranac najvrednijim sadržajem.  </p>
+<p>Potrebno je odredti koje predmete treba staviti u ranac.</p>
+<div class="codehilite"><pre><span class="n">N</span><span class="p">,</span> <span class="n">M</span> <span class="o">&lt;</span> <span class="mi">5000</span>
+</pre></div>
+
+
+</li>
+<li>
+<p><strong>Problem ranca sa ponavljanjem elemenata:</strong><br />
+Provalnik sa rancem zapremine <code>N</code> upao je u prostoriju u kojoj se čuvaju vredni
+predmeti. U prostoriji ima ukupno <code>M</code> klasa predmeta. Za svaku klasu predmeta poznata je njegova vrednost <code>v[k]</code> i njegova zapremina <code>z[k], k ϵ [1,M]</code>. Sve navedene vrednosti su celobrojne, predmeta svake klase ima beskonačno mnogo. Provalnik želi da napuni ranac najvrednijim sadržajem.  </p>
+<p>Potrebno je odredti koje predmete treba staviti u ranac.</p>
+<div class="codehilite"><pre><span class="n">N</span><span class="p">,</span> <span class="n">M</span> <span class="o">&lt;</span> <span class="mi">5000</span>
+</pre></div>
+
+
+</li>
+</ol>
+	
+    </div>
+    <div id="footer-bar">
+      <div id="footer-bar-content">
+	<!--span id = "social">
+	  <b> SOCIAL: </b>
+	</span!-->
+
+	
+	<span id="fb-like-b">
+	  <div class="fb-like" data-send="true" data-layout="button_count" data-width="50" data-show-faces="true"></div>
+	      <div id="fb-root"></div>
+	      <script>(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+		fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+	</span>
+
+	<hr class="spaceless">
+
+	
+	<span id="tweetb-b">
+	  <a href="https://twitter.com/share" class="twitter-share-button" data-size="medium">Tweet</a>
+	  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	</span>
+
+	<hr class="spaceless">
+
+	
+	<span id="google-pb">
+	  <!-- Place this tag where you want the +1 button to render. -->
+	  <div class="g-plusone" data-size="medium"></div>
+
+	  <!-- Place this tag after the last +1 button tag. -->
+	  <script type="text/javascript">
+	    (function() {
+	    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+	    po.src = 'https://apis.google.com/js/plusone.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+	    })();
+	  </script>
+	</span>
+
+	<hr class="spaceless">
+
+      </div>
+    </div>
+  </body>
+</html>
