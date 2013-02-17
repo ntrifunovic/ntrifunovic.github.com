@@ -22,7 +22,6 @@
      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
      })();
-
    </script>
   </head>
   <body>
@@ -58,14 +57,8 @@
 	  <div class="toc">
 <ul>
 <li><a href="#strukture-u-jeziku-c">Strukture u jeziku C++</a></li>
-<li><a href="#pokazivaci">Pokazivaci</a><ul>
-<li><a href="#eng-pointers">(eng. Pointers)</a></li>
-</ul>
-</li>
-<li><a href="#povezane-ulancane-liste">Povezane (Ulancane) Liste</a><ul>
-<li><a href="#eng-linked-list">(eng. Linked List)</a></li>
-</ul>
-</li>
+<li><a href="#pokazivaci">Pokazivaci</a></li>
+<li><a href="#povezane-ulancane-liste">Povezane (Ulancane) Liste</a></li>
 <li><a href="#hash-tabelefunkcije">Hash tabele/funkcije</a><ul>
 <li><a href="#hash-funkcije">Hash funkcije</a></li>
 <li><a href="#hash-tabele">Hash tabele</a></li>
@@ -75,7 +68,7 @@
 </ul>
 </div>
 <hr />
-<h2 id="strukture-u-jeziku-c">Strukture u jeziku C++</h2>
+<h1 id="strukture-u-jeziku-c">Strukture u jeziku C++</h1>
 <p>Sintaksa:</p>
 <div class="codehilite"><pre><span class="k">struct</span> <span class="n">imeTipaStrukture</span> <span class="p">{</span>
     <span class="n">tip1</span> <span class="n">ime1</span><span class="p">;</span>
@@ -130,8 +123,8 @@
 </pre></div>
 
 
-<h2 id="pokazivaci">Pokazivaci</h2>
-<h3 id="eng-pointers">(eng. Pointers)</h3>
+<h1 id="pokazivaci">Pokazivaci</h1>
+<p><strong>(eng. Pointers)</strong></p>
 <ul>
 <li>
 <p>Promenjiva tipa pokazivac na neki tip se deklarise na sledeci nacin</p>
@@ -171,8 +164,8 @@
 </pre></div>
 
 
-<h2 id="povezane-ulancane-liste">Povezane (Ulancane) Liste</h2>
-<h3 id="eng-linked-list">(eng. Linked List)</h3>
+<h1 id="povezane-ulancane-liste">Povezane (Ulancane) Liste</h1>
+<p><strong>(eng. Linked List)</strong></p>
 <p>Povezana lista je linearna struktura podataka, tj. podaci su u nekom linearnom poretku.</p>
 <p>Vrste povezanih lista:</p>
 <ul>
@@ -226,8 +219,8 @@
 
 <p><strong>Napomena</strong>: Pretpostavlja se da postoji poslednji dummy element. 
 <em>Da li bi ova implementacija radila da on ne postoji ?</em></p>
-<h2 id="hash-tabelefunkcije">Hash tabele/funkcije</h2>
-<h3 id="hash-funkcije">Hash funkcije</h3>
+<h1 id="hash-tabelefunkcije">Hash tabele/funkcije</h1>
+<h2 id="hash-funkcije">Hash funkcije</h2>
 <ul>
 <li>Hash funkcija je funkcija koja preslikava podatak promenjive velicine iz velikog skupa mogucih vrednosti u podatak fiksne velicine sa manjim skupom mogucih vrednosti.</li>
 <li>Podatak koji se preslikava se naziva kljuc</li>
@@ -238,7 +231,7 @@
 </pre></div>
 
 
-<h3 id="hash-tabele">Hash tabele</h3>
+<h2 id="hash-tabele">Hash tabele</h2>
 <ul>
 <li>Hash funkcije se koriste za implementaciju hash tabela</li>
 <li>Hash tabela je struktura podataka sa asocijativnim pristupom, sto znaci da mapira kljuceve u njihove vrednosti</li>
@@ -251,7 +244,7 @@
 <blockquote>
 <p>Odgovor: Hash tabela bi se svela na pretrazivanje u povezanoj listi</p>
 </blockquote>
-<h3 id="dobre-hash-funkcije">Dobre hash funkcije</h3>
+<h2 id="dobre-hash-funkcije">Dobre hash funkcije</h2>
 <ul>
 <li>Hash funkcije koje imaju uniformnu distribuciju vrednosti su dobre hash funkcije</li>
 <li>Hash funkcija treba da bude sto prostija zbog lakseg i brzeg izracunavanja</li>

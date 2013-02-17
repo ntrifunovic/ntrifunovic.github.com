@@ -22,7 +22,6 @@
      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
      })();
-
    </script>
   </head>
   <body>
@@ -78,14 +77,14 @@
 </ul>
 </div>
 <hr />
-<h2 id="podaci-i-tipovi">Podaci i Tipovi</h2>
+<h1 id="podaci-i-tipovi">Podaci i Tipovi</h1>
 <ul>
 <li>Podatak je svaki objekat koji se obradjuje.</li>
 <li>U programskom jeziku C++ svaki podatak ima svoj tip (C++ je  strogo tipiziran jezik).</li>
 <li>Tip podatka odredjuje sta moze biti njegova vrednost i operacije koje mozemo izvrsavati nad njim.</li>
 <li>Podatak moze biti promenjiva ili konstanta.</li>
 </ul>
-<h2 id="prosti-tipovi-podataka">Prosti tipovi podataka</h2>
+<h1 id="prosti-tipovi-podataka">Prosti tipovi podataka</h1>
 <ul>
 <li><code>char</code> znak ili mali broj <strong>[1B]</strong></li>
 <li><code>short</code> celi broj <strong>[2B]</strong></li>
@@ -96,13 +95,13 @@
 <li><code>double</code>  decimalni broj dvostruke preciznosti <strong>[8B]</strong></li>
 <li><code>bool</code> logicka vrednost, moze imati vrednosti true i false <strong>[1B]</strong></li>
 </ul>
-<h2 id="celobrojni-tipovi-podataka">Celobrojni tipovi podataka</h2>
+<h1 id="celobrojni-tipovi-podataka">Celobrojni tipovi podataka</h1>
 <ul>
 <li>Svakom celobrojnom tipu moze biti dodat prefiks <code>unsigned</code>. To znaci da ce se podatak tog tipa tretirati kao neoznacen ceo broj.</li>
 <li>Oznaceni celi brojevi se pamte u drugom komplementu.</li>
 <li>Opseg u kome se moze nalaziti vrednost podatka nekog celobrojnog tipa zavisi od broja bajtova koje taj podatak zauzima u memoriji.</li>
 </ul>
-<h3 id="kako-odrediti-opseg-vrednosti-nekog-celobrojnog-tipa">Kako odrediti opseg vrednosti nekog celobrojnog tipa?</h3>
+<h2 id="kako-odrediti-opseg-vrednosti-nekog-celobrojnog-tipa">Kako odrediti opseg vrednosti nekog celobrojnog tipa?</h2>
 <p><strong>Neka je x broj bitova koje zauzima tip podatka koji analiziramo:</strong></p>
 <ul>
 <li>Za oznacene brojeve:  <blockquote>
@@ -127,7 +126,7 @@
 <blockquote>
 <p>Resenje od -231 do 231-1</p>
 </blockquote>
-<h2 id="identifikatori">Identifikatori</h2>
+<h1 id="identifikatori">Identifikatori</h1>
 <ul>
 <li>Imena konstanti, promenjivih, funkcija, ...</li>
 <li>Moraju da pocinju slovom ili znakom '_'</li>
@@ -143,7 +142,7 @@
 </pre></div>
 
 
-<h2 id="deklaracija-promenjive">Deklaracija promenjive</h2>
+<h1 id="deklaracija-promenjive">Deklaracija promenjive</h1>
 <div class="codehilite"><pre><span class="o">&lt;</span> <span class="n">tip</span> <span class="o">&gt;</span> <span class="p">(</span><span class="o">&lt;</span> <span class="n">ime_promenjive</span> <span class="o">&gt;</span><span class="p">(</span> <span class="o">=</span> <span class="o">&lt;</span> <span class="n">vrednost</span> <span class="o">&gt;</span><span class="p">)</span><span class="o">?</span><span class="sc">&#39;,&#39;</span> <span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="o">&lt;</span> <span class="n">ime_promenjive</span> <span class="o">&gt;</span><span class="p">(</span> <span class="o">=</span> <span class="o">&lt;</span> <span class="n">vrednost</span> <span class="o">&gt;</span><span class="p">)</span><span class="o">?</span><span class="p">)</span><span class="sc">&#39;;&#39;</span>
 </pre></div>
 
@@ -157,7 +156,7 @@
 
 
 <p>Pocetna vrednost nije obavezna. U tom slucaju promenjiva ima slucajnu pocetnu vrednost.</p>
-<h2 id="operatori">Operatori</h2>
+<h1 id="operatori">Operatori</h1>
 <ul>
 <li>
 <p>U jeziku C++ postoje 3 vrste operatora:</p>
@@ -194,7 +193,7 @@
 <p>Rezultat primene operatora je ili neka vrednost ili promena objekta nad kojim operator radi.</p>
 </li>
 </ul>
-<h3 id="operator-dodele-b">Operator dodele <strong>[B]</strong></h3>
+<h2 id="operator-dodele-b">Operator dodele <strong>[B]</strong></h2>
 <p>Operator dodele u jezik C++ je <strong><code>=</code></strong></p>
 <p><strong>Primer:</strong></p>
 <div class="codehilite"><pre><span class="kt">int</span> <span class="n">a</span><span class="p">;</span>
@@ -209,7 +208,7 @@
 <blockquote>
 <p><code>a = 2</code>, <code>b = 1</code></p>
 </blockquote>
-<h3 id="aritmeticki-operatori">Aritmeticki operatori</h3>
+<h2 id="aritmeticki-operatori">Aritmeticki operatori</h2>
 <ul>
 <li><code>+</code> sabiranje <strong>[B]</strong></li>
 <li><code>-</code> oduzimanje <strong>[B]</strong>, negacija <strong>[U]</strong></li>
@@ -227,7 +226,7 @@
 <blockquote>
 <p><code>a = 7</code>, <code>b = 4</code></p>
 </blockquote>
-<h3 id="slozeni-aritmeticki-operatori-dodele-b">Slozeni aritmeticki operatori dodele <strong>[B]</strong></h3>
+<h2 id="slozeni-aritmeticki-operatori-dodele-b">Slozeni aritmeticki operatori dodele <strong>[B]</strong></h2>
 <ul>
 <li>
 <p><code>+=</code></p>
@@ -265,7 +264,7 @@
 
 </li>
 </ul>
-<h3 id="operatori-i-u">Operatori <code>++</code> i <code>--</code> <strong>[U]</strong></h3>
+<h2 id="operatori-i-u">Operatori <code>++</code> i <code>--</code> <strong>[U]</strong></h2>
 <p>za <code>++</code></p>
 <div class="codehilite"><pre><span class="o">++</span><span class="n">x</span><span class="p">;</span> <span class="c1">// &lt;=&gt; x = x + 1;</span>
 <span class="n">x</span><span class="o">++</span><span class="p">;</span> <span class="c1">// &lt;=&gt; x = x + 1;</span>
@@ -278,7 +277,7 @@
 </pre></div>
 
 
-<h3 id="relacioni-operatori-b">Relacioni operatori <strong>[B]</strong></h3>
+<h2 id="relacioni-operatori-b">Relacioni operatori <strong>[B]</strong></h2>
 <ul>
 <li><code>==</code> jednakost</li>
 <li><code>!=</code> nejednakost</li>
@@ -287,7 +286,7 @@
 <li><code>&gt;=</code> vece jednako</li>
 <li><code>&lt;=</code> manje jednako</li>
 </ul>
-<h3 id="logicki-operatori">Logicki operatori</h3>
+<h2 id="logicki-operatori">Logicki operatori</h2>
 <ul>
 <li><code>!</code> negacija [U]</li>
 <li><code>&amp;&amp;</code> logicko i [B]</li>
@@ -302,7 +301,7 @@
 <blockquote>
 <p>Resenje: <code>true</code></p>
 </blockquote>
-<h3 id="uslovni-operator-t">Uslovni operator <strong>[T]</strong></h3>
+<h2 id="uslovni-operator-t">Uslovni operator <strong>[T]</strong></h2>
 <div class="codehilite"><pre><span class="o">&lt;</span> <span class="n">uslov</span> <span class="o">&gt;</span> <span class="o">?</span> <span class="o">&lt;</span> <span class="n">vrednost1</span> <span class="o">&gt;</span> <span class="o">:</span> <span class="o">&lt;</span> <span class="n">vrednost2</span> <span class="o">&gt;</span>
 </pre></div>
 
