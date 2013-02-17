@@ -43,9 +43,32 @@
           <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a> modified by <a href="https://github.com/ntrifunovic">ntrifunovic</a></span>	  
         </div>
 	
-	  <h1>Strukture podataka</h1>
+	  <h1 id="strukture-podataka">Strukture podataka</h1>
 <hr />
-<h2>Strukture u jeziku C++</h2>
+<div class="toc">
+<ul>
+<li><a href="#strukture-podataka">Strukture podataka</a><ul>
+<li><a href="#strukture-u-jeziku-c">Strukture u jeziku C++</a></li>
+<li><a href="#pokazivaci">Pokazivaci</a><ul>
+<li><a href="#eng-pointers">(eng. Pointers)</a></li>
+</ul>
+</li>
+<li><a href="#povezane-ulancane-liste">Povezane (Ulancane) Liste</a><ul>
+<li><a href="#eng-linked-list">(eng. Linked List)</a></li>
+</ul>
+</li>
+<li><a href="#hash-tabelefunkcije">Hash tabele/funkcije</a><ul>
+<li><a href="#hash-funkcije">Hash funkcije</a></li>
+<li><a href="#hash-tabele">Hash tabele</a></li>
+<li><a href="#dobre-hash-funkcije">Dobre hash funkcije</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<hr />
+<h2 id="strukture-u-jeziku-c">Strukture u jeziku C++</h2>
 <p>Sintaksa:</p>
 <div class="codehilite"><pre><span class="k">struct</span> <span class="n">imeTipaStrukture</span> <span class="p">{</span>
     <span class="n">tip1</span> <span class="n">ime1</span><span class="p">;</span>
@@ -100,8 +123,8 @@
 </pre></div>
 
 
-<h2>Pokazivaci</h2>
-<h3>(eng. Pointers)</h3>
+<h2 id="pokazivaci">Pokazivaci</h2>
+<h3 id="eng-pointers">(eng. Pointers)</h3>
 <ul>
 <li>
 <p>Promenjiva tipa pokazivac na neki tip se deklarise na sledeci nacin</p>
@@ -141,8 +164,8 @@
 </pre></div>
 
 
-<h2>Povezane (Ulancane) Liste</h2>
-<h3>(eng. Linked List)</h3>
+<h2 id="povezane-ulancane-liste">Povezane (Ulancane) Liste</h2>
+<h3 id="eng-linked-list">(eng. Linked List)</h3>
 <p>Povezana lista je linearna struktura podataka, tj. podaci su u nekom linearnom poretku.</p>
 <p>Vrste povezanih lista:</p>
 <ul>
@@ -196,8 +219,8 @@
 
 <p><strong>Napomena</strong>: Pretpostavlja se da postoji poslednji dummy element. 
 <em>Da li bi ova implementacija radila da on ne postoji ?</em></p>
-<h2>Hash tabele/funkcije</h2>
-<h3>Hash funkcije</h3>
+<h2 id="hash-tabelefunkcije">Hash tabele/funkcije</h2>
+<h3 id="hash-funkcije">Hash funkcije</h3>
 <ul>
 <li>Hash funkcija je funkcija koja preslikava podatak promenjive velicine iz velikog skupa mogucih vrednosti u podatak fiksne velicine sa manjim skupom mogucih vrednosti.</li>
 <li>Podatak koji se preslikava se naziva kljuc</li>
@@ -208,7 +231,7 @@
 </pre></div>
 
 
-<h3>Hash tabele</h3>
+<h3 id="hash-tabele">Hash tabele</h3>
 <ul>
 <li>Hash funkcije se koriste za implementaciju hash tabela</li>
 <li>Hash tabela je struktura podataka sa asocijativnim pristupom, sto znaci da mapira kljuceve u njihove vrednosti</li>
@@ -221,7 +244,7 @@
 <blockquote>
 <p>Odgovor: Hash tabela bi se svela na pretrazivanje u povezanoj listi</p>
 </blockquote>
-<h3>Dobre hash funkcije</h3>
+<h3 id="dobre-hash-funkcije">Dobre hash funkcije</h3>
 <ul>
 <li>Hash funkcije koje imaju uniformnu distribuciju vrednosti su dobre hash funkcije</li>
 <li>Hash funkcija treba da bude sto prostija zbog lakseg i brzeg izracunavanja</li>

@@ -43,9 +43,23 @@
           <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a> modified by <a href="https://github.com/ntrifunovic">ntrifunovic</a></span>	  
         </div>
 	
-	  <h1>Input\Output</h1>
+	  <h1 id="inputoutput">Input\Output</h1>
 <hr />
-<h2>C vs C++ I\O</h2>
+<div class="toc">
+<ul>
+<li><a href="#inputoutput">Input\Output</a><ul>
+<li><a href="#c-vs-c-io">C vs C++ I\O</a></li>
+<li><a href="#struktura-c-programa">Struktura C++ programa</a></li>
+<li><a href="#stdioh">stdio.h</a><ul>
+<li><a href="#scanf-printf-sscanf-parametar-format">scanf, printf, sscanf, ...  parametar format</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<hr />
+<h2 id="c-vs-c-io">C vs C++ I\O</h2>
 <p>U ovom kursu koristicemo C I\O (biblioteku <code>stdio.h</code>) za input i output</p>
 <ul>
 <li>zato sto je znatno brza u odnosu na C++ I\O (biblioteka <code>iostream</code> - <code>cin</code> i <code>cout</code>)</li>
@@ -60,7 +74,7 @@
 </ul>
 </li>
 </ul>
-<h2>Struktura C++ programa</h2>
+<h2 id="struktura-c-programa">Struktura C++ programa</h2>
 <p>Program koji ispisuje <code>Zdravo svete !!!</code></p>
 <div class="codehilite"><pre><span class="c1">// Ovo je komentar</span>
 <span class="cm">/* I ovo je komentar */</span>
@@ -93,7 +107,7 @@
 </pre></div>
 
 
-<h2>stdio.h</h2>
+<h2 id="stdioh">stdio.h</h2>
 <div class="codehilite"><pre><span class="kt">FILE</span><span class="o">*</span> <span class="nf">fopen</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">fileName</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">mode</span><span class="p">);</span>
 </pre></div>
 
@@ -151,7 +165,7 @@
 <li>Posle formata sledi lista promenjivih koje se ispisuju</li>
 </ul>
 <hr />
-<h3><code>scanf</code>, <code>printf</code>, <code>sscanf</code>, ...  parametar <code>format</code></h3>
+<h3 id="scanf-printf-sscanf-parametar-format"><code>scanf</code>, <code>printf</code>, <code>sscanf</code>, ...  parametar <code>format</code></h3>
 <ul>
 <li><code>%c</code>      <code>char</code></li>
 <li><code>%d</code>      <code>long</code>, <code>int</code></li>
