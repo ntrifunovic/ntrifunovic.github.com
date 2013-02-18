@@ -1,0 +1,187 @@
+<script
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+<!doctype html>
+<html>
+  <head>
+   <meta charset="UTF-8">
+   <title>Dodatna nastava iz informatike</title>
+   <link rel="stylesheet" href="/pygments.css">
+   <link rel="stylesheet" href="/static/stylesheets/styles.css">
+   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+   <script>
+     var _gaq = _gaq || [];
+     _gaq.push(['_setAccount', 'UA-38492106-1']);
+     _gaq.push(['_trackPageview']);
+
+     (function() {
+     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+   </script>
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="/">Home</a></li>
+        </nav> 
+      </div><!-- end header -->
+    <div class="wrapper">
+      <section>
+        <div id="title">
+          <h1>
+
+    Uvod u C++ <b>\</b>
+  
+  
+    8<b>.</b>
+  
+  Složenost algoritma
+  
+</h1>
+          <p>
+	    -Dodatna nastava iz informatike-
+	  </p>
+          <hr>
+          <span class="credits left">
+	    Project maintained by <a href="https://github.com/ntrifunovic">ntrifunovic</a>
+	  </span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a> <b>modified</b> by <a href="https://github.com/ntrifunovic">ntrifunovic</a></span>
+        </div>
+	<hr>  
+	
+	  <div class="toc">
+<ul>
+<li><a href="#medjusobno-poredjenje-vise-algoritama">Medjusobno poredjenje vise algoritama</a><ul>
+<li><a href="#najcesce-funkcije-kojima-se-izrazava-slozenost-su">Najcesce funkcije kojima se izrazava slozenost su:</a></li>
+</ul>
+</li>
+<li><a href="#osobine-funkcije-o">Osobine funkcije O</a></li>
+</ul>
+</div>
+<hr />
+<h1 id="medjusobno-poredjenje-vise-algoritama">Medjusobno poredjenje vise algoritama</h1>
+<p>Da bi se od vise mogucih algoritama odredio najbolji obicno je potrebno oceniti dve velcine:</p>
+<ul>
+<li><strong>Vremenska slozenost</strong> - broj elementarnih operacija koje program izvrsi</li>
+<li><strong>Prostorna slozenost</strong> - Zauzece memorije</li>
+</ul>
+<p>Uobicajan nacin za izrazavanje slozenosti algoritma je <em>O</em>-notacija.</p>
+<h2 id="najcesce-funkcije-kojima-se-izrazava-slozenost-su">Najcesce funkcije kojima se izrazava slozenost su:</h2>
+<ul>
+<li><mathjax><mathjax><mathjax>$$O(1)$$</mathjax></mathjax></mathjax> 
+    Izracunavanje u konstantom vremenu. <ul>
+<li><em>Primer:</em> <blockquote>
+<div class="codehilite"><pre>  <span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span> <span class="o">%</span> <span class="n">c</span>
+</pre></div>
+
+
+</blockquote>
+</li>
+</ul>
+</li>
+<li><mathjax><mathjax><mathjax>$$O(\log n)$$</mathjax></mathjax></mathjax>
+    Logaritamska slozenost. Slozenost veoma sporo raste sa povecanjem dimenzije ulaza.<ul>
+<li><em>Primer:</em> <blockquote>
+<p>Binarna pretraga</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><mathjax>$$n$$</mathjax>
+    Linerana slozenost. Za svaki element ulaza potrebno je neko konstatno vreme obrade.</li>
+<li><mathjax><mathjax><mathjax>$$O(n \log n)$$</mathjax></mathjax></mathjax><ul>
+<li><em>Primer:</em> <blockquote>
+<p>Merge Sort, Heap Sort </p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><mathjax><mathjax><mathjax>$$O(n^2)$$</mathjax></mathjax></mathjax>
+Kvadratna slozenost.    <ul>
+<li><em>Primer:</em> <blockquote>
+<div class="codehilite"><pre>  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+            <span class="p">...</span> <span class="c1">// Neka obrada u slozenosti O(1)</span>
+</pre></div>
+
+
+</blockquote>
+</li>
+</ul>
+</li>
+<li><mathjax>$$O(n^3)$$</mathjax></li>
+<li><mathjax><mathjax><mathjax>$$O(2^n)$$</mathjax></mathjax></mathjax>
+    Eksponencijalna slozenost.<ul>
+<li><em>Primer:</em> <blockquote>
+<p><em>Brute force</em> resenja problema</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="osobine-funkcije-o">Osobine funkcije <em>O</em></h1>
+<p><mathjax>$$O(c \cdot n) = O(n),\ c - const$$</mathjax>
+<mathjax>$$O(f(n)) + O(g(n)) = O(f(n) + g(n))$$</mathjax>
+<mathjax>$$O(f(n)) O(g(n)) = O(f(n) g(n))$$</mathjax></p>
+	
+    </div>
+
+    <div id="footer-bar">
+      <div id="footer-bar-content">
+	<hr class="spaceless">
+
+	<span id = "social">
+	  SOCIAL CORNER
+	</span>
+
+	<hr class="spaceless">
+
+	
+	<span id="fb-like-b">
+	  <div class="fb-like" data-send="true" data-layout="button_count" data-width="50" data-show-faces="true"></div>
+	      <div id="fb-root"></div>
+	      <script>(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+		fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+	</span>
+
+	<hr class="spaceless">
+
+	
+	<span id="tweetb-b">
+	  <a href="https://twitter.com/share" class="twitter-share-button" data-size="medium">Tweet</a>
+	  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	</span>
+
+	<hr class="spaceless">
+
+	
+	<span id="google-pb">
+	  <!-- Place this tag where you want the +1 button to render. -->
+	  <div class="g-plusone" data-size="medium"></div>
+
+	  <!-- Place this tag after the last +1 button tag. -->
+	  <script>
+	    (function() {
+	    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+	    po.src = 'https://apis.google.com/js/plusone.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+	    })();
+	  </script>
+	</span>
+
+	<hr class="spaceless">
+
+      </div>
+    </div>
+  </body>
+</html>
