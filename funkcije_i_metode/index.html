@@ -1,0 +1,165 @@
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+  });
+</script>
+<script
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+<!doctype html>
+<html>
+  <head>
+   <meta charset="UTF-8">
+   <title>Dodatna nastava iz informatike</title>
+   <link rel="stylesheet" href="/pygments.css">
+   <link rel="stylesheet" href="/static/stylesheets/styles.css">
+   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+   <script>
+     var _gaq = _gaq || [];
+     _gaq.push(['_setAccount', 'UA-38492106-1']);
+     _gaq.push(['_trackPageview']);
+
+     (function() {
+     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+   </script>
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="/">Home</a></li>
+        </nav> 
+      </div><!-- end header -->
+    <div class="wrapper">
+      <section>
+        <div id="title">
+          <h1>
+
+    Uvod u C++ <b>\</b>
+  
+  
+    5<b>.</b>
+  
+  Funkcije\Metode
+  
+</h1>
+          <p>
+	    -Dodatna nastava iz informatike-
+	  </p>
+          <hr>
+          <span class="credits left">
+	    Project maintained by <a href="https://github.com/ntrifunovic">ntrifunovic</a>
+	  </span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a> <b>modified</b> by <a href="https://github.com/ntrifunovic">ntrifunovic</a></span>
+        </div>
+	<hr>  
+	
+	  <div class="codehilite"><pre><span class="nt">&lt;tip&gt;</span> <span class="nt">&lt;ime&gt;</span>(<span class="nt">&lt;lista</span><span class="na">_argumenata</span><span class="nt">&gt;</span>) <span class="nt">&lt;telo&gt;</span>
+</pre></div>
+
+
+<ul>
+<li>Podela resenja na manje delove</li>
+<li>Koriscenje takvih delova na vise mesta</li>
+<li>Funkciju mozemo smatrati za n-arni operator najviseg prioriteta</li>
+<li><code>&lt;tip&gt;</code> - svi tipovi koje smo spominjali + <code>void</code> (kada funkcija ne vraca vrednost)</li>
+<li><code>&lt;lista_argumenata&gt;</code> - proizvoljni br. elemenata razdvojenih <code>,</code> (moze biti i nula).</li>
+<li>F-ja vraca vrednost koristeci komandu <code>return izraz;</code>, tada se ujedno izlazi iz f-je.</li>
+</ul>
+<h1 id="argumenti">Argumenti</h1>
+<ul>
+<li>Argumenti se mogu u funkciju preneti po vrednosti ili po referenci.</li>
+<li>Podrazumevano je da se prenose po vrednosti<ul>
+<li>To znaci da f-ja ima svoju kopiju argumenata</li>
+</ul>
+</li>
+<li>Ako zelimo da se argument prenosi po referenci tada treba da dodamo <code>&amp;</code> ispred imena argumenta u listi argumenta.<ul>
+<li>To znaci da kada f-ja menja argument ona menja i vrednost za koju je f-ja pozvana</li>
+</ul>
+</li>
+</ul>
+<p><strong>Primer:</strong></p>
+<div class="codehilite"><pre><span class="cp">#include&lt;stdio.h&gt;</span>
+
+<span class="kt">int</span> <span class="nf">zbir</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d %d %d&quot;</span><span class="p">,</span> <span class="n">zbir</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="n">zbir</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">zbir</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">));</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p><em>Sta ispisuje program?</em></p>
+<blockquote>
+<p>Resenje: 4 6 8</p>
+</blockquote>
+	
+    </div>
+
+    <div id="footer-bar">
+      <div id="footer-bar-content">
+	<hr class="spaceless">
+
+	<span id = "social">
+	  SOCIAL CORNER
+	</span>
+
+	<hr class="spaceless">
+
+	
+	<span id="fb-like-b">
+	  <div class="fb-like" data-send="true" data-layout="button_count" data-width="50" data-show-faces="true"></div>
+	      <div id="fb-root"></div>
+	      <script>(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+		fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+	</span>
+
+	<hr class="spaceless">
+
+	
+	<span id="tweetb-b">
+	  <a href="https://twitter.com/share" class="twitter-share-button" data-size="medium">Tweet</a>
+	  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	</span>
+
+	<hr class="spaceless">
+
+	
+	<span id="google-pb">
+	  <!-- Place this tag where you want the +1 button to render. -->
+	  <div class="g-plusone" data-size="medium"></div>
+
+	  <!-- Place this tag after the last +1 button tag. -->
+	  <script>
+	    (function() {
+	    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+	    po.src = 'https://apis.google.com/js/plusone.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+	    })();
+	  </script>
+	</span>
+
+	<hr class="spaceless">
+
+      </div>
+    </div>
+  </body>
+</html>
