@@ -1,3 +1,12 @@
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+  });
+</script>
 <script
   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
@@ -73,8 +82,8 @@
 <p>Uobicajan nacin za izrazavanje slozenosti algoritma je <em>O</em>-notacija.</p>
 <h2 id="najcesce-funkcije-kojima-se-izrazava-slozenost-su">Najcesce funkcije kojima se izrazava slozenost su:</h2>
 <ul>
-<li><mathjax><mathjax><mathjax>$$O(1)$$</mathjax></mathjax></mathjax> 
-    Izracunavanje u konstantom vremenu. <ul>
+<li><mathjax><mathjax><mathjax>$O(1)$</mathjax></mathjax></mathjax><ul>
+<li>Izracunavanje u konstantom vremenu.   </li>
 <li><em>Primer:</em> <blockquote>
 <div class="codehilite"><pre>  <span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span> <span class="o">%</span> <span class="n">c</span>
 </pre></div>
@@ -84,25 +93,27 @@
 </li>
 </ul>
 </li>
-<li><mathjax><mathjax><mathjax>$$O(\log n)$$</mathjax></mathjax></mathjax>
-    Logaritamska slozenost. Slozenost veoma sporo raste sa povecanjem dimenzije ulaza.<ul>
+<li><mathjax><mathjax><mathjax>$O(\log n)$</mathjax></mathjax></mathjax><ul>
+<li>Logaritamska slozenost. Slozenost veoma sporo raste sa povecanjem dimenzije ulaza.</li>
 <li><em>Primer:</em> <blockquote>
 <p>Binarna pretraga</p>
 </blockquote>
 </li>
 </ul>
 </li>
-<li><mathjax>$$n$$</mathjax>
-    Linerana slozenost. Za svaki element ulaza potrebno je neko konstatno vreme obrade.</li>
-<li><mathjax><mathjax><mathjax>$$O(n \log n)$$</mathjax></mathjax></mathjax><ul>
+<li><mathjax><mathjax><mathjax>$O(n)$</mathjax></mathjax></mathjax><ul>
+<li>Linerana slozenost. Za svaki element ulaza potrebno je neko konstatno vreme obrade.</li>
+</ul>
+</li>
+<li><mathjax><mathjax><mathjax>$O(n \log n)$</mathjax></mathjax></mathjax><ul>
 <li><em>Primer:</em> <blockquote>
 <p>Merge Sort, Heap Sort </p>
 </blockquote>
 </li>
 </ul>
 </li>
-<li><mathjax><mathjax><mathjax>$$O(n^2)$$</mathjax></mathjax></mathjax>
-Kvadratna slozenost.    <ul>
+<li><mathjax><mathjax><mathjax>$O(n^2)$</mathjax></mathjax></mathjax><ul>
+<li>Kvadratna slozenost.  </li>
 <li><em>Primer:</em> <blockquote>
 <div class="codehilite"><pre>  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
         <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
@@ -114,9 +125,9 @@ Kvadratna slozenost.    <ul>
 </li>
 </ul>
 </li>
-<li><mathjax>$$O(n^3)$$</mathjax></li>
-<li><mathjax><mathjax><mathjax>$$O(2^n)$$</mathjax></mathjax></mathjax>
-    Eksponencijalna slozenost.<ul>
+<li><mathjax>$O(n^3)$</mathjax></li>
+<li><mathjax><mathjax><mathjax>$O(2^n)$</mathjax></mathjax></mathjax>  <ul>
+<li>Eksponencijalna slozenost.</li>
 <li><em>Primer:</em> <blockquote>
 <p><em>Brute force</em> resenja problema</p>
 </blockquote>
@@ -125,9 +136,9 @@ Kvadratna slozenost.    <ul>
 </li>
 </ul>
 <h1 id="osobine-funkcije-o">Osobine funkcije <em>O</em></h1>
-<p><mathjax>$$O(c \cdot n) = O(n),\ c - const$$</mathjax>
-<mathjax>$$O(f(n)) + O(g(n)) = O(f(n) + g(n))$$</mathjax>
-<mathjax>$$O(f(n)) O(g(n)) = O(f(n) g(n))$$</mathjax></p>
+<p><mathjax>$O(c \cdot n) = O(n),\ c - const$</mathjax><br />
+<mathjax>$O(f(n)) + O(g(n)) = O(f(n) + g(n))$</mathjax><br />
+<mathjax>$O(f(n)) O(g(n)) = O(f(n) g(n))$</mathjax>  </p>
 	
     </div>
 
