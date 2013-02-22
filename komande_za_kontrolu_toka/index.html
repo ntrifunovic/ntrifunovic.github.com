@@ -136,19 +136,26 @@
 <li>Eksplicitno zavrsavanje ciklusa (naredba <code>break</code>)</li>
 <li>Ciklusi u jeziku C++ <code>while</code>, <code>do while</code> i <code>for</code></li>
 </ul>
+<p>Ako je uslov ispunjen ulazimo u petlju kada se naredba izvrsi opet proveramo uslov da odlucimo da li cemo opet uci u petlju ili cemo produziti dalje sa izvrsavanjem.</p>
+<p>Svaka <code>while</code> petlja ima 0 ili vise iteracija.</p>
 <h2 id="while">while</h2>
 <div class="codehilite"><pre><span class="k">while</span> <span class="p">(</span><span class="n">uslov</span><span class="p">)</span> 
     <span class="n">naredba</span><span class="p">;</span>
 </pre></div>
 
 
-<p><strong>Primer:</strong></p>
+<p><strong>Primeri:</strong></p>
 <div class="codehilite"><pre>    <span class="k">while</span><span class="p">(</span><span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
         <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="n">n</span><span class="o">--</span><span class="p">);</span>
 </pre></div>
 
 
-<p>Ako je uslov ispunjen ulazimo u petlju kada se naredba izvrsi opet proveramo uslov da odlucimo da li cemo opet uci u petlju ili cemo produziti dalje sa izvrsavanjem.</p>
+<p>Beskonacna petlja </p>
+<div class="codehilite"><pre><span class="k">while</span> <span class="p">(</span><span class="nb">true</span><span class="p">)</span>
+    <span class="p">...</span>
+</pre></div>
+
+
 <h2 id="do-while">do while</h2>
 <div class="codehilite"><pre><span class="k">do</span>
     <span class="n">naredba</span><span class="p">;</span>
@@ -156,6 +163,8 @@
 </pre></div>
 
 
+<p>Prvo se izvrsi telo petlje pa se zatim proverava uslov.</p>
+<p>Ciklus se ponavalja bar jedan put.</p>
 <p><strong>Primer:</strong></p>
 <div class="codehilite"><pre><span class="k">do</span> <span class="p">{</span>
     <span class="n">x</span><span class="o">++</span><span class="p">;</span>
@@ -164,7 +173,6 @@
 </pre></div>
 
 
-<p>Prvo se izvrsi telo petlje pa se zatim proverava uslov.</p>
 <h2 id="for">for</h2>
 <div class="codehilite"><pre><span class="k">for</span><span class="p">(</span><span class="n">izraz_inicijalizacija</span><span class="p">;</span> <span class="n">uslov</span><span class="p">;</span> <span class="n">izraz_korak</span><span class="p">)</span>
     <span class="n">naredba</span><span class="p">;</span>
@@ -229,6 +237,7 @@
 <blockquote>
 <p>Resenje: druga</p>
 </blockquote>
+<p><em>Zadatak za uvezbavanje:</em> Odrediti i ispisati sumu brojeva koji se unose sa tastature sve dok se ne unese <code>0</code>.</p>
 	
     </div>
 

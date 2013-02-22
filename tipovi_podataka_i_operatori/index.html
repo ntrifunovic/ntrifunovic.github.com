@@ -83,6 +83,7 @@
 <li><a href="#uslovni-operator-t">Uslovni operator [T]</a></li>
 </ul>
 </li>
+<li><a href="#napomena">Napomena</a></li>
 </ul>
 </div>
 <hr />
@@ -94,6 +95,7 @@
 <li>Podatak moze biti promenjiva ili konstanta.</li>
 </ul>
 <h1 id="prosti-tipovi-podataka">Prosti tipovi podataka</h1>
+<p>Tipovi ugradjeni u C++.</p>
 <ul>
 <li><code>char</code> znak ili mali broj <strong>[<abbr title="1 bajt"><abbr title="1 bajt">1B</abbr></abbr>]</strong></li>
 <li><code>short</code> celi broj <strong>[<abbr title="2 bajta"><abbr title="2 bajta">2B</abbr></abbr>]</strong></li>
@@ -102,8 +104,17 @@
 <li><code>long long</code> celi broj <strong>[<abbr title="8 bajta"><abbr title="8 bajta">8B</abbr></abbr>]</strong></li>
 <li><code>float</code> decimalni broj <strong>[<abbr title="4 bajta"><abbr title="4 bajta">4B</abbr></abbr>]</strong></li>
 <li><code>double</code>  decimalni broj dvostruke preciznosti <strong>[<abbr title="8 bajta"><abbr title="8 bajta">8B</abbr></abbr>]</strong></li>
-<li><code>bool</code> logicka vrednost, moze imati vrednosti true i false <strong>[<abbr title="1 bajt"><abbr title="1 bajt">1B</abbr></abbr>]</strong></li>
+<li><code>bool</code> logicka vrednost <strong>[<abbr title="1 bajt"><abbr title="1 bajt"><abbr title="1 bajt">1B</abbr></abbr></abbr>]</strong><ul>
+<li>moze imati vrednosti <code>true</code> i <code>false</code></li>
 </ul>
+</li>
+</ul>
+<p>Velicina tipa se moze utvrditi operatorom <code>sizeof</code>.</p>
+<p><strong>Primer:</strong></p>
+<div class="codehilite"><pre><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span>
+</pre></div>
+
+
 <h1 id="celobrojni-tipovi-podataka">Celobrojni tipovi podataka</h1>
 <ul>
 <li>Svakom celobrojnom tipu moze biti dodat prefiks <code>unsigned</code>. To znaci da ce se podatak tog tipa tretirati kao neoznacen ceo broj.</li>
@@ -203,7 +214,7 @@
 </li>
 </ul>
 <h2 id="operator-dodele-b">Operator dodele <strong>[B]</strong></h2>
-<p>Operator dodele u jezik C++ je <strong><code>=</code></strong></p>
+<p>Operator dodele u jezik C++ je operator <code>=</code>.</p>
 <p><strong>Primer:</strong></p>
 <div class="codehilite"><pre><span class="kt">int</span> <span class="n">a</span><span class="p">;</span>
 <span class="n">a</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
@@ -287,6 +298,7 @@
 
 
 <h2 id="relacioni-operatori-b">Relacioni operatori <strong>[B]</strong></h2>
+<p>Relacioni operatori vracaju logicku vrednost.</p>
 <ul>
 <li><code>==</code> jednakost</li>
 <li><code>!=</code> nejednakost</li>
@@ -296,6 +308,7 @@
 <li><code>&lt;=</code> manje jednako</li>
 </ul>
 <h2 id="logicki-operatori">Logicki operatori</h2>
+<p>Logicki operatori rade sa logickim vrednostima.</p>
 <ul>
 <li><code>!</code> negacija [U]</li>
 <li><code>&amp;&amp;</code> logicko i [B]</li>
@@ -329,6 +342,8 @@
 
 
 </blockquote>
+<h1 id="napomena">Napomena</h1>
+<p><strong>Postoje i drugi operatori (npr. bitovni operatori) koji ovde nisu obradjeni.</strong></p>
 	
     </div>
 
