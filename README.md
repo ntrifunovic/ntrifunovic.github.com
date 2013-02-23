@@ -2,3 +2,5 @@
 ======================
 
 Web site: <http://ntrifunovic.github.com>
+
+On heroku: <http://ntrifunovic.herokuapp.com>
