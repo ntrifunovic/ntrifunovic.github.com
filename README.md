@@ -3,4 +3,4 @@
 
 Web site: <http://ntrifunovic.github.com>
 
-On heroku: <http://damp-cliffs-1585.herokuapp.com>
+On heroku: <http://ntrifunovic.herokuapp.com>
