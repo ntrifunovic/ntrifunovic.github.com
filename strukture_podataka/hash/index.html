@@ -207,10 +207,12 @@
         <div id="title">
           <h1>
 
+    Strukture Podataka <b>\</b>
+  
 
   
 
-  Korisni linkovi &amp; Korisna literatura
+  Hash tabele
   
 </h1>
           <p>
@@ -229,95 +231,42 @@
    
 	  <div class="toc">
 <ul>
-<li><a href="#korisni-linkovi">Korisni linkovi</a><ul>
-<li><a href="#online-judges">Online judges</a></li>
-<li><a href="#online-c-references">Online C++ references</a></li>
-<li><a href="#online-c-compiler-and-debugging-tool">Online C++ compiler and debugging tool</a></li>
-<li><a href="#tutorijali">Tutorijali</a></li>
-</ul>
-</li>
-<li><a href="#korisna-literatura">Korisna literatura</a></li>
+<li><a href="#hash-funkcije">Hash funkcije</a></li>
+<li><a href="#hash-tabele">Hash tabele</a></li>
+<li><a href="#dobre-hash-funkcije">Dobre hash funkcije</a></li>
 </ul>
 </div>
 <hr />
-<h1 id="korisni-linkovi">Korisni linkovi</h1>
-<p><strong>Zvanicni sajt takmicenja</strong></p>
-<blockquote>
-<p><a href="http://takprog.dms.rs">http://takprog.dms.rs</a></p>
-</blockquote>
-<p><strong>USACO Training program</strong></p>
-<blockquote>
-<p><a href="http://train.usaco.org/usacogate">http://train.usaco.org/usacogate</a></p>
-</blockquote>
-<h2 id="online-judges">Online judges</h2>
+<h1 id="hash-funkcije">Hash funkcije</h1>
 <ul>
-<li>
-<p><strong><abbr title="Sadrzi zadatke sa takmicenja od prethodnih godina"><abbr title="Sadrzi zadatke sa takmicenja od prethodnih godina">Z-trening</abbr></abbr></strong></p>
-<blockquote>
-<p><a href="http://z-trening.com">http://z-trening.com</a></p>
-</blockquote>
-</li>
-<li>
-<p>TopCoder</p>
-<blockquote>
-<p><a href="http://www.topcoder.com">http://www.topcoder.com</a></p>
-</blockquote>
-</li>
-<li>
-<p>Spoj</p>
-<blockquote>
-<p><a href="http://www.spoj.com">http://www.spoj.com</a></p>
-</blockquote>
-</li>
-<li>
-<p>Timus</p>
-<blockquote>
-<p><a href="http://acm.timus.ru">http://acm.timus.ru</a></p>
-</blockquote>
-</li>
-<li>
-<p>Saratov</p>
-<blockquote>
-<p><a href="http://acm.sgu.ru">http://acm.sgu.ru</a></p>
-</blockquote>
-</li>
-<li>
-<p>UVa</p>
-<blockquote>
-<p><a href="http://uva.onlinejudge.org">http://uva.onlinejudge.org</a></p>
-</blockquote>
-</li>
-<li>
-<p><em><abbr title="Za ljubitelje matematike"><abbr title="Za ljubitelje matematike">Project Euler</abbr></abbr></em></p>
-<blockquote>
-<p><a href="http://projecteuler.net">http://projecteuler.net</a></p>
-</blockquote>
-</li>
+<li>Hash funkcija je funkcija koja preslikava podatak promenjive velicine iz velikog skupa mogucih vrednosti u podatak fiksne velicine sa manjim skupom mogucih vrednosti.</li>
+<li>Podatak koji se preslikava se naziva kljuc</li>
 </ul>
-<h2 id="online-c-references">Online C++ references</h2>
-<blockquote>
-<p><a href="http://en.cppreference.com">http://en.cppreference.com</a><br />
-<a href="http://cplusplus.com">http://cplusplus.com</a></p>
-</blockquote>
-<h2 id="online-c-compiler-and-debugging-tool">Online C++ compiler and debugging tool</h2>
-<blockquote>
-<p><a href="http://ideone.com">http://ideone.com</a></p>
-</blockquote>
-<h2 id="tutorijali">Tutorijali</h2>
+<p><strong>Primer:</strong> Kljuc moze biti ime osobe, koje se preslikava u ceo broj</p>
+<p><strong>Primer:</strong> Hash funkcija koja preslika rec od tri znaka</p>
+<div class="codehilite"><pre><span class="n">h</span><span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">3</span><span class="o">*</span><span class="n">r</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">7</span><span class="o">*</span><span class="n">r</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="n">mod</span> <span class="mi">11</span>
+</pre></div>
+
+
+<h1 id="hash-tabele">Hash tabele</h1>
 <ul>
-<li><a href="http://community.topcoder.com/tc?module=Static&amp;d1=tutorials&amp;d2=alg_index">TopCoder Algorithm Tutorials</a></li>
+<li>Hash funkcije se koriste za implementaciju hash tabela</li>
+<li>Hash tabela je struktura podataka sa asocijativnim pristupom, sto znaci da mapira kljuceve u njihove vrednosti</li>
+<li>Hash tabela koristi hash funkciju da preslika kljuc u br. ulaza tabele</li>
+<li>Svaki ulaz hash tabele je struktura podataka sa asocijativnim pristupom</li>
+<li>Najcesce se ulaz hash tabele realizuje kao povezana lista key-value parova</li>
+<li>Da bi se pretraga hash tabele brzo izvrsavala potrebno je da je br. elemenata u svim ulazima priblizno jednak. To se postize koriscenjem dobre hash funkcije</li>
 </ul>
-<hr />
-<h1 id="korisna-literatura">Korisna literatura</h1>
-<p><strong>Algoritmi u programskom jeziku C</strong><br />
-Autor: <em>Dragan Urosevic</em><br />
-Izdavac: <em>Mikro knjiga</em></p>
-<p><strong>Algoritmi</strong><br />
-Autor: <em>Miodrag Zivkovic</em><br />
-Izdavac: <em>Matematicki fakultet, Beograd</em></p>
-<p><strong>Introduction to Algorithms</strong><br />
-Autori: <em>Charles E. Leiserson, Clifford Stein, Thomas H. Cormen, Ronald Rivest</em><br />
-Izdavac: <em>The MIT Press</em></p>
+<p><em>Sta bi se desilo ako bi se svi kjucevi uvek preslikavali u jedan ulaz hash tabele?</em></p>
+<blockquote>
+<p>Odgovor: Hash tabela bi se svela na pretrazivanje u povezanoj listi</p>
+</blockquote>
+<h1 id="dobre-hash-funkcije">Dobre hash funkcije</h1>
+<ul>
+<li>Hash funkcije koje imaju uniformnu distribuciju vrednosti su dobre hash funkcije</li>
+<li>Hash funkcija treba da bude sto prostija zbog lakseg i brzeg izracunavanja</li>
+</ul>
+<p>Pokazuje se da je funkcija <code>h(K) = K mod p</code> gde je <code>p</code> prost broj dobra hash funkcija</p>
 	
    <hr>
    
@@ -325,8 +274,8 @@ Izdavac: <em>The MIT Press</em></p>
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
         var disqus_shortname = 'ntrifunovic'; // required: replace example with your forum shortname
-	var disqus_title = '\\Korisni linkovi &amp; Korisna literatura';
-	var disqus_identifier = '\\Korisni linkovi &amp; Korisna literatura';
+	var disqus_title = 'Strukture Podataka\\Hash tabele';
+	var disqus_identifier = 'Strukture Podataka\\Hash tabele';
 
         /* * * DON'T EDIT BELOW THIS LINE * * */
         (function() {

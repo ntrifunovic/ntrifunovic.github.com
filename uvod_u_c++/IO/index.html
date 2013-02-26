@@ -1,0 +1,471 @@
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+  });
+</script>
+<script
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+<!doctype html>
+<html>
+  <head>
+   <meta charset="UTF-8">
+   <title>Dodatna nastava iz informatike</title>
+   <link rel="stylesheet" href="/pygments.css">
+   <link rel="stylesheet" href="/static/stylesheets/styles.css">
+   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+   <script>
+     var _gaq = _gaq || [];
+     _gaq.push(['_setAccount', 'UA-38492106-1']);
+     _gaq.push(['_trackPageview']);
+
+     (function() {
+     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+   </script>
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="/">Home</a></li>
+        </nav> 
+      </div><!-- end header -->
+  
+
+      <div id="index">
+	
+	<ul>
+	  
+          <li>
+            <a href="/korisni_linkovi_i_korisna_literatura/">
+
+  
+
+  Korisni linkovi &amp; Korisna literatura
+  </a>
+          </li>
+	  
+          <li>
+            <a href="/algoritmi/slozenost_algoritma/">
+    Algoritmi <b>\</b>
+  
+
+  
+
+  Složenost algoritma
+  </a>
+          </li>
+	  
+          <li>
+            <a href="/algoritmi/osnovni_algoritmi_sortiranja/">
+    Algoritmi <b>\</b>
+  
+
+  
+
+  Osnovni algoritmi sortiranja
+  </a>
+          </li>
+	  
+          <li>
+            <a href="/strukture_podataka/povezane_liste/">
+    Strukture Podataka <b>\</b>
+  
+
+  
+
+  Povezane Liste
+  </a>
+          </li>
+	  
+          <li>
+            <a href="/strukture_podataka/hash/">
+    Strukture Podataka <b>\</b>
+  
+
+  
+
+  Hash tabele
+  </a>
+          </li>
+	  
+          <li>
+            <a href="/uvod_u_c%2B%2B/tipovi_podataka_i_operatori/">
+    Uvod u C++ <b>\</b>
+  
+
+  
+
+  Tipovi podataka &amp; Operatori
+  </a>
+          </li>
+	  
+          <li>
+            <a href="/uvod_u_c%2B%2B/IO/">
+    Uvod u C++ <b>\</b>
+  
+
+  
+
+  I\O
+  </a>
+          </li>
+	  
+          <li>
+            <a href="/uvod_u_c%2B%2B/komande_za_kontrolu_toka/">
+    Uvod u C++ <b>\</b>
+  
+
+  
+
+  Komande za kontrolu toka
+  </a>
+          </li>
+	  
+          <li>
+            <a href="/uvod_u_c%2B%2B/nizovi_i_matrice/">
+    Uvod u C++ <b>\</b>
+  
+
+  
+
+  Nizovi i Matrice
+  </a>
+          </li>
+	  
+          <li>
+            <a href="/uvod_u_c%2B%2B/funkcije_i_metode/">
+    Uvod u C++ <b>\</b>
+  
+
+  
+
+  Funkcije\Metode
+  </a>
+          </li>
+	  
+          <li>
+            <a href="/uvod_u_c%2B%2B/strukture/">
+    Uvod u C++ <b>\</b>
+  
+
+  
+
+  Strukture
+  </a>
+          </li>
+	  
+          <li>
+            <a href="/uvod_u_c%2B%2B/pokazivaci/">
+    Uvod u C++ <b>\</b>
+  
+
+  
+
+  Pokazivaci
+  </a>
+          </li>
+	  
+          <li>
+            <a href="/zadaci/dinamicko_programiranje/">
+    Zadaci <b>\</b>
+  
+
+  
+
+  Dinamičko programiranje
+  </a>
+          </li>
+	  
+          <li>
+            <a href="/zadaci/z-trening/trojke/">
+    Zadaci <b>\</b>
+  
+
+  
+
+  Z-trening \ Trojke
+  </a>
+          </li>
+	  
+	</ul>
+	
+      </div>
+
+
+    <div class="wrapper">
+      <section>
+        <div id="title">
+          <h1>
+
+    Uvod u C++ <b>\</b>
+  
+
+  
+
+  I\O
+  
+</h1>
+          <p>
+	    -Dodatna nastava iz informatike-
+	  </p>
+          <hr>
+          <span class="credits left">
+	    Project maintained by <a href="https://github.com/ntrifunovic">ntrifunovic</a>
+	  </span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a> <b>modified</b> by <a href="https://github.com/ntrifunovic">ntrifunovic</a></span>
+        </div>
+
+        <hr>  
+	</section>
+	
+   
+	  <h1 id="inputoutput">Input\Output</h1>
+<hr />
+<div class="toc">
+<ul>
+<li><a href="#inputoutput">Input\Output</a><ul>
+<li><a href="#c-vs-c-io">C vs C++ I\O</a></li>
+<li><a href="#struktura-c-programa">Struktura C++ programa</a></li>
+<li><a href="#stdioh">stdio.h</a><ul>
+<li><a href="#scanf-printf-sscanf-parametar-format">scanf, printf, sscanf, ...  parametar format</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<hr />
+<h2 id="c-vs-c-io">C <abbr title="Protiv (eng. versus)">vs</abbr> C++ I\O</h2>
+<p>U ovom kursu koristicemo C I\O (biblioteku <code>stdio.h</code>) za input i output</p>
+<ul>
+<li>zato sto je znatno brza u odnosu na C++ I\O (biblioteka <code>iostream</code> - <code>cin</code> i <code>cout</code>)</li>
+<li>metode koje cemo najvise koristiti su<ul>
+<li><code>scanf</code>, <code>fscanf</code>, <code>sscanf</code></li>
+<li><code>printf</code>, <code>fprintf</code></li>
+<li><code>getchar</code>, <code>fgetc</code></li>
+<li><code>gets</code>, <code>fgets</code></li>
+<li><code>puts</code>, <code>fputs</code></li>
+<li><code>putchar</code>, <code>fputc</code></li>
+<li><code>fopen</code></li>
+</ul>
+</li>
+</ul>
+<p><strong>Primer:</strong> Ucitavanje niza od <code>1 000 000</code> elemenata u nekom zadatku na takmicenju (sa standardnim vremenskim ogranicenjem od <code>1s</code>) moze biti suvise sporo ako se koristi <code>cin</code> (samo ucitavanje moze trajati duze od <code>1s</code>), a da radi dovoljno brzo ako se umesto <code>cin</code> koristi  <code>scanf</code>.</p>
+<h2 id="struktura-c-programa">Struktura C++ programa</h2>
+<p>Program koji ispisuje <code>Zdravo svete !!!</code></p>
+<div class="codehilite"><pre><span class="c1">// Ovo je komentar</span>
+<span class="cm">/* I ovo je komentar */</span>
+
+<span class="cp">#include &lt;stdio.h&gt; </span><span class="c1">// Koristimo standardnu biblioteku stdio</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span> <span class="c1">// Ulazna tacka u program</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Zdravo svete !!!&quot;</span><span class="p">);</span> <span class="c1">// poziv metode za ispis na ekran iz biblioteke stdio</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// Vracamo vrednost 0, sto znaci da se nas program uspesno zavrsio</span>
+<span class="p">}</span> <span class="c1">// Kraj metode main</span>
+</pre></div>
+
+
+<p>Program koji sabira dva broja uneta sa tastature</p>
+<div class="codehilite"><pre><span class="c1">// Program koji sabira dva broja uneta sa tastature</span>
+
+<span class="cp">#include &lt;stdio.h&gt; </span><span class="c1">// Koristimo standardnu biblioteku stdio</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span> <span class="c1">// Ulazna tacka u program</span>
+    <span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">;</span> <span class="c1">// Deklaracija promenjivih a i b tipa int</span>
+
+    <span class="c1">// poziv metode scanf za citanje sa tastature iz biblioteke stdio</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">);</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">);</span> <span class="c1">// poziv metode za ispis na ekran iz biblioteke stdio</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// Vracamo vrednost 0, sto znaci da se nas program uspesno zavrsio</span>
+<span class="p">}</span> <span class="c1">// Kraj metode main</span>
+</pre></div>
+
+
+<h2 id="stdioh">stdio.h</h2>
+<div class="codehilite"><pre><span class="kt">FILE</span><span class="o">*</span> <span class="nf">fopen</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">fileName</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">mode</span><span class="p">);</span>
+</pre></div>
+
+
+<p><code>mode</code> moze biti</p>
+<ul>
+<li><code>"r"</code> ako zelimo da citamo iz fajla</li>
+<li><code>"w"</code> ako zelimo da pisemo u fajl</li>
+<li>postoje i drugi modovi, ali mi ih necemo koristiti</li>
+</ul>
+<p>Povratna vrednost je <abbr title="Pokazivace cemo raditi kasnije u kursu, za sada ne moramo da znamo nista o njima da bismo koristili ove funkcije">pokazivac</abbr> na objekat tipa <code>FILE</code> koji koristimo za pristup otvorenom fajlu.</p>
+<p>Ako je doslo do greske prilikom otvaranja fajla povratna vrednost je <code>null</code> (<abbr title="Pokazivace cemo raditi kasnije u kursu, za sada ne moramo da znamo nista o njima da bismo koristili ove funkcije">pokazivac</abbr> na nista).</p>
+<p><em>Takodje postoji i metoda <code>fclose</code> , koja sluzi za zatvaranje fajla, ali mi je necemo koristiit zato sto se po zavrsetku programa fajl sam zatvara.</em></p>
+<hr />
+<div class="codehilite"><pre><span class="kt">int</span> <span class="nf">getchar</span><span class="p">();</span> <span class="c1">// cita sa standardnog ulaza</span>
+<span class="kt">int</span> <span class="nf">fgetc</span><span class="p">(</span><span class="kt">FILE</span><span class="o">*</span> <span class="n">f</span><span class="p">);</span> <span class="c1">// cita iz fajla</span>
+</pre></div>
+
+
+<ul>
+<li>Cita jedan karakter sa standardnog ulaza\fajla</li>
+<li>Povratna vrednost je procitani znak (njegov ASCII kod ili <code>EOF</code> ako se stiglo do kraja fajla)<ul>
+<li><code>EOF</code> je konstanta koja se nalazi u <code>stdio.h</code></li>
+</ul>
+</li>
+</ul>
+<p><code>getc</code> radi isto sto i <code>fgetc</code>.</p>
+<hr />
+<div class="codehilite"><pre><span class="kt">int</span> <span class="nf">putchar</span><span class="p">(</span><span class="kt">int</span> <span class="n">ch</span><span class="p">);</span> <span class="c1">// pise na standardni izlaz</span>
+<span class="kt">int</span> <span class="nf">fputc</span><span class="p">(</span><span class="kt">int</span> <span class="n">ch</span><span class="p">,</span> <span class="kt">FILE</span><span class="o">*</span> <span class="n">f</span><span class="p">);</span> <span class="c1">// pise u fajl</span>
+</pre></div>
+
+
+<ul>
+<li>Pise jedan karakter na standardni izlaz\fajl</li>
+<li>Vraca <code>ch</code> ako je upis uspeo, <code>EOF</code> ako je doslo do greske</li>
+</ul>
+<p><code>putc</code> radi isto sto i <code>fputc</code>.</p>
+<hr />
+<p><code>gets</code>, <code>fgets</code> - Cita do kraja linije<br />
+<code>puts</code>, <code>fputs</code> - Ispisuje jednu liniju</p>
+<p><em>Za koriscenje ovih metoda potrebno je znanje nizova koje cemo uciti kasnije tokom kursa, pa ne ulazimo u detalje.</em></p>
+<p><strong>Primer:</strong> Program radi isto kao program sa pocetka ove lekcije.</p>
+<div class="codehilite"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">puts</span><span class="p">(</span><span class="s">&quot;Zdravo svete !!!&quot;</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<hr />
+<div class="codehilite"><pre><span class="kt">int</span> <span class="nf">scanf</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">format</span><span class="p">,</span> <span class="p">...);</span>
+<span class="kt">int</span> <span class="nf">fscanf</span><span class="p">(</span><span class="kt">FILE</span><span class="o">*</span> <span class="n">f</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">format</span><span class="p">,</span> <span class="p">...);</span>
+</pre></div>
+
+
+<ul>
+<li>Povratna vrednost je broj procitanih elemenata, <code>EOF</code> ako je doslo do greske</li>
+<li><code>format</code> - Format ulaza koji se cita</li>
+<li>Posle formata sledi lista adresa promenjivih u koje se pamte ucitane vrednosti<ul>
+<li>Za dobijanje adrese promenjive koristi se operator <code>&amp;</code> </li>
+</ul>
+</li>
+</ul>
+<hr />
+<div class="codehilite"><pre><span class="kt">int</span> <span class="nf">printf</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">format</span><span class="p">,</span> <span class="p">...);</span>
+<span class="kt">int</span> <span class="nf">fprintf</span><span class="p">(</span><span class="kt">FILE</span><span class="o">*</span> <span class="n">f</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">format</span><span class="p">,</span> <span class="p">...);</span>
+</pre></div>
+
+
+<ul>
+<li>Povratna vrednost je broj ispisanih karaktera, negativna vrednost ako je doslo do greske</li>
+<li><code>format</code> - Format izlaza koji se ispisuje</li>
+<li>Posle formata sledi lista promenjivih koje se ispisuju</li>
+</ul>
+<hr />
+<h3 id="scanf-printf-sscanf-parametar-format"><code>scanf</code>, <code>printf</code>, <code>sscanf</code>, ...  parametar <code>format</code></h3>
+<ul>
+<li><code>%c</code>      <code>char</code></li>
+<li><code>%d</code>      <code>long</code>, <code>int</code></li>
+<li><code>%u</code>      <code>unsigned int</code></li>
+<li><code>%lld</code>    <code>long long</code></li>
+<li><code>%f</code>      <code>float</code></li>
+<li><code>%lf</code>     <code>double</code></li>
+<li>
+<p><code>%s</code>      <code>char*</code></p>
+</li>
+<li>
+<p>Opciono posle <code>%</code> moze ici <code>*</code> sto ce za posledicu imati da se procitani podatak ne pamti u neku promenjivu</p>
+</li>
+<li>Postoje i drugi opcioni parametri vezani za formatiranje ulaza</li>
+</ul>
+	
+   <hr>
+   
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'ntrifunovic'; // required: replace example with your forum shortname
+	var disqus_title = 'Uvod u C++\\I\O';
+	var disqus_identifier = 'Uvod u C++\\I\O';
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+
+
+    </div>
+
+    <div id="footer-bar">
+      <div id="footer-bar-content">
+	<hr class="spaceless">
+
+	<span id = "social">
+	  SOCIAL CORNER
+	</span>
+
+	<hr class="spaceless">
+
+	
+	<span id="fb-like-b">
+	  <div class="fb-like" data-send="true" data-layout="button_count" data-width="50" data-show-faces="true"></div>
+	      <div id="fb-root"></div>
+	      <script>(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+		fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	      </script>
+	</span>
+
+	<hr class="spaceless">
+
+	
+	<span id="tweetb-b">
+	  <a href="https://twitter.com/share" class="twitter-share-button" data-size="medium">Tweet</a>
+	  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	</span>
+
+	<hr class="spaceless">
+
+	
+	<span id="google-pb">
+	  <!-- Place this tag where you want the +1 button to render. -->
+	  <div class="g-plusone" data-size="medium"></div>
+
+	  <!-- Place this tag after the last +1 button tag. -->
+	  <script>
+	    (function() {
+	    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+	    po.src = 'https://apis.google.com/js/plusone.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+	    })();
+	  </script>
+	</span>
+
+	<hr class="spaceless">
+
+      </div>
+    </div>
+  </body>
+</html>

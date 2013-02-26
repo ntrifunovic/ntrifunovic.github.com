@@ -608,10 +608,10 @@ strong {
 }
 
 .wrapper {
-  max-width: 650px;
-  margin: 0 auto;
+  width: 65%;
+  margin: 0 27.5%;
   position: relative;
-  padding: 0 20px;
+  padding: 0 0;
 }
 
 section img {
@@ -782,9 +782,14 @@ dt {
   font-size: 11px;
 }
 
+#naslovna{
+  padding: 10px 0px 0px 0px;
+  margin: 0;
+  margin-top: 0;
+}
+
 section {
-  max-width: 650px;
-  padding: 30px 0px 50px 0px;
+  padding: 30px 0px 0px 0px;
   margin: 20px 0;
   margin-top: 70px;
 }
@@ -820,6 +825,16 @@ section #title .credits.left {
 }
 section #title .credits.right {
   float: right;
+}
+
+#index {
+    z-index: 100;
+    position: fixed;
+    left: 0;
+
+    max-width: 25%;
+
+    font-size: 13px;
 }
 
 #footer-bar {

@@ -207,10 +207,12 @@
         <div id="title">
           <h1>
 
+    Algoritmi <b>\</b>
+  
 
   
 
-  Korisni linkovi &amp; Korisna literatura
+  Osnovni algoritmi sortiranja
   
 </h1>
           <p>
@@ -229,95 +231,112 @@
    
 	  <div class="toc">
 <ul>
-<li><a href="#korisni-linkovi">Korisni linkovi</a><ul>
-<li><a href="#online-judges">Online judges</a></li>
-<li><a href="#online-c-references">Online C++ references</a></li>
-<li><a href="#online-c-compiler-and-debugging-tool">Online C++ compiler and debugging tool</a></li>
-<li><a href="#tutorijali">Tutorijali</a></li>
-</ul>
-</li>
-<li><a href="#korisna-literatura">Korisna literatura</a></li>
+<li><a href="#insertion-sort">Insertion sort</a></li>
+<li><a href="#selection-sort">Selection sort</a></li>
+<li><a href="#bubble-sort">Bubble sort</a></li>
+<li><a href="#counting-sort">Counting sort</a></li>
+<li><a href="#radix-sort">Radix sort</a></li>
 </ul>
 </div>
 <hr />
-<h1 id="korisni-linkovi">Korisni linkovi</h1>
-<p><strong>Zvanicni sajt takmicenja</strong></p>
-<blockquote>
-<p><a href="http://takprog.dms.rs">http://takprog.dms.rs</a></p>
-</blockquote>
-<p><strong>USACO Training program</strong></p>
-<blockquote>
-<p><a href="http://train.usaco.org/usacogate">http://train.usaco.org/usacogate</a></p>
-</blockquote>
-<h2 id="online-judges">Online judges</h2>
 <ul>
-<li>
-<p><strong><abbr title="Sadrzi zadatke sa takmicenja od prethodnih godina"><abbr title="Sadrzi zadatke sa takmicenja od prethodnih godina">Z-trening</abbr></abbr></strong></p>
-<blockquote>
-<p><a href="http://z-trening.com">http://z-trening.com</a></p>
-</blockquote>
-</li>
-<li>
-<p>TopCoder</p>
-<blockquote>
-<p><a href="http://www.topcoder.com">http://www.topcoder.com</a></p>
-</blockquote>
-</li>
-<li>
-<p>Spoj</p>
-<blockquote>
-<p><a href="http://www.spoj.com">http://www.spoj.com</a></p>
-</blockquote>
-</li>
-<li>
-<p>Timus</p>
-<blockquote>
-<p><a href="http://acm.timus.ru">http://acm.timus.ru</a></p>
-</blockquote>
-</li>
-<li>
-<p>Saratov</p>
-<blockquote>
-<p><a href="http://acm.sgu.ru">http://acm.sgu.ru</a></p>
-</blockquote>
-</li>
-<li>
-<p>UVa</p>
-<blockquote>
-<p><a href="http://uva.onlinejudge.org">http://uva.onlinejudge.org</a></p>
-</blockquote>
-</li>
-<li>
-<p><em><abbr title="Za ljubitelje matematike"><abbr title="Za ljubitelje matematike">Project Euler</abbr></abbr></em></p>
-<blockquote>
-<p><a href="http://projecteuler.net">http://projecteuler.net</a></p>
-</blockquote>
-</li>
+<li>Sortiranje je proces preuredjivanja skupa podataka da zadovoljava neki zadati poredak</li>
+<li>Sortiranje omogucava kasnije efikasno pretrazivanje</li>
+<li>Postoje razni algoritmi sortiranja</li>
 </ul>
-<h2 id="online-c-references">Online C++ references</h2>
-<blockquote>
-<p><a href="http://en.cppreference.com">http://en.cppreference.com</a><br />
-<a href="http://cplusplus.com">http://cplusplus.com</a></p>
-</blockquote>
-<h2 id="online-c-compiler-and-debugging-tool">Online C++ compiler and debugging tool</h2>
-<blockquote>
-<p><a href="http://ideone.com">http://ideone.com</a></p>
-</blockquote>
-<h2 id="tutorijali">Tutorijali</h2>
+<p>Osnovni algoritmi sortiranja koje cemo obraditi u ovoj prezentaciji su:</p>
 <ul>
-<li><a href="http://community.topcoder.com/tc?module=Static&amp;d1=tutorials&amp;d2=alg_index">TopCoder Algorithm Tutorials</a></li>
+<li>Insertion sort</li>
+<li>Selection sort</li>
+<li>Bubble sort</li>
+<li>Counting sort</li>
+<li>Radix sort</li>
 </ul>
-<hr />
-<h1 id="korisna-literatura">Korisna literatura</h1>
-<p><strong>Algoritmi u programskom jeziku C</strong><br />
-Autor: <em>Dragan Urosevic</em><br />
-Izdavac: <em>Mikro knjiga</em></p>
-<p><strong>Algoritmi</strong><br />
-Autor: <em>Miodrag Zivkovic</em><br />
-Izdavac: <em>Matematicki fakultet, Beograd</em></p>
-<p><strong>Introduction to Algorithms</strong><br />
-Autori: <em>Charles E. Leiserson, Clifford Stein, Thomas H. Cormen, Ronald Rivest</em><br />
-Izdavac: <em>The MIT Press</em></p>
+<h1 id="insertion-sort">Insertion sort</h1>
+<ol>
+<li>Uredjeni deo niza se sastoji samo od prvog elementa niza</li>
+<li>Sledeci element se umece u uredjeni deo niza na odgovarajuce mesto. Ovim se uredjeni deo niza povecava za jedan element, a ne uredjeni deo smanjuje za jedan element</li>
+<li>Ako ne uredjeni deo nije prazan ponavlja se korak 2.</li>
+</ol>
+<p><strong>Primer:</strong> sortiramo niz 3 1 4 2 koristeci insertion sort</p>
+<blockquote>
+<p>3 | 1 4 2</p>
+<p>1 3 | 4 2</p>
+<p>1 3 4 | 2</p>
+<p>1 2 3 4 | </p>
+</blockquote>
+<h1 id="selection-sort">Selection sort</h1>
+<ol>
+<li>Uredjeni deo niza je prazan</li>
+<li>Najmanji element ne uredjenog dela niza se prebacuje na kraj uredjenog dela niza</li>
+<li>Ako ne uredjeni deo nije prazan ponavlja se korak 2.</li>
+</ol>
+<p><strong>Primer:</strong> sortiramo niz 3 1 4 2 koristeci slection sort</p>
+<blockquote>
+<p>1 | 3 4 2</p>
+<p>1 2 | 3 4</p>
+<p>1 2 3 | 4</p>
+<p>1 2 3 4 | </p>
+</blockquote>
+<h1 id="bubble-sort">Bubble sort</h1>
+<ol>
+<li>Prolazimo kroz niz i poredimo dva susedna elementa ako nisu u dobrom poredku menjamo im redosled</li>
+<li>Ako je pri prolasku bilo promena ponavljamo korak 1.</li>
+</ol>
+<p><strong>Primer:</strong> sortiramo niz 3 1 4 2 koristeci bubble sort</p>
+<blockquote>
+<p>3 1 4 2; 1-3 4 2; 1 3 2-4</p>
+<p>1 3 2 4; 1 2-3 4</p>
+</blockquote>
+<h1 id="counting-sort">Counting sort</h1>
+<p>Podrazumeva se da su kljucevi po kojima se podaci sortiraju celi brojevi iz intervala od <code>1</code> do <code>K</code>.</p>
+<p><strong>Ideja counting sort-a:</strong> Odrediti broj elemenata manjih od nekog elementa. Koristeci ovu informaciju mozemo odrediti poziciju elementa u nizu.</p>
+<p><em>Sta da radimo kada niz sadrzi elemente sa istim kjucem ?</em></p>
+<ol>
+<li>Odredimo <code>C[x] =</code> broj elementa u nizu sa kljucem <code>x</code>, <code>x = 1..K</code></li>
+<li><code>C[2] += C[1]; C[3] += C[2]; ... C[K] += C[K-1];</code></li>
+<li>Pozicija u sortiranom nizu elementa sa kljucem <code>x</code> je <code>C[x]</code>, problem vise istih  kjuceva resavamo tako sto radimo <code>C[x]--</code> posto smestimo element na njegovo mesto.</li>
+</ol>
+<p><strong>Primer:</strong> sortiramo niz 3 2 1 3 2 koristeci countig sort</p>
+<ol>
+<li>
+<blockquote>
+<p><code>C[1] = 1</code>, <code>C[2] = 2</code>, <code>C[3] = 2</code></p>
+</blockquote>
+</li>
+<li>
+<blockquote>
+<p><code>C[1] = 1</code>, <code>C[2] = 3</code>, <code>C[3] = 5</code></p>
+</blockquote>
+</li>
+<li></li>
+<li>
+<blockquote>
+<div class="codehilite"><pre>    <span class="n">_</span> <span class="n">_</span> <span class="n">_</span> <span class="n">_</span> <span class="mi">3</span> <span class="n">C</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">_</span> <span class="n">_</span> <span class="mi">2</span> <span class="n">_</span> <span class="mi">3</span> <span class="n">C</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="mi">1</span> <span class="n">_</span> <span class="mi">2</span> <span class="n">_</span> <span class="mi">3</span> <span class="n">C</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="mi">1</span> <span class="n">_</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">3</span> <span class="n">C</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="mi">1</span> <span class="mi">2</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">3</span> <span class="n">C</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+
+
+</blockquote>
+</li>
+</ol>
+<h1 id="radix-sort">Radix sort</h1>
+<p>Koristi si se kada su kjucevi k-tocifreni celi brojevi</p>
+<ol>
+<li>Prvo se posmatra najmladja cifra kljuca</li>
+<li>Elemente niza redom dodajemo na kraj jednog od 10 redova u zavisnosti od posmatrane cifre</li>
+<li>Spajamo redove</li>
+<li>Ponavljamo postupak od koraka 2. za sledecu cifru</li>
+</ol>
+<p><strong>Primer:</strong> sortiramo niz 213 191 222 214 koristeci radix sort</p>
+<blockquote>
+<p>191 222 213 214</p>
+<p>213 214 222 191</p>
+<p>191 213 214 222</p>
+</blockquote>
 	
    <hr>
    
@@ -325,8 +344,8 @@ Izdavac: <em>The MIT Press</em></p>
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
         var disqus_shortname = 'ntrifunovic'; // required: replace example with your forum shortname
-	var disqus_title = '\\Korisni linkovi &amp; Korisna literatura';
-	var disqus_identifier = '\\Korisni linkovi &amp; Korisna literatura';
+	var disqus_title = 'Algoritmi\\Osnovni algoritmi sortiranja';
+	var disqus_identifier = 'Algoritmi\\Osnovni algoritmi sortiranja';
 
         /* * * DON'T EDIT BELOW THIS LINE * * */
         (function() {
