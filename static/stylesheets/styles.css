@@ -834,7 +834,13 @@ section #title .credits.right {
 
     max-width: 25%;
 
+
     font-size: 13px;
+}
+
+.index-item {
+    color: #FC623A;
+    
 }
 
 #footer-bar {
@@ -860,7 +866,7 @@ section #title .credits.right {
     font-size: 16px;
     font-family: 'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 900;
-    color: #D14D2B;
+    color: #C95132;
     
 }
 
