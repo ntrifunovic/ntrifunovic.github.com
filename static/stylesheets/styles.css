@@ -817,9 +817,14 @@ section #title .credits.right {
     left: 0;
 
     max-width: 25%;
-
+    overflow: hidden;
 
     font-size: 13px;
+}
+
+#index #scroller{
+    padding-bottom: 15px;
+    overflow: scroll; 
 }
 
 .index-item {
