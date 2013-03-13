@@ -811,25 +811,20 @@ section #title .credits.right {
   float: right;
 }
 
-#sidebar {
+#index {
     z-index: 100;
     position: fixed;
-    max-width: 25%;
     left: 0;
 
-}
-
-#sidebar #index {
-    height: calc(100% - 115px);
-    width: 100%;
+    max-width: 25%;
     overflow: hidden;
+
     font-size: 13px;
 }
 
-#sidebar #index #scroller{
-    height: calc(100% - 115px);
-    width: 100%;
+#index #scroller{
     padding-bottom: 15px;
+  
     overflow: scroll; 
 }
 
@@ -838,8 +833,8 @@ section #title .credits.right {
     
 }
 
-#sidebar #footer-bar {
-    height: 115px;
+#footer-bar {
+    z-index: 100;
     position: fixed;
     left:0;
     bottom:0;
