@@ -11,12 +11,12 @@
 
    <title>
 
-    Algoritmi \
+    Projekti \
   
 
   
 
-  Složenost algoritma
+  Web Site
   
 </title>
    <link rel="stylesheet" href="/pygments.css">
@@ -245,10 +245,10 @@
       <section>
         <div id="title">
           
-<h1>Složenost algoritma</h1>
+<h1>Web Site</h1>
   
      <p>
-       -Algoritmi-
+       -Projekti-
      </p>
   
   
@@ -266,80 +266,46 @@
    
           <div class="toc">
 <ul>
-<li><a href="#medjusobno-poredjenje-vise-algoritama">Medjusobno poredjenje vise algoritama</a><ul>
-<li><a href="#najcesce-funkcije-kojima-se-izrazava-slozenost-su">Najcesce funkcije kojima se izrazava slozenost su:</a></li>
-</ul>
-</li>
-<li><a href="#osobine-funkcije-o">Osobine funkcije O</a></li>
+<li><a href="#koriscene-tehnologije">Koriscene tehnologije</a></li>
+<li><a href="#tema">Tema</a></li>
+<li><a href="#free-hosting">Free Hosting</a></li>
 </ul>
 </div>
 <hr />
-<h1 id="medjusobno-poredjenje-vise-algoritama">Medjusobno poredjenje vise algoritama</h1>
-<p>Da bi se od vise mogucih algoritama odredio najbolji obicno je potrebno oceniti dve velcine:</p>
+<h1 id="koriscene-tehnologije">Koriscene tehnologije</h1>
+<p>Ovaj web site je napravljen koristeci <code>Python</code> kao i pakete <code>flask</code>, <code>FlatPages</code>, <code>Frozen-Flask</code> i <code>markdown</code>.</p>
+<p>Kao web-framework za razvoj sajta koriscen je <strong><a href="http://flask.pocoo.org">Flask</a></strong>.</p>
+<blockquote>
+<p>Flask is a microframework for Python based on Werkzeug, Jinja 2 and good intentions. And before you ask: It's BSD licensed!</p>
+</blockquote>
+<p>Ceo sajt se dinamicki generise iz fajlova koji su u <strong><a href="http://daringfireball.net/projects/markdown/">markdown</a></strong> formatu koristeci pakete <code>markdown</code> i <code>FlatPages</code>.</p>
+<blockquote>
+<p>Markdown is a text-to-HTML conversion tool for web writers. Markdown allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML (or HTML).</p>
+</blockquote>
+<p>Vise o koriscenim paketima mozete pronaci na: </p>
 <ul>
-<li><strong>Vremenska slozenost</strong> - broj elementarnih operacija koje program izvrsi</li>
-<li><strong>Prostorna slozenost</strong> - Zauzece memorije</li>
+<li><a href="http://pythonhosted.org/Markdown/">http://pythonhosted.org/Markdown/</a></li>
+<li><a href="http://flask.pocoo.org">http://flask.pocoo.org</a></li>
+<li><a href="http://pythonhosted.org/Flask-FlatPages/">http://pythonhosted.org/Flask-FlatPages/</a></li>
+<li><a href="http://pythonhosted.org/Frozen-Flask/">http://pythonhosted.org/Frozen-Flask/</a></li>
 </ul>
-<p>Uobicajan nacin za izrazavanje slozenosti algoritma je <em>O</em>-notacija.</p>
-<h2 id="najcesce-funkcije-kojima-se-izrazava-slozenost-su">Najcesce funkcije kojima se izrazava slozenost su:</h2>
-<ul>
-<li><mathjax><mathjax><mathjax>$O(1)$</mathjax></mathjax></mathjax><ul>
-<li>Izracunavanje u konstantom vremenu.   </li>
-<li><em>Primer:</em> <blockquote>
-<div class="codehilite"><pre>  <span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span> <span class="o">%</span> <span class="n">c</span>
+<p>Pakete mozete instalirati koristeci <code>pip</code>. ( Vise o <code>pip</code>-u mozete pronaci na <a href="https://pypi.python.org/pypi/pip">https://pypi.python.org/pypi/pip</a>. )</p>
+<div class="codehilite"><pre><span class="n">pip</span> <span class="n">install</span> <span class="n">markdown</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">flask</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">Frozen</span><span class="o">-</span><span class="n">Flask</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">Flask</span><span class="o">-</span><span class="n">FlatPages</span>
 </pre></div>
 
 
-</blockquote>
-</li>
+<h1 id="tema">Tema</h1>
+<p>Koriscena tema je modifikovana verzija teme <a href="https://github.com/mattgraham/Midnight">Midnight by mattgraham</a>.</p>
+<h1 id="free-hosting">Free Hosting</h1>
+<p>Ovaj website koristi free hosting i dostupan ja na dve adrese <a href="http://ntrifunovic.github.com">http://ntrifunovic.github.com</a> i <a href="http://ntrifunovic.herokuapp.com">http://ntrifunovic.herokuapp.com</a>.</p>
+<p>Vise o free hosting-u koji ovaj website koristi mozete pronaci na:</p>
+<ul>
+<li><a href="http://pages.github.com">http://pages.github.com</a> ( <strong>github pages</strong> moze da host-uje samo staticki sadrzaj za generisanje statickog website-a koriscen je paket <code>Frozen-Flask</code> )</li>
+<li><a href="http://www.heroku.com">http://www.heroku.com</a> ( <strong>Heroku</strong> daje samo 1 <em>web dyno</em> free po website-u )</li>
 </ul>
-</li>
-<li><mathjax><mathjax><mathjax>$O(\log n)$</mathjax></mathjax></mathjax><ul>
-<li>Logaritamska slozenost. Slozenost veoma sporo raste sa povecanjem dimenzije ulaza.</li>
-<li><em>Primer:</em> <blockquote>
-<p>Binarna pretraga</p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><mathjax><mathjax><mathjax>$O(n)$</mathjax></mathjax></mathjax><ul>
-<li>Linerana slozenost. Za svaki element ulaza potrebno je neko konstatno vreme obrade.</li>
-</ul>
-</li>
-<li><mathjax><mathjax><mathjax>$O(n \log n)$</mathjax></mathjax></mathjax><ul>
-<li><em>Primer:</em> <blockquote>
-<p>Merge Sort, Heap Sort </p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><mathjax><mathjax><mathjax>$O(n^2)$</mathjax></mathjax></mathjax><ul>
-<li>Kvadratna slozenost.  </li>
-<li><em>Primer:</em> <blockquote>
-<div class="codehilite"><pre>  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
-        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
-            <span class="p">...</span> <span class="c1">// Neka obrada u slozenosti O(1)</span>
-</pre></div>
-
-
-</blockquote>
-</li>
-</ul>
-</li>
-<li><mathjax>$O(n^3)$</mathjax></li>
-<li><mathjax><mathjax><mathjax>$O(2^n)$</mathjax></mathjax></mathjax>  <ul>
-<li>Eksponencijalna slozenost.</li>
-<li><em>Primer:</em> <blockquote>
-<p><em>Brute force</em> resenja problema</p>
-</blockquote>
-</li>
-</ul>
-</li>
-</ul>
-<h1 id="osobine-funkcije-o">Osobine funkcije <em>O</em></h1>
-<p><mathjax>$O(c \cdot n) = O(n),\ c - const$</mathjax><br />
-<mathjax>$O(f(n)) + O(g(n)) = O(f(n) + g(n))$</mathjax><br />
-<mathjax>$O(f(n)) O(g(n)) = O(f(n) g(n))$</mathjax>  </p>
         
    <hr>
    
@@ -347,8 +313,8 @@
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
         var disqus_shortname = 'ntrifunovic'; // required: replace example with your forum shortname
-	var disqus_title = 'Algoritmi\\Složenost algoritma';
-	var disqus_identifier = 'Algoritmi\\Složenost algoritma';
+	var disqus_title = 'Projekti\\Web Site';
+	var disqus_identifier = 'Projekti\\Web Site';
 
         /* * * DON'T EDIT BELOW THIS LINE * * */
         (function() {
