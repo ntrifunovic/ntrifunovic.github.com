@@ -538,11 +538,11 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: -50px;
 }
 
-p, ol, table, pre, dl, .toc, ul {
+p, ol, table, pre, dl, ul {
   margin: 0 0 20px;
 }
 
-.toc ul {
+ul ul, ul ul ul, ul ul ul ul {
   margin: 0 0 2px;
 }
 
