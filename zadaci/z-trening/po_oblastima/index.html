@@ -20,7 +20,7 @@
 
   
 
-  Z-trening \ Trojke
+  Z-trening \ Po Oblastima
   
 </title>
    <link rel="stylesheet" href="/pygments.css">
@@ -260,7 +260,7 @@
       <section>
         <div id="title">
           
-<h1>Z-trening \ Trojke</h1>
+<h1>Z-trening \ Po Oblastima</h1>
   
      <p>
        -Zadaci-
@@ -279,74 +279,10 @@
         </section>
         
    
-          <h1 id="z-trening-trojke"><a href="http://z-trening.com/tasks.php?show_task=5000000125">Z-trening \ Trojke</a></h1>
-<p>Profesor matematike je postavio Dragancetu sledeci zadatak. Na osnovu datog niza brojeva <code>a[1]</code>, <code>a[2]</code>, ..., <code>a[n]</code>, Dragance treba da za svaku trojku indeksa (<code>i</code>, <code>j</code>, <code>k</code>), gde je <code>1 &lt;= i &lt; j &lt; k &lt;= n</code>, napiše na tabli najveci od brojeva <code>a[i]</code>, <code>a[j]</code> i <code>a[k]</code>. Zatim treba da izracuna ostatak koji daje zbir svih brojeva koji su napisani na tabli pri deljenju sa <code>10007</code>. Profesor je obecao Dragancetu peticu za kraj školske godine, ako dobije tacno rešenje pre kraja casa. Pomozite Dragancetu da što brže dobije tacan rezultat. </p>
-<p><strong>Ulaz:</strong></p>
-<p>(Ulazni podaci se citaju sa standardnog ulaza) U prvom redu nalazi se broj <code>n</code> (<code>3 &lt;= n &lt;= 30000</code>). U sledecih n redova se nalaze celi brojevi <code>a[1]</code>, <code>a[2]</code>, ..., <code>a[n]</code>, pri cemu je <code>-100000 &lt;= a[i] &lt;= 100000</code>. </p>
-<p><strong>Izlaz:</strong></p>
-<p>(Izlazne podatke ispisati na standardni izlaz) U prvom i jedinom redu ispisati sumu brojeva napisanih na tabli po modulu <code>10007</code>. </p>
-<p><em>Primeri:</em></p>
-<blockquote>
-<p>Ulaz:
-4
-3
--1
-2
-2</p>
-<p>Izlaz:
-11</p>
-<p>Objašnjenje.
-Sve trojke niza brojeva su: (3, -1, 2), (3, -1, 2), (3, 2, 2), (-1, 2, 2). Na tabli su napisani brojevi 3, 3, 3, 2, pa je rešenje u ovom slucaju 11.</p>
-<p>Ulaz:
-6
-8
--10
-4
-5
-2
-6</p>
-<p>Izlaz:
-135</p>
-</blockquote>
-<hr />
-<h2 id="resenje">Resenje:</h2>
-<div class="codehilite"><pre><span class="cp">#include&lt;stdio.h&gt;</span>
-<span class="cp">#include&lt;algorithm&gt;</span>
-
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
-
-<span class="cp">#define MOD 10007</span>
-<span class="cp">#define MAXN 30000</span>
-
-<span class="kt">int</span> <span class="n">a</span><span class="p">[</span><span class="n">MAXN</span><span class="p">];</span>
-
-<span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
-<span class="kt">long</span> <span class="kt">long</span> <span class="n">ret</span><span class="p">;</span>
-<span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
- <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">n</span><span class="p">);</span>
-
- <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
-  <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
-
- <span class="n">sort</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">+</span><span class="n">n</span><span class="p">);</span>
- <span class="n">reverse</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">+</span><span class="n">n</span><span class="p">);</span>
-
- <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
- <span class="p">{</span>
-   <span class="n">ret</span> <span class="o">+=</span> <span class="p">(((</span><span class="n">n</span> <span class="o">-</span> <span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="n">i</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">%</span> <span class="n">MOD</span><span class="p">)</span><span class="o">*</span><span class="p">((</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">MOD</span><span class="p">)</span> <span class="o">%</span> <span class="n">MOD</span><span class="p">);</span>
-   <span class="n">ret</span> <span class="o">%=</span> <span class="n">MOD</span><span class="p">;</span>
- <span class="p">}</span>
-
- <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="n">ret</span><span class="p">);</span>
-
- <span class="n">getchar</span><span class="p">();</span>
- <span class="n">getchar</span><span class="p">();</span>
- <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
+          <p>TODO</p>
+<h1 id="dinamicko-programiranje">Dinamicko programiranje</h1>
+<h1 id="binarna-pretraga">Binarna pretraga</h1>
+<h1 id="hip">Hip</h1>
         
    <hr>
    
@@ -354,8 +290,8 @@ Sve trojke niza brojeva su: (3, -1, 2), (3, -1, 2), (3, 2, 2), (-1, 2, 2). Na ta
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
         var disqus_shortname = 'ntrifunovic'; // required: replace example with your forum shortname
-	var disqus_title = 'Zadaci\\Z-trening \ Trojke';
-	var disqus_identifier = 'Zadaci\\Z-trening \ Trojke';
+	var disqus_title = 'Zadaci\\Z-trening \ Po Oblastima';
+	var disqus_identifier = 'Zadaci\\Z-trening \ Po Oblastima';
 
         /* * * DON'T EDIT BELOW THIS LINE * * */
         (function() {
