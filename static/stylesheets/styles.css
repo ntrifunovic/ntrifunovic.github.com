@@ -542,7 +542,7 @@ p, ol, table, pre, dl, ul {
   margin: 0 0 20px;
 }
 
-ul ul, ul ul ul, ul ul ul ul {
+ul ul, li p{
   margin: 0 0 2px;
 }
 
