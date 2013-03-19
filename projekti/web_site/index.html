@@ -295,6 +295,7 @@
 <li><a href="#dochtml">doc.html</a></li>
 </ul>
 </li>
+<li><a href="#prmer-stranice-u-markdown-formatu">Prmer stranice u Markdown formatu</a></li>
 <li><a href="#free-hosting">Free Hosting</a></li>
 </ul>
 </div>
@@ -677,6 +678,42 @@
     <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://disqus.com&quot;</span> <span class="na">class=</span><span class="s">&quot;dsq-brlink&quot;</span><span class="nt">&gt;</span>comments powered by <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;logo-disqus&quot;</span><span class="nt">&gt;</span>Disqus<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
 
 <span class="cp">{%</span> <span class="k">endblock</span> <span class="nv">content</span> <span class="cp">%}</span>
+</pre></div>
+
+
+<h1 id="prmer-stranice-u-markdown-formatu">Prmer stranice u Markdown formatu</h1>
+<div class="codehilite"><pre><span class="n">topic</span><span class="o">:</span> <span class="n">Uvod</span> <span class="n">u</span> <span class="n">C</span><span class="o">++</span>
+<span class="n">order</span><span class="o">:</span> <span class="mi">7</span>
+<span class="n">title</span><span class="o">:</span> <span class="n">Pokazivaci</span>
+
+<span class="o">**(</span><span class="n">eng</span><span class="o">.</span> <span class="n">Pointers</span><span class="o">)**</span>
+
+<span class="o">*</span> <span class="n">Promenjiva</span> <span class="n">tipa</span> <span class="n">pokazivac</span> <span class="n">na</span> <span class="n">neki</span> <span class="n">tip</span> <span class="n">se</span> <span class="n">deklarise</span> <span class="n">na</span> <span class="n">sledeci</span> <span class="n">nacin</span>
+
+        <span class="n">tip</span> <span class="o">*</span><span class="n">imePokazivaca</span><span class="o">;</span>
+
+<span class="o">*</span> <span class="n">Vrednost</span> <span class="n">pokazivaca</span> <span class="n">predstavlja</span> <span class="n">adresu</span> <span class="n">u</span> <span class="n">memoriji</span> <span class="n">na</span> <span class="n">kojoj</span> <span class="n">se</span> <span class="n">nalazi</span> <span class="n">promenjiva</span> <span class="n">onog</span> <span class="n">tipa</span> <span class="n">koji</span> <span class="n">je</span> <span class="n">koriscen</span> <span class="n">pri</span> <span class="n">deklaraciji</span> <span class="n">pokazivaca</span>
+<span class="o">*</span> <span class="n">Memoriskoj</span> <span class="n">lokaciji</span> <span class="n">na</span> <span class="n">koju</span> <span class="n">ukazuje</span> <span class="n">pokazivac</span> <span class="n">pristupamo</span> <span class="n">unarnim</span> <span class="n">prefiksnim</span> <span class="n">operatorom</span> <span class="err">`</span><span class="o">*</span><span class="err">`</span>
+<span class="o">*</span> <span class="n">Unarni</span> <span class="n">prefiksni</span> <span class="n">operator</span> <span class="err">`</span><span class="o">&amp;</span><span class="err">`</span> <span class="n">vraca</span> <span class="n">adresu</span> <span class="n">podatka</span> <span class="n">u</span> <span class="n">memoriji</span>
+<span class="o">*</span> <span class="n">Za</span> <span class="n">pristup</span> <span class="n">elementima</span> <span class="n">strukture</span> <span class="n">preko</span> <span class="n">pokazivaca</span> <span class="n">koristi</span> <span class="n">se</span> <span class="n">operator</span> <span class="err">`</span><span class="o">-&gt;</span><span class="err">`</span>
+<span class="o">*</span> <span class="n">Pokazivaci</span> <span class="n">se</span> <span class="n">ponasaju</span> <span class="n">kao</span> <span class="n">i</span> <span class="n">drugi</span> <span class="n">podaci</span>
+    <span class="o">*</span> <span class="n">Mogu</span> <span class="n">se</span> <span class="n">praviti</span> <span class="n">nizovi</span> <span class="n">pokazivaca</span>
+    <span class="o">*</span> <span class="n">Strukture</span> <span class="n">u</span> <span class="n">sebi</span> <span class="n">mogu</span> <span class="n">sadrzati</span> <span class="n">pokazivace</span>
+
+<span class="o">**</span><span class="n">Primer</span><span class="o">:**</span>
+
+    <span class="n">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span>
+    <span class="n">int</span> <span class="o">*</span><span class="n">px</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">;</span> <span class="c1">// y nije pokazivac</span>
+    <span class="o">*</span><span class="n">px</span> <span class="o">=</span> <span class="mi">3</span><span class="o">;</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="o">;</span>
+
+<span class="o">*</span><span class="n">Koja</span> <span class="n">je</span> <span class="n">vrednost</span> <span class="n">u</span> <span class="n">promenjivoj</span> <span class="n">y</span> <span class="o">?*</span>
+<span class="o">&gt;</span> <span class="n">Resenje</span><span class="o">:</span> <span class="mi">3</span>
+
+    <span class="c1">// Pristupanje elementima strukture preko pointera</span>
+    <span class="n">Tacka</span> <span class="o">*</span><span class="n">pt</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">t</span><span class="o">;</span>
+    <span class="o">(*</span><span class="n">pt</span><span class="o">).</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+    <span class="n">pt</span><span class="o">-&gt;</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
 </pre></div>
 
 
