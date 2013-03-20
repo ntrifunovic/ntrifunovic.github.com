@@ -66,15 +66,6 @@
         <ul>
           
           <li>
-            <a href="/korisni_linkovi_i_korisna_literatura/" class="index-item">
-
-  
-
-  Korisni linkovi &amp; Korisna literatura
-  </a>
-          </li>
-          
-          <li>
             <a href="/algoritmi/slozenost_algoritma/" class="index-item">
     Algoritmi \
   
@@ -137,6 +128,17 @@
   
 
   Hash tabele
+  </a>
+          </li>
+          
+          <li>
+            <a href="/takmicenja_iz_informatike/korisni_linkovi_i_korisna_literatura/" class="index-item">
+    Takmicenja iz informatike \
+  
+
+  
+
+  Korisni linkovi &amp; Korisna literatura
   </a>
           </li>
           
@@ -313,7 +315,7 @@
 <!-- -->
 
 <blockquote>
-<p><a href="http://pythonhosted.org/Flask-FlatPages/">Flask-FlatPages</a> provides a collections of pages to your <a href="http://flask.pocoo.org">Flask</a> application. Pages are built from “flat” text files as opposed to a relational database.</p>
+<p><strong><a href="http://pythonhosted.org/Flask-FlatPages/">Flask-FlatPages</a></strong> provides a collections of pages to your <strong><a href="http://flask.pocoo.org">Flask</a></strong> application. Pages are built from “flat” text files as opposed to a relational database.</p>
 </blockquote>
 <p>Vise o koriscenim paketima mozete pronaci na: </p>
 <ul>
@@ -322,7 +324,7 @@
 <li><a href="http://pythonhosted.org/Flask-FlatPages/">http://pythonhosted.org/Flask-FlatPages/</a></li>
 <li><a href="http://pythonhosted.org/Frozen-Flask/">http://pythonhosted.org/Frozen-Flask/</a></li>
 </ul>
-<p>Pakete mozete instalirati koristeci <code>pip</code>. ( Vise o <code>pip</code>-u mozete pronaci na <a href="https://pypi.python.org/pypi/pip">https://pypi.python.org/pypi/pip</a>. )</p>
+<p>Pakete mozete instalirati koristeci <code>pip</code>.</p>
 <div class="codehilite"><pre><span class="n">pip</span> <span class="n">install</span> <span class="n">markdown</span>
 <span class="n">pip</span> <span class="n">install</span> <span class="n">flask</span>
 <span class="n">pip</span> <span class="n">install</span> <span class="n">Frozen</span><span class="o">-</span><span class="n">Flask</span>
@@ -330,6 +332,7 @@
 </pre></div>
 
 
+<p>Vise o <code>pip</code>-u mozete pronaci na <a href="https://pypi.python.org/pypi/pip">https://pypi.python.org/pypi/pip</a>.</p>
 <p>Nakon sto nabavite sve potrebne pakete mozete pokusati da napravite svoj sajt pomocu izvornog koda i template-a datih u nastavku teksta.</p>
 <h2 id="virtualenv">virtualenv</h2>
 <p>Preporucujem da se za rad na projektima u <code>python</code>-u za svaki projekat koji zavisi od nekih paketa kreira virtuelno okruzenje koristeci <code>virtualenv</code>.</p>
@@ -352,7 +355,7 @@
 
 
 <p>Vise o <code>virtualenv</code>-u mozete pronaci na: <a href="http://virtualenv.org">http://virtualenv.org</a></p>
-<p>Kada instalirate i aktivirate <code>virtualenv</code> sve potrebne pakete mozete instalirati iz fajla <code>requirements.txt</code> komandom</p>
+<p>Kada instalirate i aktivirate <code>virtualenv</code> sve potrebne pakete mozete instalirati iz fajla <code>requirements.txt</code> komandom:</p>
 <div class="codehilite"><pre><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="p">.</span><span class="n">txt</span>
 </pre></div>
 
@@ -373,7 +376,7 @@
 <h1 id="tema">Tema</h1>
 <p>Koriscena tema je modifikovana verzija teme <a href="https://github.com/mattgraham/Midnight">Midnight by mattgraham</a>.</p>
 <h1 id="source-code">Source code</h1>
-<div class="codehilite"><pre><span class="c"># file: site.py</span>
+<div class="codehilite"><pre><span class="c"># file:   site.py</span>
 <span class="c"># author: ntrifunovic</span>
 
 <span class="kn">import</span> <span class="nn">os</span>
@@ -441,7 +444,7 @@
 <p>Vise informacija mozete pronaci na: <a href="http://jinja.pocoo.org">http://jinja.pocoo.org</a></p>
 <h2 id="basehtml">base.html</h2>
 <div class="codehilite"><pre><span class="c">{#</span>
-<span class="c">  title: base.html</span>
+<span class="c">  title:  base.html</span>
 <span class="c">  author: ntrifunovic</span>
 <span class="c">#}</span>
 
@@ -721,8 +724,8 @@
 <p>Ovaj website koristi free hosting i dostupan ja na dve adrese <a href="http://ntrifunovic.github.com">http://ntrifunovic.github.com</a> i <a href="http://ntrifunovic.herokuapp.com">http://ntrifunovic.herokuapp.com</a>.</p>
 <p>Vise o free hosting-u koji ovaj website koristi mozete pronaci na:</p>
 <ul>
-<li><a href="http://pages.github.com">http://pages.github.com</a> ( <strong>github pages</strong> moze da host-uje samo staticki sadrzaj. Za generisanje statickog website-a koriscen je paket <code>Frozen-Flask</code>.)</li>
-<li><a href="http://www.heroku.com">http://www.heroku.com</a> ( <strong>Heroku</strong> daje samo 1 <em>web dyno</em> free po website-u. )</li>
+<li><a href="http://pages.github.com">http://pages.github.com</a> ( <strong>github pages</strong> moze da host-uje samo staticki sadrzaj. Za generisanje statickog website-a koriscen je paket <code>Frozen-Flask</code>)</li>
+<li><a href="http://www.heroku.com">http://www.heroku.com</a> ( <strong>Heroku</strong> daje samo 1 <em>web dyno</em> free po website-u )</li>
 </ul>
         
    <hr>
