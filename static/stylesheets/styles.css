@@ -776,9 +776,16 @@ dt {
   margin-top: 0;
 }
 
-#naslovna iframe {
-    width: 100%;
-    height: calc(width);
+#naslovna #slike {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;;
+}
+
+#naslovna #slike iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 section {
