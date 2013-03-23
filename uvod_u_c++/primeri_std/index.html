@@ -1,0 +1,459 @@
+
+
+
+
+
+
+
+
+<!doctype html>
+<html>
+  <head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="chrome=1">
+   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+   <title>
+
+    Uvod u C++ \
+  
+
+  
+
+  Primeri \ STD
+  
+</title>
+   <link rel="stylesheet" href="/pygments.css">
+   <link rel="stylesheet" href="/static/stylesheets/styles.css">
+   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+   <script>
+     var _gaq = _gaq || [];
+     _gaq.push(['_setAccount', 'UA-38492106-1']);
+     _gaq.push(['_trackPageview']);
+
+     (function() {
+     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+   </script>
+   
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+  });
+</script>
+<script
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="/">Home</a></li>
+        </nav> 
+      </div><!-- end header -->
+  
+
+      <div id="index">
+        
+        <h3><b>NAVIGACIJA:</b></h3>
+        <ul>
+          
+          <li>
+            <a href="/algoritmi/slozenost_algoritma/" class="index-item">
+    Algoritmi \
+  
+
+  
+
+  Složenost algoritma
+  </a>
+          </li>
+          
+          <li>
+            <a href="/algoritmi/osnovni_algoritmi_sortiranja/" class="index-item">
+    Algoritmi \
+  
+
+  
+
+  Osnovni algoritmi sortiranja
+  </a>
+          </li>
+          
+          <li>
+            <a href="/projekti/tsp/" class="index-item">
+    Projekti \
+  
+
+  
+
+  Traveling Salesman Problem
+  </a>
+          </li>
+          
+          <li>
+            <a href="/projekti/web_site/" class="index-item">
+    Projekti \
+  
+
+  
+
+  Web Site
+  </a>
+          </li>
+          
+          <li>
+            <a href="/strukture_podataka/povezane_liste/" class="index-item">
+    Strukture Podataka \
+  
+
+  
+
+  Povezane Liste
+  </a>
+          </li>
+          
+          <li>
+            <a href="/strukture_podataka/hash/" class="index-item">
+    Strukture Podataka \
+  
+
+  
+
+  Hash tabele
+  </a>
+          </li>
+          
+          <li>
+            <a href="/takmicenja_iz_informatike/korisni_linkovi_i_korisna_literatura/" class="index-item">
+    Takmicenja iz informatike \
+  
+
+  
+
+  Korisni linkovi &amp; Korisna literatura
+  </a>
+          </li>
+          
+          <li>
+            <a href="/uvod_u_c%2B%2B/tipovi_podataka_i_operatori/" class="index-item">
+    Uvod u C++ \
+  
+
+  
+
+  Tipovi podataka &amp; Operatori
+  </a>
+          </li>
+          
+          <li>
+            <a href="/uvod_u_c%2B%2B/IO/" class="index-item">
+    Uvod u C++ \
+  
+
+  
+
+  I\O
+  </a>
+          </li>
+          
+          <li>
+            <a href="/uvod_u_c%2B%2B/komande_za_kontrolu_toka/" class="index-item">
+    Uvod u C++ \
+  
+
+  
+
+  Komande za kontrolu toka
+  </a>
+          </li>
+          
+          <li>
+            <a href="/uvod_u_c%2B%2B/nizovi_i_matrice/" class="index-item">
+    Uvod u C++ \
+  
+
+  
+
+  Nizovi i Matrice
+  </a>
+          </li>
+          
+          <li>
+            <a href="/uvod_u_c%2B%2B/funkcije_i_metode/" class="index-item">
+    Uvod u C++ \
+  
+
+  
+
+  Funkcije\Metode
+  </a>
+          </li>
+          
+          <li>
+            <a href="/uvod_u_c%2B%2B/strukture/" class="index-item">
+    Uvod u C++ \
+  
+
+  
+
+  Strukture
+  </a>
+          </li>
+          
+          <li>
+            <a href="/uvod_u_c%2B%2B/pokazivaci/" class="index-item">
+    Uvod u C++ \
+  
+
+  
+
+  Pokazivaci
+  </a>
+          </li>
+          
+          <li>
+            <a href="/uvod_u_c%2B%2B/primeri_std/" class="index-item">
+    Uvod u C++ \
+  
+
+  
+
+  Primeri \ STD
+  </a>
+          </li>
+          
+          <li>
+            <a href="/zadaci/dinamicko_programiranje/" class="index-item">
+    Zadaci \
+  
+
+  
+
+  Dinamičko programiranje
+  </a>
+          </li>
+          
+          <li>
+            <a href="/zadaci/z-trening/po_oblastima/" class="index-item">
+    Zadaci \
+  
+
+  
+
+  Z-trening \ Po Oblastima
+  </a>
+          </li>
+          
+          <li>
+            <a href="/zadaci/z-trening/trojke/" class="index-item">
+    Zadaci \
+  
+
+  
+
+  Z-trening \ Trojke
+  </a>
+          </li>
+          
+        </ul>
+        <hr>
+        
+      </div>
+
+
+    <div class="wrapper">
+      <section>
+        <div id="title">
+          
+<h1>Primeri \ STD</h1>
+  
+     <p>
+       -Uvod u C++-
+     </p>
+  
+  
+
+          <hr>
+          <span class="credits left">
+            Project maintained by <a href="https://github.com/ntrifunovic">ntrifunovic</a>
+          </span>
+          <span class="credits right">Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a> <b>modified</b> by <a href="https://github.com/ntrifunovic">ntrifunovic</a></span>
+        </div>
+
+        <hr>  
+        </section>
+        
+   
+          <div class="codehilite"><pre><span class="cp">#include&lt;stdio.h&gt;</span>
+<span class="cp">#include&lt;list&gt;</span>
+<span class="cp">#include&lt;set&gt;</span>
+
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// Primer sa listama </span>
+  <span class="c1">//</span>
+  <span class="c1">// Liste koristiti kad ima dosta dodavanja na pocetak ili kraj liste</span>
+  <span class="c1">// i kada se lista obilazi ili od pocetka ka kraju ili od kraja ka pocetku</span>
+  <span class="c1">// ili kada se pristupa samo prvom i poslednjem elementu liste</span>
+  <span class="c1">// Pristup i-tom elementu liste je ne efikasan posto se moraju obici elementi </span>
+  <span class="c1">// pre i-tog. </span>
+  <span class="c1">// Ako se cesto pristupa i-tom elementu bolje je koristiti std::vector.</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Primer sa listama</span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">);</span>
+
+  <span class="n">list</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">lista</span><span class="p">;</span>
+
+  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> 
+    <span class="n">lista</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">i</span><span class="p">);</span> <span class="c1">// Ubacuje na kraj liste</span>
+
+  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> 
+    <span class="n">lista</span><span class="p">.</span><span class="n">push_front</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+
+  <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">lista</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span> <span class="p">{</span>  <span class="c1">// Provera da li je lista prazna </span>
+    <span class="c1">// Pristup prvom i poslednjem elementu liste</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Prvi elem: %d</span><span class="se">\n</span><span class="s">Poslednji elem: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">lista</span><span class="p">.</span><span class="n">front</span><span class="p">(),</span> <span class="n">lista</span><span class="p">.</span><span class="n">back</span><span class="p">());</span>
+  <span class="p">}</span>
+
+  <span class="c1">// Obilazak liste koristeci iteratore</span>
+  <span class="c1">//</span>
+  <span class="c1">// Lista ima dve specijalne metode begin() i end()</span>
+  <span class="c1">// begin() - vraca iterator koji pokazuje na prvi element liste</span>
+  <span class="c1">// end()   - vraca iterator koji pokazuje na element iza poslednjeg u listi</span>
+  <span class="k">for</span> <span class="p">(</span><span class="n">list</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">iterator</span> <span class="n">it</span> <span class="o">=</span> <span class="n">lista</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span> <span class="n">it</span> <span class="o">!=</span> <span class="n">lista</span><span class="p">.</span><span class="n">end</span><span class="p">();</span> <span class="n">it</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// *it vraca vrednost koja se nalazi u elementu liste na koji iterator</span>
+    <span class="c1">// pokazuje, iterator ima i operaciju ++ koja pomera iterator na sledeci</span>
+    <span class="c1">// element liste</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d; &quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">it</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="n">putchar</span><span class="p">(</span><span class="sc">&#39;\n&#39;</span><span class="p">);</span>
+
+  <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">lista</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span> <span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Prvi elem: %d</span><span class="se">\n</span><span class="s">Poslednji elem: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">lista</span><span class="p">.</span><span class="n">front</span><span class="p">(),</span> <span class="n">lista</span><span class="p">.</span><span class="n">back</span><span class="p">());</span>
+    <span class="c1">// Skidanje elementa sa pocetka i kraja liste</span>
+    <span class="n">lista</span><span class="p">.</span><span class="n">pop_front</span><span class="p">();</span>
+    <span class="n">lista</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
+  <span class="p">}</span>
+
+  <span class="c1">// Primer sa setom</span>
+  <span class="c1">//</span>
+  <span class="c1">// Set ima sledece operacije:</span>
+  <span class="c1">// insert - Ubacuje element u set O(logN))</span>
+  <span class="c1">// erase  - Izbacuje element iz seta O(logN)</span>
+  <span class="c1">// find   - Proverava da li se element nalazi u setu O(logN)</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n\n</span><span class="s">Primer sa setom</span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">);</span>
+
+  <span class="n">set</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">set_brojeva</span><span class="p">;</span>
+
+  <span class="c1">// set: 10 20 30 40 50</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="mi">5</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">set_brojeva</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="mi">10</span><span class="p">);</span>    
+  <span class="p">}</span>
+
+  <span class="n">set_brojeva</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+
+  <span class="c1">// Obilazak svih elemenata seta</span>
+  <span class="k">for</span> <span class="p">(</span><span class="n">set</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">iterator</span> <span class="n">it</span> <span class="o">=</span> <span class="n">set_brojeva</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span> <span class="n">it</span> <span class="o">!=</span> <span class="n">set_brojeva</span><span class="p">.</span><span class="n">end</span><span class="p">();</span> <span class="n">it</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d; &quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">it</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">set_brojeva</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">!=</span> <span class="n">set_brojeva</span><span class="p">.</span><span class="n">end</span><span class="p">())</span> <span class="p">{</span>
+      <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d je u setu</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d nije u setu</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+    <span class="p">}</span>
+
+  <span class="n">putchar</span><span class="p">(</span><span class="sc">&#39;\n&#39;</span><span class="p">);</span>
+
+  <span class="n">getchar</span><span class="p">();</span>
+
+<span class="p">}</span>
+</pre></div>
+        
+   <hr>
+   
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'ntrifunovic'; // required: replace example with your forum shortname
+	var disqus_title = 'Uvod u C++\\Primeri \ STD';
+	var disqus_identifier = 'Uvod u C++\\Primeri \ STD';
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+
+
+    </div>
+
+    <div id="footer-bar">
+      <div id="footer-bar-content">
+        <hr class="spaceless">
+
+        <span id = "social">
+          SOCIAL CORNER
+        </span>
+
+        <hr class="spaceless">
+
+        
+        <span id="fb-like-b">
+          <div class="fb-like" data-send="true" data-layout="button_count" data-width="50" data-show-faces="true"></div>
+              <div id="fb-root"></div>
+              <script>(function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+                fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
+              </script>
+        </span>
+
+        <hr class="spaceless">
+
+        
+        <span id="tweetb-b">
+          <a href="https://twitter.com/share" class="twitter-share-button" data-size="medium">Tweet</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </span>
+
+        <hr class="spaceless">
+
+        
+        <span id="google-pb">
+          <!-- Place this tag where you want the +1 button to render. -->
+          <div class="g-plusone" data-size="medium"></div>
+
+          <!-- Place this tag after the last +1 button tag. -->
+          <script>
+            (function() {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = 'https://apis.google.com/js/plusone.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+            })();
+          </script>
+        </span>
+
+        <hr class="spaceless">
+
+      </div>
+    </div>
+  </body>
+</html>
