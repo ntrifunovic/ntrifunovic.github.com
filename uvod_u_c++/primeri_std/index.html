@@ -292,21 +292,30 @@
         </section>
         
    
-          <div class="codehilite"><pre><span class="cp">#include&lt;stdio.h&gt;</span>
+          <div class="toc">
+<ul>
+<li><a href="#liste">Liste</a></li>
+<li><a href="#set">Set</a></li>
+</ul>
+</div>
+<hr />
+<h1 id="liste">Liste</h1>
+<div class="codehilite"><pre><span class="c1">// Primer sa listama </span>
+<span class="c1">//</span>
+<span class="c1">// Liste koristiti kad ima dosta dodavanja na pocetak ili kraj liste</span>
+<span class="c1">// i kada se lista obilazi ili od pocetka ka kraju ili od kraja ka pocetku</span>
+<span class="c1">// ili kada se pristupa samo prvom i poslednjem elementu liste</span>
+<span class="c1">// Pristup i-tom elementu liste je ne efikasan posto se moraju obici elementi </span>
+<span class="c1">// pre i-tog. </span>
+<span class="c1">// Ako se cesto pristupa i-tom elementu bolje je koristiti std::vector.</span>
+
+<span class="cp">#include&lt;stdio.h&gt;</span>
 <span class="cp">#include&lt;list&gt;</span>
 <span class="cp">#include&lt;set&gt;</span>
 
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-  <span class="c1">// Primer sa listama </span>
-  <span class="c1">//</span>
-  <span class="c1">// Liste koristiti kad ima dosta dodavanja na pocetak ili kraj liste</span>
-  <span class="c1">// i kada se lista obilazi ili od pocetka ka kraju ili od kraja ka pocetku</span>
-  <span class="c1">// ili kada se pristupa samo prvom i poslednjem elementu liste</span>
-  <span class="c1">// Pristup i-tom elementu liste je ne efikasan posto se moraju obici elementi </span>
-  <span class="c1">// pre i-tog. </span>
-  <span class="c1">// Ako se cesto pristupa i-tom elementu bolje je koristiti std::vector.</span>
   <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Primer sa listama</span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">);</span>
 
   <span class="n">list</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">lista</span><span class="p">;</span>
@@ -343,12 +352,27 @@
     <span class="n">lista</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
   <span class="p">}</span>
 
-  <span class="c1">// Primer sa setom</span>
-  <span class="c1">//</span>
-  <span class="c1">// Set ima sledece operacije:</span>
-  <span class="c1">// insert - Ubacuje element u set O(logN))</span>
-  <span class="c1">// erase  - Izbacuje element iz seta O(logN)</span>
-  <span class="c1">// find   - Proverava da li se element nalazi u setu O(logN)</span>
+  <span class="n">getchar</span><span class="p">();</span>
+
+<span class="p">}</span>
+</pre></div>
+
+
+<h1 id="set">Set</h1>
+<div class="codehilite"><pre><span class="c1">// Primer sa setom</span>
+<span class="c1">//</span>
+<span class="c1">// Set ima sledece operacije:</span>
+<span class="c1">// insert - Ubacuje element u set O(logN))</span>
+<span class="c1">// erase  - Izbacuje element iz seta O(logN)</span>
+<span class="c1">// find   - Proverava da li se element nalazi u setu O(logN)</span>
+
+<span class="cp">#include&lt;stdio.h&gt;</span>
+<span class="cp">#include&lt;list&gt;</span>
+<span class="cp">#include&lt;set&gt;</span>
+
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
   <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n\n</span><span class="s">Primer sa setom</span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">);</span>
 
   <span class="n">set</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">set_brojeva</span><span class="p">;</span>
