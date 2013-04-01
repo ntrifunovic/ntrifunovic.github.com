@@ -836,11 +836,17 @@ section #title .credits.right {
 
 
     font-size: 13px;
+    
+    border-radius: 10px;
+    border: 1px solid  #121212;
+    background: #191919;
+    padding-right: 5px;
 }
+
+
 
 .index-item {
     color: #FC623A;
-    
 }
 
 #footer-bar {
