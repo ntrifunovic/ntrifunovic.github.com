@@ -840,7 +840,11 @@ section #title .credits.right {
     border-radius: 10px;
     border: 1px solid  #121212;
     background: #191919;
-    padding-right: 5px;
+    padding: 2px 5px;
+}
+
+#index ul {
+   padding: 0 20px;
 }
 
 
