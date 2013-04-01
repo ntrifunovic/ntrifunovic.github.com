@@ -776,6 +776,10 @@ dt {
   margin-top: 0;
 }
 
+#naslovna #title h1 {
+    font-size: 70px;
+}
+
 #naslovna #slike {
   position: relative;
   width: 100%;
@@ -799,10 +803,11 @@ section #title {
   margin: 0 0 10px 0;
   padding: 0 0 5px 0;
 }
+
 section #title h1 {
   font-family: 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
-  font-size: 40px;
+  font-size: 50px;
   text-align: center;
   line-height: 36px;
 }
@@ -856,11 +861,13 @@ section #title .credits.right {
 #footer-bar {
     z-index: 100;
     position: fixed;
-    left:0;
-    bottom:0;
+    right:0;
+    top:0;
     background: url(../images/nav-bg.gif) #353535;
-    border-top: 4px solid #434343;
-    border-right: 4px solid #434343;
+    border-bottom: 4px solid #434343;
+    border-left: 4px solid #434343;
+    margin-top: 50px;
+    padding: 5px;
 }
 
 .spaceless {
@@ -869,11 +876,18 @@ section #title .credits.right {
 }
 
 #footer-bar-content {
-
+    z-index: 200;
+    position: relative;
+    right:0;
+    top:0;
+    margin-top: 0px;
+    padding: 0px;
 }
 
  #social {
-    font-size: 16px;
+    float: right;
+    font-size: 33px;
+    padding: 5px;
     font-family: 'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 900;
     color: #C95132;

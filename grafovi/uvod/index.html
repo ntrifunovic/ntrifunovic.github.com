@@ -15,12 +15,12 @@
 
    <title>
 
-    Strukture Podataka \
+    Grafovi \
   
 
   
 
-  Povezane Liste
+  Uvod
   
 </title>
    <link rel="stylesheet" href="/pygments.css">
@@ -242,10 +242,10 @@
       <section>
         <div id="title">
           
-<h1>Povezane Liste</h1>
+<h1>Uvod</h1>
   
      <p>
-       -Strukture Podataka-
+       -Grafovi-
      </p>
   
   
@@ -261,69 +261,39 @@
         </section>
         
    
-          <div class="toc">
-<ul>
-<li><a href="#vrste-povezanih-lista">Vrste povezanih lista</a></li>
-<li><a href="#primer-implementacije">Primer implementacije</a></li>
-<li><a href="#ubacivanje-elementa">Ubacivanje elementa</a></li>
-<li><a href="#izbacivanje-elementa">Izbacivanje elementa</a></li>
-</ul>
-</div>
-<hr />
-<p><strong>(eng. Linked List)</strong></p>
-<p>Povezana lista je linearna struktura podataka, tj. podaci su u nekom linearnom poretku.</p>
-<h1 id="vrste-povezanih-lista">Vrste povezanih lista</h1>
-<ul>
-<li>jednostruka ulancana lista</li>
-<li>dvostruko ulancana lista</li>
-<li>ciklicna lista</li>
-<li>ne ciklicna lista</li>
-</ul>
-<h1 id="primer-implementacije">Primer implementacije</h1>
-<div class="codehilite"><pre><span class="k">struct</span> <span class="n">Elem</span> <span class="p">{</span>
-    <span class="n">Podaci</span> <span class="n">p</span><span class="p">;</span>
-    <span class="n">Elem</span><span class="o">*</span> <span class="n">next</span><span class="p">;</span>
-    <span class="n">Elem</span><span class="o">*</span> <span class="n">prev</span><span class="p">;</span>
+          <h1 id="osnovni-pojmovi">Osnovni pojmovi</h1>
+<p>Graf <strong>G</strong> je uredjeni skup <strong>(V,E)</strong>, gde je <strong>V</strong> skup cvorova, a <strong>E</strong> skup ivica. Svaka ivica predstavlja
+par cvorova <strong>(x,y)</strong> iz <strong>V</strong>.</p>
+<p>Put od cvora <strong>X</strong> do nekog drugog cvora <strong>Y</strong> je niz ivica koji spaja ova dva cvora, u kome se svaka ivica iz grafa pojavljuje najvise jedanput.</p>
+<p>Za graf kazemo da je povezan ako i samo ako za svaka dva njegova cvora postoji put koji ih spaja. Ako graf nije povezan onda se on moze razbiti na povezane komponente, disjunktne po cvorovima.</p>
+<h1 id="nacini-cuvanja-grafa-u-memoriji-racunara">Nacini cuvanja grafa u memoriji racunara</h1>
+<ol>
+<li>
+<p><strong>Matrica povezanosti:</strong> U matrici velicine <code>nxn</code> (gde je <code>n</code> broj cvorova grafa) polje <code>i</code>, <code>j</code> ima vrednost <code>1</code> ako postoji ivica koja povezuje cvorove <code>i</code> i <code>j</code>, ili <code>0</code> u slucaju da takva ivica ne postoji.</p>
+<div class="codehilite"><pre><span class="cp">#define MAXN 100</span>
+
+<span class="kt">int</span> <span class="n">veze</span><span class="p">[</span><span class="n">MAXN</span><span class="p">][</span><span class="n">MAXN</span><span class="p">];</span>
+</pre></div>
+
+
+<p><em>Napomena:</em> umesto matrice tipa int moze se koristiti matrica tipa bool.</p>
+</li>
+<li>
+<p><strong>Lista suseda:</strong> U nizu velicne <code>n</code> (gde je <code>n</code> broj cvorova) <code>i</code>-ti element sadrzi povezanu listu u kojoj se nalaze svi cvorovi izmedju kojih i cvora <code>i</code> postoji ivica.</p>
+<div class="codehilite"><pre><span class="cp">#define MAXN 100</span>
+
+<span class="k">struct</span> <span class="n">PList</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">v</span><span class="p">;</span>
+  <span class="n">PList</span><span class="o">*</span> <span class="n">sled</span><span class="p">;</span>
 <span class="p">};</span>
 
-<span class="n">Elem</span><span class="o">*</span> <span class="n">head</span><span class="p">;</span> <span class="c1">// Pokazivac na pocetak liste</span>
+<span class="n">PList</span><span class="o">*</span> <span class="n">veze</span><span class="p">[</span><span class="n">MAXN</span><span class="p">];</span>
 </pre></div>
 
 
-<p>Jednostruko povezane liste sadrze samo pokazivac <code>next</code>, a dvostruko povezane liste sadrze i <code>next</code> i <code>prev</code> pokazivac. </p>
-<p><strong>Primer implementacije jednostuko povezanih listi:</strong></p>
-<div class="codehilite"><pre><span class="k">struct</span> <span class="n">Elem</span> <span class="p">{</span>
-    <span class="n">Podaci</span> <span class="n">p</span><span class="p">;</span>
-    <span class="n">Elem</span><span class="o">*</span> <span class="n">next</span><span class="p">;</span>
-<span class="p">};</span>
-</pre></div>
-
-
-<h1 id="ubacivanje-elementa">Ubacivanje elementa</h1>
-<div class="codehilite"><pre><span class="c1">// Ubacujemo element n iza elementa e</span>
-<span class="k">void</span> <span class="n">ubaci</span><span class="p">(</span><span class="n">Elem</span> <span class="o">*</span><span class="n">e</span><span class="p">,</span> <span class="n">Elem</span> <span class="o">*</span><span class="n">n</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">n</span><span class="o">-&gt;</span><span class="n">sled</span> <span class="o">=</span> <span class="n">e</span><span class="o">-&gt;</span><span class="n">sled</span><span class="p">;</span>
-    <span class="n">n</span><span class="o">-&gt;</span><span class="n">prev</span> <span class="o">=</span> <span class="n">e</span><span class="p">;</span>
-    <span class="n">e</span><span class="o">-&gt;</span><span class="n">sled</span><span class="o">-&gt;</span><span class="n">prev</span> <span class="o">=</span> <span class="n">n</span><span class="p">;</span>
-    <span class="n">e</span><span class="o">-&gt;</span><span class="n">sled</span> <span class="o">=</span> <span class="n">n</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-
-
-<h1 id="izbacivanje-elementa">Izbacivanje elementa</h1>
-<div class="codehilite"><pre><span class="c1">// Izbacuje element e iz povezane liste</span>
-<span class="k">void</span> <span class="n">izbaci</span><span class="p">(</span><span class="n">Elem</span><span class="o">*</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">Elem</span><span class="o">*</span> <span class="n">prev</span> <span class="o">=</span> <span class="n">e</span><span class="o">-&gt;</span><span class="n">prev</span><span class="p">;</span>
-    <span class="n">Elem</span><span class="o">*</span> <span class="n">next</span> <span class="o">=</span> <span class="n">e</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
-
-    <span class="n">prev</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">next</span><span class="p">;</span>
-    <span class="n">next</span><span class="o">-&gt;</span><span class="n">prev</span> <span class="o">=</span> <span class="n">prev</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-
-
-<p><strong>Napomena</strong>: Pretpostavlja se da postoji poslednji dummy element. 
-<em>Da li bi ova implementacija radila da on ne postoji ?</em></p>
+<p><em>Napomena:</em> Moze se korisit i neka STD struktura za cuvanje liste suseda (<code>std::vector</code>, <code>std::queue</code>, <code>std::list</code>, …).</p>
+</li>
+</ol>
         
    <hr>
    
@@ -331,8 +301,8 @@
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
         var disqus_shortname = 'ntrifunovic'; // required: replace example with your forum shortname
-	var disqus_title = 'Strukture Podataka\\Povezane Liste';
-	var disqus_identifier = 'Strukture Podataka\\Povezane Liste';
+	var disqus_title = 'Grafovi\\Uvod';
+	var disqus_identifier = 'Grafovi\\Uvod';
 
         /* * * DON'T EDIT BELOW THIS LINE * * */
         (function() {
