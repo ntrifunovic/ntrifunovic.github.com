@@ -816,7 +816,7 @@ section #title .credits.right {
     left: 0;
 
     max-width: 25%;
-    max-height: 90%;
+    max-height: 100%;
 
     font-size: 13px;
     
@@ -829,7 +829,7 @@ section #title .credits.right {
 
     vertical-align: middle;
 
-    overflow: scroll;
+    overflow: auto;
 }
 
 #index ul {
