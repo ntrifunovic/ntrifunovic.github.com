@@ -602,7 +602,7 @@ strong {
   padding: 0 0;
 }
 
-section img {
+img {
   max-width: 100%;
 }
 
@@ -768,28 +768,6 @@ dt {
   float: right;
   margin-right: 10px;
   font-size: 11px;
-}
-
-#naslovna{
-  padding: 10px 0px 0px 0px;
-  margin: 0;
-  margin-top: 0;
-}
-
-#naslovna #title h1 {
-    font-size: 70px;
-}
-
-#naslovna #slike {
-  position: relative;
-  width: 100%;
-  padding-bottom: 100%;;
-}
-
-#naslovna #slike object {
-  position: absolute;
-  width: 100%;
-  height: 100%;
 }
 
 section {
