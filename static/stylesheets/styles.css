@@ -836,7 +836,28 @@ section #title .credits.right {
    padding: 0 20px;
 }
 
+#index ul li div {
+    display:none;
+}
+
+#index span:target + div
+{
+  display: block;
+}
+
+
+.MENU-ITEM-DUMMY {
+    position: fixed;
+    display: none;
+}
+
+
 .index-item {
+    
+    color:#B33D3D;
+}
+
+.index-sub-item {
     color: #FC623A;
 }
 
