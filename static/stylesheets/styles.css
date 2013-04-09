@@ -816,21 +816,25 @@ section #title .credits.right {
     left: 0;
 
     max-width: 25%;
-
+    max-height: 90%;
 
     font-size: 13px;
     
     border-radius: 10px;
     border: 1px solid  #121212;
     background: #191919;
+
     padding: 2px 5px;
+    margin: 0px;
+
+    vertical-align: middle;
+
+    overflow: scroll;
 }
 
 #index ul {
    padding: 0 20px;
 }
-
-
 
 .index-item {
     color: #FC623A;
