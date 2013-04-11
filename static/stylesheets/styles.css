@@ -818,7 +818,7 @@ section #title .credits.right {
     max-width: 25%;
     max-height: 100%;
 
-    font-size: 13px;
+    font-size: 15px;
     
     border-radius: 10px;
     border: 1px solid  #121212;
@@ -854,11 +854,13 @@ section #title .credits.right {
 
 .index-item {
     
-    color:#B33D3D;
+    color:#C93C3C;
+    font-weight:800;
 }
 
 .index-sub-item {
     color: #FC623A;
+    font-weight:600;
 }
 
 #footer-bar {
