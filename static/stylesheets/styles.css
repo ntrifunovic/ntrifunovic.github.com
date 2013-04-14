@@ -854,13 +854,21 @@ section #title .credits.right {
 
 .index-item {
     
-    color:#C93C3C;
+    color: #C93C3C;
     font-weight:800;
 }
 
+#menu > li:nth-child(odd) .index-item {
+    color:   #6E853E;
+}
+
 .index-sub-item {
-    color: #FC623A;
+    color: #FA5341;
     font-weight:600;
+}
+
+#menu div li:nth-child(odd) .index-sub-item {
+    color: #FC883A;
 }
 
 #footer-bar {
