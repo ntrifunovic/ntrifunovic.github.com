@@ -861,14 +861,32 @@ section #title .credits.right {
 #menu > li:nth-child(odd) .index-item {
     color:   #6E853E;
 }
+   
+.index-sub-item:hover, .index-item:hover 
+{
+    font-size: 108%;
+}
 
 .index-sub-item {
     color: #FA5341;
     font-weight:600;
 }
 
+#menu div {
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 5px;
+}
+
 #menu div li:nth-child(odd) .index-sub-item {
     color: #FC883A;
+}
+
+#menu > li:nth-child(odd):hover .index-item {
+ color: #FFEB9B;
+}
+
+#menu div li:nth-child(odd):hover .index-sub-item {
+    color: #FFEB9B;
 }
 
 #footer-bar {
