@@ -364,7 +364,22 @@
         </section>
         
    
-          <h1 id="osnovni-pojmovi">Osnovni pojmovi</h1>
+          <div class="toc">
+<ul>
+<li><a href="#osnovni-pojmovi">Osnovni pojmovi</a></li>
+<li><a href="#nacini-cuvanja-grafa-u-memoriji-racunara">Nacini cuvanja grafa u memoriji racunara</a></li>
+<li><a href="#vrste-grafova">Vrste grafova</a><ul>
+<li><a href="#usmereni-grafovi">Usmereni grafovi</a></li>
+<li><a href="#ne-usmereni-grafovi">Ne usmereni grafovi</a><ul>
+<li><a href="#drvo">Drvo</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<hr />
+<h1 id="osnovni-pojmovi">Osnovni pojmovi</h1>
 <p>Graf <code>G</code> je uredjeni skup <code>(V, E)</code>, gde je <code>V</code> skup cvorova, a <code>E</code> skup ivica. Svaka ivica predstavlja
 par cvorova <code>(x, y)</code> iz <code>V</code>.</p>
 <p>Put od cvora <code>X</code> do nekog drugog cvora <code>Y</code> je niz ivica koji spaja ova dva cvora, u kome se svaka ivica iz grafa pojavljuje najvise jedanput.</p>
@@ -396,6 +411,19 @@ par cvorova <code>(x, y)</code> iz <code>V</code>.</p>
 
 <p><em>Napomena:</em> Moze se korisit i neka STD struktura za cuvanje liste suseda (<code>std::vector</code>, <code>std::list</code>, ... ).</p>
 </li>
+</ol>
+<h1 id="vrste-grafova">Vrste grafova</h1>
+<h2 id="usmereni-grafovi">Usmereni grafovi</h2>
+<p>Matrica povezanosti ne mora da bude simetricna, ako postoji  grana <code>(a, b)</code> onda ne mora da postoji grana <code>(b, a)</code>.</p>
+<h2 id="ne-usmereni-grafovi">Ne usmereni grafovi</h2>
+<p>Matrica povezanosti je simetricna, ako postoji  grana <code>(a, b)</code> onda postoji i grana <code>(b, a)</code>.</p>
+<h3 id="drvo">Drvo</h3>
+<p>Drvo je neusmereni povezani graf bez ciklusa.</p>
+<p>Ako vaze dve od sledece tri osobine za neki graf onda za taj graf vazi i treca osobina:</p>
+<ol>
+<li>Graf od <code>N</code> cvorova ima <code>N-1</code> granu</li>
+<li>Graf je povezan</li>
+<li>Graf je drvo</li>
 </ol>
         
    <hr>
