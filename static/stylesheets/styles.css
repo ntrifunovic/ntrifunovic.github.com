@@ -690,10 +690,11 @@ dt {
   left: 0;
   top: 0px;
   height: 50px;
-  width: 100%;
+  /* width: 100%; */
   position: fixed;
   background: url(../images/nav-bg.gif) #353535;
   border-bottom: 4px solid #434343;
+  border-right: 4px solid #434343;
   -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
   -o-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
@@ -773,7 +774,7 @@ dt {
 section {
   padding: 30px 0px 0px 0px;
   margin: 20px 0;
-  margin-top: 70px;
+  /*margin-top: 70px;*/
 }
 section #title {
   border: 0;
@@ -825,7 +826,7 @@ section #title .credits.right {
     background: #191919;
 
     padding: 2px 5px;
-    margin: 0px;
+    margin: 20px 0px;
 
     vertical-align: middle;
 
@@ -907,11 +908,11 @@ section #title .credits.right {
 #footer-bar {
     z-index: 100;
     position: fixed;
-    right:0;
+    left:0;
     top:0;
     background: url(../images/nav-bg.gif) #353535;
     border-bottom: 4px solid #434343;
-    border-left: 4px solid #434343;
+    border-right: 4px solid #434343;
     margin-top: 50px;
     padding: 5px;
 }
@@ -931,7 +932,7 @@ section #title .credits.right {
 }
 
  #social {
-    float: right;
+    float: left;
     font-size: 33px;
     padding: 5px;
     font-family: 'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;

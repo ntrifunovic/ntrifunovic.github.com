@@ -37,6 +37,7 @@
      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
      })();
    </script>
+   <script src="http://getsupportribbon.com/ntrifunovic/script.js"></script>
    
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
@@ -68,7 +69,204 @@
 	</span>
       </div><!-- end header -->
 
-      <div id="index">
+     
+
+    <div class="wrapper">
+      <section>
+        <div id="title">
+          
+<h1>Osnovni algoritmi sortiranja</h1>
+  
+     <p>
+       -Algoritmi-
+     </p>
+  
+  
+
+          <hr>
+          <span class="credits left">
+            Website maintained by <a href="https://github.com/ntrifunovic">ntrifunovic</a>
+          </span>
+          <span class="credits right">Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a> <b>modified</b> by <a href="https://github.com/ntrifunovic">ntrifunovic</a></span>
+        </div>
+
+        <hr>  
+        </section>
+        
+   
+          <div class="toc">
+<ul>
+<li><a href="#insertion-sort">Insertion sort</a></li>
+<li><a href="#selection-sort">Selection sort</a></li>
+<li><a href="#bubble-sort">Bubble sort</a></li>
+<li><a href="#counting-sort">Counting sort</a></li>
+<li><a href="#radix-sort">Radix sort</a></li>
+</ul>
+</div>
+<hr />
+<ul>
+<li>Sortiranje je proces preuredjivanja skupa podataka da zadovoljava neki zadati poredak</li>
+<li>Sortiranje omogucava kasnije efikasno pretrazivanje</li>
+<li>Postoje razni algoritmi sortiranja</li>
+</ul>
+<p>Osnovni algoritmi sortiranja koje cemo obraditi u ovoj prezentaciji su:</p>
+<ul>
+<li>Insertion sort</li>
+<li>Selection sort</li>
+<li>Bubble sort</li>
+<li>Counting sort</li>
+<li>Radix sort</li>
+</ul>
+<h1 id="insertion-sort">Insertion sort</h1>
+<ol>
+<li>Uredjeni deo niza se sastoji samo od prvog elementa niza</li>
+<li>Sledeci element se umece u uredjeni deo niza na odgovarajuce mesto. Ovim se uredjeni deo niza povecava za jedan element, a ne uredjeni deo smanjuje za jedan element</li>
+<li>Ako ne uredjeni deo nije prazan ponavlja se korak 2.</li>
+</ol>
+<p><strong>Primer:</strong> sortiramo niz 3 1 4 2 koristeci insertion sort</p>
+<blockquote>
+<p>3 | 1 4 2</p>
+<p>1 3 | 4 2</p>
+<p>1 3 4 | 2</p>
+<p>1 2 3 4 | </p>
+</blockquote>
+<h1 id="selection-sort">Selection sort</h1>
+<ol>
+<li>Uredjeni deo niza je prazan</li>
+<li>Najmanji element ne uredjenog dela niza se prebacuje na kraj uredjenog dela niza</li>
+<li>Ako ne uredjeni deo nije prazan ponavlja se korak 2.</li>
+</ol>
+<p><strong>Primer:</strong> sortiramo niz 3 1 4 2 koristeci slection sort</p>
+<blockquote>
+<p>1 | 3 4 2</p>
+<p>1 2 | 3 4</p>
+<p>1 2 3 | 4</p>
+<p>1 2 3 4 | </p>
+</blockquote>
+<h1 id="bubble-sort">Bubble sort</h1>
+<ol>
+<li>Prolazimo kroz niz i poredimo dva susedna elementa ako nisu u dobrom poredku menjamo im redosled</li>
+<li>Ako je pri prolasku bilo promena ponavljamo korak 1.</li>
+</ol>
+<p><strong>Primer:</strong> sortiramo niz 3 1 4 2 koristeci bubble sort</p>
+<blockquote>
+<p>3 1 4 2; 1-3 4 2; 1 3 2-4</p>
+<p>1 3 2 4; 1 2-3 4</p>
+</blockquote>
+<h1 id="counting-sort">Counting sort</h1>
+<p>Podrazumeva se da su kljucevi po kojima se podaci sortiraju celi brojevi iz intervala od <code>1</code> do <code>K</code>.</p>
+<p><strong>Ideja counting sort-a:</strong> Odrediti broj elemenata manjih od nekog elementa. Koristeci ovu informaciju mozemo odrediti poziciju elementa u nizu.</p>
+<p><em>Sta da radimo kada niz sadrzi elemente sa istim kjucem ?</em></p>
+<ol>
+<li>Odredimo <code>C[x] =</code> broj elementa u nizu sa kljucem <code>x</code>, <code>x = 1..K</code></li>
+<li><code>C[2] += C[1]; C[3] += C[2]; ... C[K] += C[K-1];</code></li>
+<li>Pozicija u sortiranom nizu elementa sa kljucem <code>x</code> je <code>C[x]</code>, problem vise istih  kjuceva resavamo tako sto radimo <code>C[x]--</code> posto smestimo element na njegovo mesto.</li>
+</ol>
+<p><strong>Primer:</strong> sortiramo niz 3 2 1 3 2 koristeci countig sort</p>
+<blockquote>
+<ol>
+<li><code>C[1] = 1</code>, <code>C[2] = 2</code>, <code>C[3] = 2</code></li>
+<li><code>C[1] = 1</code>, <code>C[2] = 3</code>, <code>C[3] = 5</code></li>
+<li></li>
+<li>
+<div class="codehilite"><pre><span class="n">_</span> <span class="n">_</span> <span class="n">_</span> <span class="n">_</span> <span class="mi">3</span> <span class="n">C</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">_</span> <span class="n">_</span> <span class="mi">2</span> <span class="n">_</span> <span class="mi">3</span> <span class="n">C</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="mi">1</span> <span class="n">_</span> <span class="mi">2</span> <span class="n">_</span> <span class="mi">3</span> <span class="n">C</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="mi">1</span> <span class="n">_</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">3</span> <span class="n">C</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="mi">1</span> <span class="mi">2</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">3</span> <span class="n">C</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+
+
+</li>
+</ol>
+</blockquote>
+<h1 id="radix-sort">Radix sort</h1>
+<p>Koristi si se kada su kjucevi k-tocifreni celi brojevi</p>
+<ol>
+<li>Prvo se posmatra najmladja cifra kljuca</li>
+<li>Elemente niza redom dodajemo na kraj jednog od 10 redova u zavisnosti od posmatrane cifre</li>
+<li>Spajamo redove</li>
+<li>Ponavljamo postupak od koraka 2. za sledecu cifru</li>
+</ol>
+<p><strong>Primer:</strong> sortiramo niz 213 191 222 214 koristeci radix sort</p>
+<blockquote>
+<p>191 222 213 214</p>
+<p>213 214 222 191</p>
+<p>191 213 214 222</p>
+</blockquote>
+        
+   <hr>
+   
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'ntrifunovic'; // required: replace example with your forum shortname
+	var disqus_title = 'Algoritmi\\Osnovni algoritmi sortiranja';
+	var disqus_identifier = 'Algoritmi\\Osnovni algoritmi sortiranja';
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+
+
+    </div>
+
+    <div id="footer-bar">
+      <div id="footer-bar-content">
+
+        <hr class="spaceless">
+
+        
+        <span id="fb-like-b">
+          <div class="fb-like" data-send="true" data-layout="button_count" data-width="50" data-show-faces="true"></div>
+              <div id="fb-root"></div>
+              <script>(function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+                fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
+              </script>
+        </span>
+
+        <hr class="spaceless">
+
+        
+        <span id="tweetb-b">
+          <a href="https://twitter.com/share" class="twitter-share-button" data-size="medium">Tweet</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </span>
+
+        <hr class="spaceless">
+
+        
+        <span id="google-pb">
+          <!-- Place this tag where you want the +1 button to render. -->
+          <div class="g-plusone" data-size="medium"></div>
+
+          <!-- Place this tag after the last +1 button tag. -->
+          <script>
+            (function() {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = 'https://apis.google.com/js/plusone.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+            })();
+          </script>
+        </span>
+
+        <hr class="spaceless">
+
+      </div>
+
+ <div id="index">
         
 	
         <hr class="spaceless">
@@ -346,201 +544,6 @@
         
       </div>
 
-
-    <div class="wrapper">
-      <section>
-        <div id="title">
-          
-<h1>Osnovni algoritmi sortiranja</h1>
-  
-     <p>
-       -Algoritmi-
-     </p>
-  
-  
-
-          <hr>
-          <span class="credits left">
-            Website maintained by <a href="https://github.com/ntrifunovic">ntrifunovic</a>
-          </span>
-          <span class="credits right">Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a> <b>modified</b> by <a href="https://github.com/ntrifunovic">ntrifunovic</a></span>
-        </div>
-
-        <hr>  
-        </section>
-        
-   
-          <div class="toc">
-<ul>
-<li><a href="#insertion-sort">Insertion sort</a></li>
-<li><a href="#selection-sort">Selection sort</a></li>
-<li><a href="#bubble-sort">Bubble sort</a></li>
-<li><a href="#counting-sort">Counting sort</a></li>
-<li><a href="#radix-sort">Radix sort</a></li>
-</ul>
-</div>
-<hr />
-<ul>
-<li>Sortiranje je proces preuredjivanja skupa podataka da zadovoljava neki zadati poredak</li>
-<li>Sortiranje omogucava kasnije efikasno pretrazivanje</li>
-<li>Postoje razni algoritmi sortiranja</li>
-</ul>
-<p>Osnovni algoritmi sortiranja koje cemo obraditi u ovoj prezentaciji su:</p>
-<ul>
-<li>Insertion sort</li>
-<li>Selection sort</li>
-<li>Bubble sort</li>
-<li>Counting sort</li>
-<li>Radix sort</li>
-</ul>
-<h1 id="insertion-sort">Insertion sort</h1>
-<ol>
-<li>Uredjeni deo niza se sastoji samo od prvog elementa niza</li>
-<li>Sledeci element se umece u uredjeni deo niza na odgovarajuce mesto. Ovim se uredjeni deo niza povecava za jedan element, a ne uredjeni deo smanjuje za jedan element</li>
-<li>Ako ne uredjeni deo nije prazan ponavlja se korak 2.</li>
-</ol>
-<p><strong>Primer:</strong> sortiramo niz 3 1 4 2 koristeci insertion sort</p>
-<blockquote>
-<p>3 | 1 4 2</p>
-<p>1 3 | 4 2</p>
-<p>1 3 4 | 2</p>
-<p>1 2 3 4 | </p>
-</blockquote>
-<h1 id="selection-sort">Selection sort</h1>
-<ol>
-<li>Uredjeni deo niza je prazan</li>
-<li>Najmanji element ne uredjenog dela niza se prebacuje na kraj uredjenog dela niza</li>
-<li>Ako ne uredjeni deo nije prazan ponavlja se korak 2.</li>
-</ol>
-<p><strong>Primer:</strong> sortiramo niz 3 1 4 2 koristeci slection sort</p>
-<blockquote>
-<p>1 | 3 4 2</p>
-<p>1 2 | 3 4</p>
-<p>1 2 3 | 4</p>
-<p>1 2 3 4 | </p>
-</blockquote>
-<h1 id="bubble-sort">Bubble sort</h1>
-<ol>
-<li>Prolazimo kroz niz i poredimo dva susedna elementa ako nisu u dobrom poredku menjamo im redosled</li>
-<li>Ako je pri prolasku bilo promena ponavljamo korak 1.</li>
-</ol>
-<p><strong>Primer:</strong> sortiramo niz 3 1 4 2 koristeci bubble sort</p>
-<blockquote>
-<p>3 1 4 2; 1-3 4 2; 1 3 2-4</p>
-<p>1 3 2 4; 1 2-3 4</p>
-</blockquote>
-<h1 id="counting-sort">Counting sort</h1>
-<p>Podrazumeva se da su kljucevi po kojima se podaci sortiraju celi brojevi iz intervala od <code>1</code> do <code>K</code>.</p>
-<p><strong>Ideja counting sort-a:</strong> Odrediti broj elemenata manjih od nekog elementa. Koristeci ovu informaciju mozemo odrediti poziciju elementa u nizu.</p>
-<p><em>Sta da radimo kada niz sadrzi elemente sa istim kjucem ?</em></p>
-<ol>
-<li>Odredimo <code>C[x] =</code> broj elementa u nizu sa kljucem <code>x</code>, <code>x = 1..K</code></li>
-<li><code>C[2] += C[1]; C[3] += C[2]; ... C[K] += C[K-1];</code></li>
-<li>Pozicija u sortiranom nizu elementa sa kljucem <code>x</code> je <code>C[x]</code>, problem vise istih  kjuceva resavamo tako sto radimo <code>C[x]--</code> posto smestimo element na njegovo mesto.</li>
-</ol>
-<p><strong>Primer:</strong> sortiramo niz 3 2 1 3 2 koristeci countig sort</p>
-<blockquote>
-<ol>
-<li><code>C[1] = 1</code>, <code>C[2] = 2</code>, <code>C[3] = 2</code></li>
-<li><code>C[1] = 1</code>, <code>C[2] = 3</code>, <code>C[3] = 5</code></li>
-<li></li>
-<li>
-<div class="codehilite"><pre><span class="n">_</span> <span class="n">_</span> <span class="n">_</span> <span class="n">_</span> <span class="mi">3</span> <span class="n">C</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span>
-<span class="n">_</span> <span class="n">_</span> <span class="mi">2</span> <span class="n">_</span> <span class="mi">3</span> <span class="n">C</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="mi">1</span> <span class="n">_</span> <span class="mi">2</span> <span class="n">_</span> <span class="mi">3</span> <span class="n">C</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="mi">1</span> <span class="n">_</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">3</span> <span class="n">C</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="mi">1</span> <span class="mi">2</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">3</span> <span class="n">C</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
-</pre></div>
-
-
-</li>
-</ol>
-</blockquote>
-<h1 id="radix-sort">Radix sort</h1>
-<p>Koristi si se kada su kjucevi k-tocifreni celi brojevi</p>
-<ol>
-<li>Prvo se posmatra najmladja cifra kljuca</li>
-<li>Elemente niza redom dodajemo na kraj jednog od 10 redova u zavisnosti od posmatrane cifre</li>
-<li>Spajamo redove</li>
-<li>Ponavljamo postupak od koraka 2. za sledecu cifru</li>
-</ol>
-<p><strong>Primer:</strong> sortiramo niz 213 191 222 214 koristeci radix sort</p>
-<blockquote>
-<p>191 222 213 214</p>
-<p>213 214 222 191</p>
-<p>191 213 214 222</p>
-</blockquote>
-        
-   <hr>
-   
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'ntrifunovic'; // required: replace example with your forum shortname
-	var disqus_title = 'Algoritmi\\Osnovni algoritmi sortiranja';
-	var disqus_identifier = 'Algoritmi\\Osnovni algoritmi sortiranja';
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-    
-
-
-    </div>
-
-    <div id="footer-bar">
-      <div id="footer-bar-content">
-
-        <hr class="spaceless">
-
-        
-        <span id="fb-like-b">
-          <div class="fb-like" data-send="true" data-layout="button_count" data-width="50" data-show-faces="true"></div>
-              <div id="fb-root"></div>
-              <script>(function(d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) return;
-                js = d.createElement(s); js.id = id;
-                js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-                fjs.parentNode.insertBefore(js, fjs);
-                }(document, 'script', 'facebook-jssdk'));
-              </script>
-        </span>
-
-        <hr class="spaceless">
-
-        
-        <span id="tweetb-b">
-          <a href="https://twitter.com/share" class="twitter-share-button" data-size="medium">Tweet</a>
-          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-        </span>
-
-        <hr class="spaceless">
-
-        
-        <span id="google-pb">
-          <!-- Place this tag where you want the +1 button to render. -->
-          <div class="g-plusone" data-size="medium"></div>
-
-          <!-- Place this tag after the last +1 button tag. -->
-          <script>
-            (function() {
-            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-            po.src = 'https://apis.google.com/js/plusone.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-            })();
-          </script>
-        </span>
-
-        <hr class="spaceless">
-
-      </div>
     </div>
   </body>
 </html>
