@@ -1,0 +1,58 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: fig2dev Version 3.2 Patchlevel 5-alpha7 -->
+<!-- CreationDate: Wed Feb 22 17:37:10 2006 -->
+<!-- Magnification: 1.050 -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1000" viewBox="2916 1782 2103 2481">
+<g style="stroke-width:.025in; stroke:black; fill:none">
+<!-- Circle -->
+<circle cx="3779" cy="2881" r="133"
+ style="stroke:#000000;fill:white;stroke-width:16;"/>
+<!-- Circle -->
+<circle cx="3172" cy="4023" r="133"
+ style="stroke:#000000;fill:white;stroke-width:16;"/>
+<!-- Circle -->
+<circle cx="4117" cy="3645" r="133"
+ style="stroke:#000000;fill:white;stroke-width:16;"/>
+<!-- Circle -->
+<circle cx="3267" cy="2133" r="133"
+ style="stroke:#000000;fill:white;stroke-width:16;"/>
+<!-- Circle -->
+<circle cx="4212" cy="2038" r="133"
+ style="stroke:#000000;fill:white;stroke-width:16;"/>
+<!-- Circle -->
+<circle cx="4779" cy="2605" r="133"
+ style="stroke:#000000;fill:white;troke-width:16;"/>
+<!-- Line -->
+<polyline points="3358,2240
+3701,2765
+" style="stroke:#000000;stroke-width:16;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line -->
+<polyline points="4159,2163
+3841,2762
+" style="stroke:#000000;stroke-width:16;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line -->
+<polyline points="4653,2653
+3907,2838
+" style="stroke:#000000;stroke-width:16;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line -->
+<polyline points="4065,3521
+3838,2999
+" style="stroke:#000000;stroke-width:16;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line -->
+<polyline points="3306,3990
+3991,3696
+" style="stroke:#000000;stroke-width:16;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+</g>
+</svg>
