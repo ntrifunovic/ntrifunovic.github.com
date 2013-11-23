@@ -115,6 +115,8 @@
 <p><strong>Definicija:</strong> Za graf kažemo da je <em>povezan</em> ako i samo ako za svaka dva njegova čvora postoji put koji ih spaja. </p>
 <p><strong>Teorema:</strong> Ako graf nije povezan onda se on može razbiti na povezane komponente, disjunktne po čvorovima.</p>
 <h1 id="nacini-cuvanja-grafa-u-memoriji-racunara">Načini čuvanja grafa u memoriji računara</h1>
+<p>U programskim jezicima koji se koriste na takmičenjima iz informatike graf ne postoji kao standardni tip podataka, pa ga zato na neki način treba predstaviti i čuvati u memoriji računara. </p>
+<p>Ovde su data dva načina čuvanja grafa u memoriji računara:</p>
 <ol>
 <li>
 <p><strong>Matrica povezanosti:</strong> U matrici veličine <code>nxn</code> (gde je <code>n</code> broj čvorova grafa) polje <code>i</code>, <code>j</code> ima vrednost <code>1</code> ako postoji ivica koja povezuje čvorove <code>i</code> i <code>j</code>, ili <code>0</code> u slučaju da takva ivica ne postoji.</p>
@@ -130,12 +132,13 @@
 <p><strong>Lista suseda:</strong> U nizu velične <code>n</code> (gde je <code>n</code> broj cvorova) <code>i</code>-ti element sadrži povezanu listu u kojoj se nalaze svi čvorovi izmedju kojih i čvora <code>i</code> postoji ivica.</p>
 <div class="codehilite"><pre><span class="cp">#define MAXN 100</span>
 
-<span class="k">struct</span> <span class="n">PList</span> <span class="p">{</span>
-  <span class="kt">int</span> <span class="n">v</span><span class="p">;</span>
+<span class="c1">// Lista indeksa čvorova</span>
+<span class="k">struct</span> <span class="n">PList</span> <span class="p">{</span> 
+  <span class="kt">int</span> <span class="n">v</span><span class="p">;</span> <span class="c1">// indeks čvora sa kojim je neki čvor povezan</span>
   <span class="n">PList</span><span class="o">*</span> <span class="n">sled</span><span class="p">;</span>
 <span class="p">};</span>
 
-<span class="n">PList</span><span class="o">*</span> <span class="n">veze</span><span class="p">[</span><span class="n">MAXN</span><span class="p">];</span>
+<span class="n">PList</span><span class="o">*</span> <span class="n">veze</span><span class="p">[</span><span class="n">MAXN</span><span class="p">];</span> <span class="c1">// Niz veza čiji su elementi liste indeksa čvorova</span>
 </pre></div>
 
 
