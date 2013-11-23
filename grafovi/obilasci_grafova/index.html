@@ -15,12 +15,12 @@
 
    <title>
 
-    Strukture Podataka \
+    Grafovi \
   
 
   
 
-  Povezane Liste
+  Obilasci grafova
   
 </title>
    <link rel="stylesheet" href="/pygments.css">
@@ -75,10 +75,10 @@
       <section>
         <div id="title">
           
-<h1>Povezane Liste</h1>
+<h1>Obilasci grafova</h1>
   
      <p>
-       -Strukture Podataka-
+       -Grafovi-
      </p>
   
   
@@ -96,67 +96,17 @@
    
           <div class="toc">
 <ul>
-<li><a href="#vrste-povezanih-lista">Vrste povezanih lista</a></li>
-<li><a href="#primer-implementacije">Primer implementacije</a></li>
-<li><a href="#ubacivanje-elementa">Ubacivanje elementa</a></li>
-<li><a href="#izbacivanje-elementa">Izbacivanje elementa</a></li>
+<li><a href="#pretraga-u-sirinu-bfs-eng-breadth-first-search">Pretraga u širinu (BFS eng. Breadth first search)</a></li>
+<li><a href="#pretraga-u-dubinu-dfs-eng-depth-first-search">Pretraga u dubinu (DFS eng. Depth first search)</a></li>
 </ul>
 </div>
 <hr />
-<p><strong>(eng. Linked List)</strong></p>
-<p>Povezana lista je linearna struktura podataka, tj. podaci su u nekom linearnom poretku.</p>
-<h1 id="vrste-povezanih-lista">Vrste povezanih lista</h1>
-<ul>
-<li>jednostruka ulancana lista</li>
-<li>dvostruko ulancana lista</li>
-<li>ciklicna lista</li>
-<li>ne ciklicna lista</li>
-</ul>
-<h1 id="primer-implementacije">Primer implementacije</h1>
-<div class="codehilite"><pre><span class="k">struct</span> <span class="n">Elem</span> <span class="p">{</span>
-    <span class="n">Podaci</span> <span class="n">p</span><span class="p">;</span>
-    <span class="n">Elem</span><span class="o">*</span> <span class="n">next</span><span class="p">;</span>
-    <span class="n">Elem</span><span class="o">*</span> <span class="n">prev</span><span class="p">;</span>
-<span class="p">};</span>
-
-<span class="n">Elem</span><span class="o">*</span> <span class="n">head</span><span class="p">;</span> <span class="c1">// Pokazivac na pocetak liste</span>
-</pre></div>
-
-
-<p>Jednostruko povezane liste sadrze samo pokazivac <code>next</code>, a dvostruko povezane liste sadrze i <code>next</code> i <code>prev</code> pokazivac. </p>
-<p><strong>Primer implementacije jednostuko povezanih listi:</strong></p>
-<div class="codehilite"><pre><span class="k">struct</span> <span class="n">Elem</span> <span class="p">{</span>
-    <span class="n">Podaci</span> <span class="n">p</span><span class="p">;</span>
-    <span class="n">Elem</span><span class="o">*</span> <span class="n">next</span><span class="p">;</span>
-<span class="p">};</span>
-</pre></div>
-
-
-<h1 id="ubacivanje-elementa">Ubacivanje elementa</h1>
-<div class="codehilite"><pre><span class="c1">// Ubacujemo element n iza elementa e</span>
-<span class="k">void</span> <span class="n">ubaci</span><span class="p">(</span><span class="n">Elem</span> <span class="o">*</span><span class="n">e</span><span class="p">,</span> <span class="n">Elem</span> <span class="o">*</span><span class="n">n</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">n</span><span class="o">-&gt;</span><span class="n">sled</span> <span class="o">=</span> <span class="n">e</span><span class="o">-&gt;</span><span class="n">sled</span><span class="p">;</span>
-    <span class="n">n</span><span class="o">-&gt;</span><span class="n">prev</span> <span class="o">=</span> <span class="n">e</span><span class="p">;</span>
-    <span class="n">e</span><span class="o">-&gt;</span><span class="n">sled</span><span class="o">-&gt;</span><span class="n">prev</span> <span class="o">=</span> <span class="n">n</span><span class="p">;</span>
-    <span class="n">e</span><span class="o">-&gt;</span><span class="n">sled</span> <span class="o">=</span> <span class="n">n</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-
-
-<h1 id="izbacivanje-elementa">Izbacivanje elementa</h1>
-<div class="codehilite"><pre><span class="c1">// Izbacuje element e iz povezane liste</span>
-<span class="k">void</span> <span class="n">izbaci</span><span class="p">(</span><span class="n">Elem</span><span class="o">*</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">Elem</span><span class="o">*</span> <span class="n">prev</span> <span class="o">=</span> <span class="n">e</span><span class="o">-&gt;</span><span class="n">prev</span><span class="p">;</span>
-    <span class="n">Elem</span><span class="o">*</span> <span class="n">next</span> <span class="o">=</span> <span class="n">e</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
-
-    <span class="n">prev</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">next</span><span class="p">;</span>
-    <span class="n">next</span><span class="o">-&gt;</span><span class="n">prev</span> <span class="o">=</span> <span class="n">prev</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-
-
-<p><strong>Napomena</strong>: Pretpostavlja se da postoji poslednji dummy element. 
-<em>Da li bi ova implementacija radila da on ne postoji ?</em></p>
+<h1 id="pretraga-u-sirinu-bfs-eng-breadth-first-search">Pretraga u širinu (BFS eng. Breadth first search)</h1>
+<p>Prikaz obilaska grafa dobijenog BFS algoritmom:  </p>
+<p><img alt="Prikaz rada BFS algoritma" src="/static/grafovi/Breadth-first-tree.svg" /></p>
+<h1 id="pretraga-u-dubinu-dfs-eng-depth-first-search">Pretraga u dubinu (DFS eng. Depth first search)</h1>
+<p>Prikaz obilaska grafa dobijenog DFS algoritmom:  </p>
+<p><img alt="Prikaz rada DFS algoritma" src="/static/grafovi/Depth-first-tree.svg" /></p>
         
    <hr>
    
@@ -164,8 +114,8 @@
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
         var disqus_shortname = 'ntrifunovic'; // required: replace example with your forum shortname
-	var disqus_title = 'Strukture Podataka\\Povezane Liste';
-	var disqus_identifier = 'Strukture Podataka\\Povezane Liste';
+	var disqus_title = 'Grafovi\\Obilasci grafova';
+	var disqus_identifier = 'Grafovi\\Obilasci grafova';
 
         /* * * DON'T EDIT BELOW THIS LINE * * */
         (function() {

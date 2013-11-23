@@ -97,7 +97,7 @@
           <div class="toc">
 <ul>
 <li><a href="#osnovni-pojmovi">Osnovni pojmovi</a></li>
-<li><a href="#nacini-cuvanja-grafa-u-memoriji-racunara">Nacini cuvanja grafa u memoriji racunara</a></li>
+<li><a href="#nacini-cuvanja-grafa-u-memoriji-racunara">Načini čuvanja grafa u memoriji računara</a></li>
 <li><a href="#vrste-grafova">Vrste grafova</a><ul>
 <li><a href="#usmereni-grafovi">Usmereni grafovi</a></li>
 <li><a href="#ne-usmereni-grafovi">Ne usmereni grafovi</a><ul>
@@ -110,24 +110,24 @@
 </div>
 <hr />
 <h1 id="osnovni-pojmovi">Osnovni pojmovi</h1>
-<p>Graf <code>G</code> je uredjeni skup <code>(V, E)</code>, gde je <code>V</code> skup cvorova, a <code>E</code> skup ivica. Svaka ivica predstavlja
-par cvorova <code>(x, y)</code> iz <code>V</code>.</p>
-<p>Put od cvora <code>X</code> do nekog drugog cvora <code>Y</code> je niz ivica koji spaja ova dva cvora, u kome se svaka ivica iz grafa pojavljuje najvise jedanput.</p>
-<p>Za graf kazemo da je povezan ako i samo ako za svaka dva njegova cvora postoji put koji ih spaja. Ako graf nije povezan onda se on moze razbiti na povezane komponente, disjunktne po cvorovima.</p>
-<h1 id="nacini-cuvanja-grafa-u-memoriji-racunara">Nacini cuvanja grafa u memoriji racunara</h1>
+<p><strong>Definicija:</strong> Graf <code>G</code> je uređeni skup <code>(V, E)</code>, gde je <code>V</code> konačan neprazan skup čvorova, a <code>E</code> skup ivica (grana). Svaka ivica predstavlja par čvorova <code>(x, y)</code> iz <code>V</code>.</p>
+<p><strong>Definicija:</strong> Put od čvora <code>X</code> do nekog drugog čvora <code>Y</code> je niz ivica koji spaja ova dva čvora, u kome se svaka ivica iz grafa pojavljuje najviše jedanput.</p>
+<p><strong>Definicija:</strong> Za graf kažemo da je <em>povezan</em> ako i samo ako za svaka dva njegova čvora postoji put koji ih spaja. </p>
+<p><strong>Teorema:</strong> Ako graf nije povezan onda se on može razbiti na povezane komponente, disjunktne po čvorovima.</p>
+<h1 id="nacini-cuvanja-grafa-u-memoriji-racunara">Načini čuvanja grafa u memoriji računara</h1>
 <ol>
 <li>
-<p><strong>Matrica povezanosti:</strong> U matrici velicine <code>nxn</code> (gde je <code>n</code> broj cvorova grafa) polje <code>i</code>, <code>j</code> ima vrednost <code>1</code> ako postoji ivica koja povezuje cvorove <code>i</code> i <code>j</code>, ili <code>0</code> u slucaju da takva ivica ne postoji.</p>
+<p><strong>Matrica povezanosti:</strong> U matrici veličine <code>nxn</code> (gde je <code>n</code> broj čvorova grafa) polje <code>i</code>, <code>j</code> ima vrednost <code>1</code> ako postoji ivica koja povezuje čvorove <code>i</code> i <code>j</code>, ili <code>0</code> u slučaju da takva ivica ne postoji.</p>
 <div class="codehilite"><pre><span class="cp">#define MAXN 100</span>
 
 <span class="kt">int</span> <span class="n">veze</span><span class="p">[</span><span class="n">MAXN</span><span class="p">][</span><span class="n">MAXN</span><span class="p">];</span>
 </pre></div>
 
 
-<p><em>Napomena:</em> umesto matrice tipa int moze se koristiti matrica tipa bool.</p>
+<p><em>Napomena:</em> umesto matrice tipa int može se koristiti matrica tipa bool.</p>
 </li>
 <li>
-<p><strong>Lista suseda:</strong> U nizu velicne <code>n</code> (gde je <code>n</code> broj cvorova) <code>i</code>-ti element sadrzi povezanu listu u kojoj se nalaze svi cvorovi izmedju kojih i cvora <code>i</code> postoji ivica.</p>
+<p><strong>Lista suseda:</strong> U nizu velične <code>n</code> (gde je <code>n</code> broj cvorova) <code>i</code>-ti element sadrži povezanu listu u kojoj se nalaze svi čvorovi izmedju kojih i čvora <code>i</code> postoji ivica.</p>
 <div class="codehilite"><pre><span class="cp">#define MAXN 100</span>
 
 <span class="k">struct</span> <span class="n">PList</span> <span class="p">{</span>
@@ -139,22 +139,25 @@ par cvorova <code>(x, y)</code> iz <code>V</code>.</p>
 </pre></div>
 
 
-<p><em>Napomena:</em> Moze se korisit i neka STD struktura za cuvanje liste suseda (<code>std::vector</code>, <code>std::list</code>, ... ).</p>
+<p><em>Napomena:</em> Može se korisit i neka STD struktura za čuvanje liste suseda (npr. <code>std::vector</code>, <code>std::list</code>, ... ).</p>
 </li>
 </ol>
 <h1 id="vrste-grafova">Vrste grafova</h1>
 <h2 id="usmereni-grafovi">Usmereni grafovi</h2>
-<p>Matrica povezanosti ne mora da bude simetricna, ako postoji  grana <code>(a, b)</code> onda ne mora da postoji grana <code>(b, a)</code>.</p>
+<p>Matrica povezanosti ne mora da bude simetrična, tj. ako postoji  grana <code>(a, b)</code> onda ne mora da postoji grana <code>(b, a)</code>.</p>
+<p><img alt="usmereni graf" src="/static/grafovi/Directed.svg" /></p>
 <h2 id="ne-usmereni-grafovi">Ne usmereni grafovi</h2>
-<p>Matrica povezanosti je simetricna, ako postoji  grana <code>(a, b)</code> onda postoji i grana <code>(b, a)</code>.</p>
+<p>Matrica povezanosti je simetrična, tj. ako postoji  grana <code>(a, b)</code> onda postoji i grana <code>(b, a)</code>.</p>
+<p><img alt="ne usmereni graf" src="/static/grafovi/Undirected.svg" /></p>
 <h3 id="drvo">Drvo</h3>
-<p>Drvo je neusmereni povezani graf bez ciklusa.</p>
-<p>Ako vaze dve od sledece tri osobine za neki graf onda za taj graf vazi i treca osobina:</p>
+<p><strong>Definicija:</strong> Drvo je neusmereni povezani graf bez ciklusa.</p>
+<p><strong>Teorema:</strong> Ako važe dve od sledeće tri osobine za neki graf onda za taj graf važi i treća osobina:</p>
 <ol>
-<li>Graf od <code>N</code> cvorova ima <code>N-1</code> granu</li>
+<li>Graf od <code>N</code> čvorova ima <code>N-1</code> granu</li>
 <li>Graf je povezan</li>
 <li>Graf je drvo</li>
 </ol>
+<p><img alt="drvo graf" src="/static/grafovi/Tree_graph.svg" /></p>
         
    <hr>
    
@@ -243,7 +246,7 @@ par cvorova <code>(x, y)</code> iz <code>V</code>.</p>
 	      
               <li class='sub-menu'>
 		<a href="/home/" class="index-sub-item">
-		  DOBRO DOSLI :)
+		  DOBRO DOŠLI :)
 		</a>
 	      </li>
 	      
@@ -378,6 +381,12 @@ par cvorova <code>(x, y)</code> iz <code>V</code>.</p>
               <li class='sub-menu'>
 		<a href="/grafovi/uvod/" class="index-sub-item">
 		  Uvod
+		</a>
+	      </li>
+	      
+              <li class='sub-menu'>
+		<a href="/grafovi/obilasci_grafova/" class="index-sub-item">
+		  Obilasci grafova
 		</a>
 	      </li>
 	      
