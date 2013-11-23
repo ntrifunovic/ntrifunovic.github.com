@@ -96,8 +96,16 @@
    
           <div class="toc">
 <ul>
-<li><a href="#pretraga-u-sirinu-bfs-eng-breadth-first-search">Pretraga u širinu (BFS eng. Breadth first search)</a></li>
-<li><a href="#pretraga-u-dubinu-dfs-eng-depth-first-search">Pretraga u dubinu (DFS eng. Depth first search)</a></li>
+<li><a href="#pretraga-u-sirinu-bfs-eng-breadth-first-search">Pretraga u širinu (BFS eng. Breadth first search)</a><ul>
+<li><a href="#predlog-implementacije">Predlog implementacije:</a></li>
+<li><a href="#prikaz-obilaska-grafa-dobijenog-bfs-algoritmom">Prikaz obilaska grafa dobijenog BFS algoritmom:</a></li>
+</ul>
+</li>
+<li><a href="#pretraga-u-dubinu-dfs-eng-depth-first-search">Pretraga u dubinu (DFS eng. Depth first search)</a><ul>
+<li><a href="#rekurzivni-dfs-algoritam">Rekurzivni DFS algoritam:</a></li>
+<li><a href="#prikaz-obilaska-grafa-dobijenog-dfs-algoritmom">Prikaz obilaska grafa dobijenog DFS algoritmom:</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <hr />
@@ -107,17 +115,17 @@ zatim posećuje sve njegove susede,<br />
 zatim posećuje sve njihove neposećene susede,<br />
 ...</p>
 <p>Algoritam završava rad kada nema više ne posećenih suseda.</p>
-<p><strong>Predlog implementacije:</strong></p>
+<h2 id="predlog-implementacije">Predlog implementacije:</h2>
 <ol>
 <li>Početni čvor se stavi na početak praznog reda</li>
 <li>Uzima se čvor sa početka reda i njegovi ne posećeni susedi se dodaju na kraj reda</li>
 <li>Ako red nije prazan prelazi se na korak 2,<br />
    u suprotnom je kraj izvršavanja algoritma</li>
 </ol>
-<p>Prikaz obilaska grafa dobijenog BFS algoritmom:  </p>
+<h2 id="prikaz-obilaska-grafa-dobijenog-bfs-algoritmom">Prikaz obilaska grafa dobijenog <strong>BFS</strong> algoritmom:</h2>
 <p><img alt="Prikaz rada BFS algoritma" src="/static/grafovi/Breadth-first-tree.svg" /></p>
 <h1 id="pretraga-u-dubinu-dfs-eng-depth-first-search">Pretraga u dubinu (DFS eng. Depth first search)</h1>
-<p>Rekurzivni DFS algoritam:</p>
+<h2 id="rekurzivni-dfs-algoritam">Rekurzivni <strong>DFS</strong> algoritam:</h2>
 <div class="codehilite"><pre><span class="n">DFS</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">:</span>
     <span class="k">for</span> <span class="n">y</span> <span class="n">in</span> <span class="n">susedi</span> <span class="n">od</span> <span class="n">x</span>
         <span class="k">if</span> <span class="n">y</span> <span class="n">nije</span> <span class="n">posecen</span>
@@ -125,7 +133,7 @@ zatim posećuje sve njihove neposećene susede,<br />
 </pre></div>
 
 
-<p>Prikaz obilaska grafa dobijenog DFS algoritmom:  </p>
+<h2 id="prikaz-obilaska-grafa-dobijenog-dfs-algoritmom">Prikaz obilaska grafa dobijenog <strong>DFS</strong> algoritmom:</h2>
 <p><img alt="Prikaz rada DFS algoritma" src="/static/grafovi/Depth-first-tree.svg" /></p>
         
    <hr>
